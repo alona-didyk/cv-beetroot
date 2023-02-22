@@ -19,10 +19,8 @@ body {
     font-size: 48px;
     font-weight: 700;
     line-height: 65px;
-    margin-left: 235;
-    margin-right: 905;
-    padding-top: 12;
-    padding-bottom: 4369;
+    margin-top: 12px;
+    margin-left: 235px;
 }
 /*=== navbar=== */
 .main-navbar {
@@ -47,6 +45,151 @@ img {
     height: 387px;
     order: 1;
     flex-grow: 0;
-    margin-left: 235;
-    margin-right: 235;
+    margin-left: 235px;
+    margin-right: 235px;
+}
+.about {
+    background: #F6F6F6;
+}
+
+.text-center {
+    margin-left: 620px;
+    margin-right: 620px; 
+    font-family: 'Open Sans';
+font-style: normal; 
+    font-weight: 700;
+font-size: 34px;
+line-height: 46px;
+}
+
+.prg {
+    margin-left: 480px;
+    margin-right: 480px; 
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+}
+.prg2 {
+    margin-left: 517px;
+    margin-right: 517px; 
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+}
+.text-skills {
+    display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 20px;
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 26px;
+line-height: 46px;
+}
+
+.paragr {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.product-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 97px;     
+}
+
+.photoshop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 60px;
+    width: 170px;
+    height: 230px;
+}
+
+.ps {
+    width: 80px;
+    height: 80px;
+      
+}
+ .aillust {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 60px;
+    width: 170px;
+    height: 230px;
+ }
+
+.aeffects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 60px;
+    width: 170px;
+    height: 230px;
+
+}
+
+.ae {
+    width: 80px;
+    height: 80px;
+}
+
+.ai {
+    width: 80px;
+    height: 80px;
+}
+
+.fg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 80px;
+    width: 170px;
+    height: 230px;
+}
+
+.figma {
+    width: 53.33px;
+    height: 80px;
+}
+
+.rating1 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+    width: 170px;
+    height: 26px;
+}
+
+.text {
+    font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 19px;
+text-align: center;
+letter-spacing: 0.02em;
 }
