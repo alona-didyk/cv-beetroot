@@ -192,7 +192,7 @@ line-height: 46px;
 }
 
 .portfolio {
-background: #F6F6F6;
+    background: #F6F6F6;
 }
 
 .text-portfolio {
@@ -207,20 +207,21 @@ background: #F6F6F6;
     margin-top: 190px;
 }
 
-.pages {
-    display: flex;
-    flex-direction: column;
+.works{
+    width: 970px;
+    height: 540px;
+    margin-top: 50px;
 }
 
 .description {
     font-family: 'Open Sans';
     font-style: normal;
-    margin-left: 620px;
-    margin-right: 620px;
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
     text-align: center;
+    padding-top: 40px;
+    padding-bottom: 70px;
 }
 
 .contacts {
@@ -230,6 +231,7 @@ background: #F6F6F6;
     font-size: 18px;
     line-height: 25px;
     text-align: center;
+    margin-top: 100px;
 }   
 
 .text-center {
