@@ -263,7 +263,7 @@ button {
     width: 180px;
     height: 44px;
     color: #FFFFFF;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .group {
@@ -271,5 +271,14 @@ button {
     height: 40px;
     margin-left: 250px;
     padding-top: 30px;
+}
 
+.end {
+    width: 200px;
+    height: 60px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #828282;
 }
