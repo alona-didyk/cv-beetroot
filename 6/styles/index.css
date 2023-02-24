@@ -41,6 +41,14 @@ body {
     height: 30px;
 }
 
+.nav-link1 {
+    color: #070707;
+}
+
+.nav-link2 {
+    color: #828282;
+}
+
 img {
     width: 970px;
     height: 387px;
@@ -49,21 +57,24 @@ img {
     margin-right: 235px;
 }
 .about {
-    background: #F6F6F6;
+    background-color: #F6F6F6;
+    padding: 10px 40px;
+    isolation: isolate;
+    display: flex;
 }
 
 .text-center {
-    margin-left: 620px;
-    margin-right: 620px; 
-    font-style: normal; 
+    font-style: normal;
     font-weight: 700;
     font-size: 34px;
     line-height: 46px;
+    text-align: center;
 }
 
 .prg {
     margin-left: 480px;
     margin-right: 480px; 
+    margin-top: 50px;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -73,6 +84,7 @@ img {
 .prg2 {
     margin-left: 517px;
     margin-right: 517px; 
+    margin-bottom: 100px;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -80,16 +92,21 @@ img {
     text-align: center;
 }
 
-.text-skills {
+.skills {
+    background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 0px;
+}
+
+.text-skills {
     gap: 20px;
     font-style: normal;
     font-weight: 700;
     font-size: 26px;
     line-height: 46px;
+    margin-top: 10px;
 }
 
 .paragr {
@@ -106,7 +123,8 @@ img {
     justify-content: center;
     align-items: center;
     padding: 0px;
-    gap: 97px;     
+    gap: 97px;  
+    margin-top: 56.7px;   
 }
 
 .photoshop {
@@ -160,7 +178,7 @@ img {
     flex-direction: column;
     align-items: center;
     padding: 0px;
-    gap: 80px;
+    gap: 70px;
     width: 170px;
     height: 230px;
 }
@@ -191,7 +209,11 @@ img {
 }
 
 .portfolio {
-    background: #F6F6F6;
+    background-color: #F6F6F6;
+    width: 1450px;
+    height: 2268px;
+    left: 235px;
+    top: 1653px;
 }
 
 .text-portfolio {
@@ -202,7 +224,9 @@ img {
     text-align: center;
     margin-left: 645px;
     margin-right: 645px;
-    margin-top: 190px;
+    padding-top: 100px;
+    margin-top: 100px;
+    padding-bottom: 1px;
 }
 
 .works{
@@ -217,8 +241,8 @@ img {
     font-size: 18px;
     line-height: 25px;
     text-align: center;
-    padding-top: 40px;
-    padding-bottom: 70px;
+    margin-top: 40px;
+    margin-bottom: 10px;
 }
 
 .wrapper {
@@ -234,11 +258,12 @@ img {
 }
 
 button {
-    background: #070707;
+    background-color: #070707;
     border-radius: 22px;
     width: 180px;
     height: 44px;
     color: #FFFFFF;
+    margin-top: 20px;
 }
 
 .group {
