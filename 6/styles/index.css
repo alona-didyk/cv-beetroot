@@ -185,6 +185,9 @@ img {
     line-height: 19px;
     text-align: center;
     letter-spacing: 0.02em;
+    color: #828282;
+    width: 90px;
+    height: 38px;
 }
 
 .portfolio {
