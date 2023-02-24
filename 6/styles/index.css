@@ -84,15 +84,15 @@ img {
 
 .text-skills {
     display: flex;
-flex-direction: column;
-align-items: center;
-padding: 0px;
-gap: 20px;
-font-family: 'Open Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 26px;
-line-height: 46px;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 20px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 46px;
 }
 
 .paragr {
