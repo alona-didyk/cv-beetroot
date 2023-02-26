@@ -4,11 +4,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon(1).png">
+    <title>Dinner Shoping List</title>
 </head>
 <body>
-    <header>
-        <h1></h1>
+    <header class="listhead">
+        <h1>CSS Dinner Shopping List</h1>
+        <p>Let’s go to the mall!</p>
     </header>
+    <div class="container">
+        <main>
+            <ul class="shoping-list" style="list-style: none;">
+                <li>
+                    <label>
+                        <input type="checkbox">
+                        <span>
+                            A lot of pickles
+                            <small class="description">
+                                for the next lessons about CSS
+                            </small>
+                        </span>
+                    </label>
+                </li>
+                <li class="1">
+                    <label>
+                        <input type="checkbox">
+                        <span>
+                            10 apples
+                            <small class="description">
+                                for more CSS manipulations
+                            </small>
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox">
+                        <span>
+                            20 oranges
+                            <small class="description">
+                                because they are awesome
+                            </small>
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <label class="dark">
+                        <input type="checkbox">
+                        <span>
+                            13 plates
+                            <small class="description">
+                                hm... they always disappear
+                            </small>
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox">
+                        <span>
+                            15 bentos
+                        </span>
+                    </label>
+                </li>
+                <li class="1">
+                    <label>
+                        <input type="checkbox">
+                        <span>
+                            1 bottle of Sake ^_^
+                            <small class="description">
+                                for my friends
+                            </small>
+                        </span>
+                    </label>
+                </li>
+            </ul>
+        </main>
+</div>
+    <footer>
+        <p>Bon appetit :)</p>
+    </footer>
 </body>
 </html>
+
