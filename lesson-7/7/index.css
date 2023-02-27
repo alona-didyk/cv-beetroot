@@ -124,3 +124,9 @@ li:active {
 .shoping-list .description:after {
   content: ")";
 }
+
+.listfoot p {
+  font-weight: 400;
+font-size: 18px;
+font-family: 'Roboto';
+}
