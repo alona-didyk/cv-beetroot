@@ -5,22 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/reset.css">
     <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon(1).png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Dinner Shoping List</title>
 </head>
 <body>
     <header class="listhead">
         <h1>CSS Dinner Shopping List</h1>
-        <p>Let’s go to the mall!</p>
+        <h4>Let’s go to the mall!</h4>
     </header>
     <div class="container">
         <main>
             <ul class="shoping-list" style="list-style: none;">
+            
                 <li>
                     <label>
                         <input type="checkbox">
-                        <span>
+                        <span class="paragraph">
                             A lot of pickles
                             <small class="description">
                                 for the next lessons about CSS
@@ -28,21 +32,23 @@
                         </span>
                     </label>
                 </li>
-                <li class="1">
+       
+                    <li>
+                        <label>
+                            <input type="checkbox" checked>
+                            <span class="paragraph">
+                                10 apples
+                                <small class="description">
+                                    for more CSS manipulations
+                                </small>
+                            </span>
+                        </label>
+                    </li>
+           
+                    <li>
                     <label>
                         <input type="checkbox">
-                        <span>
-                            10 apples
-                            <small class="description">
-                                for more CSS manipulations
-                            </small>
-                        </span>
-                    </label>
-                </li>
-                <li>
-                    <label>
-                        <input type="checkbox">
-                        <span>
+                        <span class="paragraph">
                             20 oranges
                             <small class="description">
                                 because they are awesome
@@ -50,29 +56,33 @@
                         </span>
                     </label>
                 </li>
-                <li>
-                    <label class="dark">
-                        <input type="checkbox">
-                        <span>
-                            13 plates
-                            <small class="description">
-                                hm... they always disappear
-                            </small>
-                        </span>
-                    </label>
-                </li>
+        
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            <span class="paragraph">
+                                13 plates
+                                <small class="description">
+                                    hm... they always disappear
+                                </small>
+                            </span>
+                        </label>
+                    </li>
+           
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            <span class="paragraph">
+                                15 bentos
+                            </span>
+                        </label>
+                    </li>
+             
+          
                 <li>
                     <label>
-                        <input type="checkbox">
-                        <span>
-                            15 bentos
-                        </span>
-                    </label>
-                </li>
-                <li class="1">
-                    <label>
-                        <input type="checkbox">
-                        <span>
+                        <input type="checkbox" checked>
+                        <span class="paragraph">
                             1 bottle of Sake ^_^
                             <small class="description">
                                 for my friends
@@ -80,10 +90,11 @@
                         </span>
                     </label>
                 </li>
+            
             </ul>
         </main>
-</div>
-    <footer>
+
+    <footer class="listfoot">
         <p>Bon appetit :)</p>
     </footer>
 </body>
