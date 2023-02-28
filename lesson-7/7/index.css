@@ -61,12 +61,12 @@ body {
   margin: 0 0 40px;
 }
 .shoping-list li {
-  background: #7a7593;
+  background:  #88839e;
   border: 0 solid #fff;
 }
 
-li:nth-child(odd) {
-    background-color: #88839e;
+li:nth-child(2n) {
+    background-color: #7a7593;
   }
 
 li:hover {
