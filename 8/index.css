@@ -20,6 +20,7 @@ body {
     line-height: 57px;
     margin-left: 120px;
     margin-right: 198px;
+    margin-top: 5px;
 }
 
 .menu {
@@ -75,4 +76,48 @@ button:nth-child(2n):hover {
 }
 
 /*main*/
+
+.first {
+    position: absolute;
+    width: 1200px;
+    height: 495px;
+    left: 120px;
+    top: 151px;
+} 
+
+.left-side {
+    float: left;
+    width: 500px;
+    height: 301px;
+    margin-top: 248px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 44px;
+    padding-bottom: 30px;
+    margin-top: -100px;
+    line-height: 1.2;
+}
+
+p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #544837;
+    line-height: 1.3;
+}
+
+.secondbutton {
+    width: 180px;
+    height: 50px;
+    padding: 13px 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.right-side {
+    float: right;
+}
+
+
 
