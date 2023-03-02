@@ -58,6 +58,8 @@ ul li {
     cursor: pointer;
 }
 
+/*list*/
+
 ul li:nth-child(1) {
     width: 50%;
     background: transparent;
@@ -113,10 +115,6 @@ ul li:nth-child(11) {
 .temperature i {
     font-size: 32px;
     vertical-align: middle;
-}
-
-.clear-span {
-    font-size: 0;
 }
 
 div.opacity{
