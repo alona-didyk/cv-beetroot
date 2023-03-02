@@ -131,6 +131,7 @@ div.opacity{
 ul:hover div.opacity{
     display: block;
 }
+
 li:hover div.opacity{
     display: none;
 }
