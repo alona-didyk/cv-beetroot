@@ -5,38 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="./assets/fonts/webfontkit-20230308-044746/stylesheet.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tourney:wght@600&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/webfontkit-20230308-044746/stylesheet.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tourney:wght@600&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
-    <header class="header">
-    <div class="navcontain">
+    <header>
+      <div class="header__wrapper">
         <div class="eng">
-            <span>ENG</span>
-           </div>
-      
-     <div class="menu">
-         <nav>
-             <ul style="list-style-type: none;">
-               <li class="navigation">
-                 <a class="a1" href="#">Documentation   /  </a>
-               </li>
-               <li class="navigation">
-                   <a href="#">Who's using</a>
-               </li>
-             </ul>
-           </nav>
-        
-       
+          <span>ENG</span>
+        </div>
+
+        <div class="menu">
+          <nav>
+            <ul style="list-style-type: none">
+              <li class="navigation">
+                <a class="a1" href="#">Documentation / </a>
+              </li>
+              <li class="navigation">
+                <a class="a1" href="#">Who's using</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <img src="./assets/img/company-logo-black.svg" alt="logo" />
       </div>
-      <img src="./assets/img/company-logo-black.svg" alt="logo" />
-    </div>
     </header>
     <main>
-      <section>
+      <section class="section1__wrapper">
         <h1>Introduction <sup>Chapter 1</sup></h1>
         <p>
           React Native is an open source framework for building Android and iOS
@@ -48,7 +52,20 @@
           work in React Native.
         </p>
       </section>
-      <section>
+      <section class="section2__wrapper">
+        <h1>core components <sup>Chapter 2</sup></h1>
+        <p>
+          React Native is an open source framework for building Android and iOS
+          applications using React and the app platform’s native capabiles. With
+          React Native, you use JavaScript to access your platform’s APIs as
+          well as to describe the appearance and behavior of your UI using React
+          components: bundles of reusable, nestable code. You can learn more
+          about React in the next section. But first, let’s cover how components
+          work in React Native.
+        </p>
+      </section>
+
+      <section class="section3__wrapper">
         <h1>react fundamentals <sup>Chapter 3</sup></h1>
         <p>
           React Native runs on React, a popular open source library for building
@@ -82,7 +99,7 @@
           memory!
         </p>
       </section>
-      <section>
+      <section class="section4__wrapper">
         <h1>handling text input <sup>Chapter 4</sup></h1>
         <p>
           TextInput is a Core Component that allows the user to enter text. It
