@@ -1,4 +1,5 @@
 @import url(./assets/fonts/webfontkit-20230308-044746/stylesheet.css);
+@import url(./assets/fonts/webfontkit-20230308-102133/stylesheet.css);
 
 html {
   box-sizing: border-box;
@@ -17,9 +18,10 @@ html {
   position: absolute;
   margin-top: 29px;
   margin-left: 120px;
+  margin-top: 13px;
 }
 
-span {
+h2 {
   font-family: "Tourney", cursive;
   font-weight: 600;
   font-size: 22px;
@@ -85,4 +87,16 @@ p {
     font-weight: 400;
 font-size: 28px;
 line-height: 48px;
+}
+
+.p__italic {
+    font-style: italic;
+}
+
+.p__background {
+    background-color: #E8E8E8;
+}
+
+.p__bold {
+    font-family: 'pt_sansbold';
 }
