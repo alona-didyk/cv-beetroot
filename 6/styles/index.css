@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+@import url(./assets/fonts/webfontkit-20230308-113447/stylesheet.css);
 
 * {
     margin: 235 auto;
@@ -7,7 +8,7 @@
 
 body {
     background-color: #FFFFFF;
-    font-family: 'Open Sans', sans-serif;;
+    font-family: 'gilroymedium';
     position: relative;
     width: 1440px;
     height: 4521px;
