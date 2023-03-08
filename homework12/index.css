@@ -1,0 +1,42 @@
+@import url(./assets/fonts/webfontkit-20230308-044746/stylesheet.css);
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+   width: 100%;
+}
+
+.navcontain {
+    display: flex;
+    flex-direction: row;
+}
+
+.eng {
+    position: absolute;
+    margin-top: 29px;
+    margin-left: 120px;
+}
+
+span {
+    font-family: 'Tourney', cursive;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    margin-left: 220px;
+    margin-top: 16px;
+}
+
+.navigation {
+    display: inline;
+    justify-content: space-between;
+
+
+}
