@@ -8,8 +8,7 @@
 
 html {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+
 }
 
 body {
@@ -71,7 +70,6 @@ h2 {
   font-family: "staatlichesregular";
   font-weight: 400;
   font-size: 22px;
-  word-spacing: 0.5em;
 }
 
 img {
@@ -81,19 +79,20 @@ img {
   margin-right: 0 auto;
 }
 
-/*section1*/
+/*section*/
 
 main {
   display: flex;
   position: relative;
 }
 
-.mark {
-  background-image: url(./assets/img/bg-picture.png);
-  filter:alpha(opacity=60);
+.mark::before {
+  content: url(./assets/img/bg-picture.png);
+  position: fixed;
+  filter: alpha(opacity=60);
+  background-repeat: no-repeat;
+  right: 0;
 }
-
-
 
 hr.solid {
   width: 100px;
@@ -126,7 +125,7 @@ a {
   cursor: pointer;
 }
 
-hr.solid2{
+hr.solid2 {
   border-top: 1px solid #bbb;
   width: 400px;
 }
@@ -137,7 +136,6 @@ hr.solid2{
   left: 535px;
   margin-top: 186px;
   transform: translate(-40px);
-
 }
 
 .section2__wrapper {
