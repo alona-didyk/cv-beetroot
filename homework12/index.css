@@ -1,4 +1,9 @@
-@import url(./assets/fonts/webfontkit-20230308-044746/stylesheet.css);
+@import url(./assets/fonts/farro/stylesheet.css);
+@import url(./assets/fonts/francoisone/stylesheet.css);
+@import url(./assets/fonts/ptsans/stylesheet.css);
+@import url(./assets/fonts/staatliches/stylesheet.css);
+@import url(./assets/fonts/tourney/stylesheet.css);
+@import url(./assets/fonts/webfontkit-20230308-102133/stylesheet.css);
 @import url(./assets/fonts/webfontkit-20230308-102133/stylesheet.css);
 
 html {
@@ -7,18 +12,39 @@ html {
   padding: 0;
 }
 
-.header__wrapper {
+body {
+  display: flex;
+  box-sizing: border-box;
+  width: 1440px;
+  height: 3081px;
+}
+
+/*header*/
+
+header {
   display: flex;
   flex-direction: row;
-  width: 1440px;
+  position: relative;
+}
+
+.header__wrapper {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  width: 1355px;
   height: 80px;
+  position: fixed;
+  background-color: white;
+  z-index: 1;
+  top: 0;
+  margin-left: -77px;
 }
 
 .eng {
   position: absolute;
   margin-top: 29px;
   margin-left: 120px;
-  margin-top: 13px;
+  margin-top: 21px;
 }
 
 h2 {
@@ -52,20 +78,96 @@ img {
   width: 238px;
   height: 54px;
   margin-left: auto;
-  margin-right: 120px;
+  margin-right: 0 auto;
 }
 
 /*section1*/
 
-.section1__wrapper , .section2__wrapper , .section3__wrapper , .section4__wrapper {
+main {
   display: flex;
-  flex-direction: column;
-  margin-left: 120px;
-  margin-right: 120px;
-  margin-top: 40px;
+  position: relative;
 }
 
-h1 {
+.mark {
+  background-image: url(./assets/img/bg-picture.png);
+  filter:alpha(opacity=60);
+}
+
+
+
+hr.solid {
+  width: 100px;
+  height: 8px;
+  margin-left: 4px;
+  background: #000000;
+}
+
+aside {
+  position: sticky;
+  width: 470px;
+  height: 462px;
+  left: 110px;
+  top: 150px;
+  margin-left: 25px;
+}
+
+ul {
+  list-style: none;
+  padding: 10px;
+}
+
+li {
+  padding: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+}
+
+hr.solid2{
+  border-top: 1px solid #bbb;
+  width: 400px;
+}
+
+.section1__wrapper {
+  position: absolute;
+  width: 785px;
+  left: 535px;
+  margin-top: 186px;
+  transform: translate(-40px);
+
+}
+
+.section2__wrapper {
+  position: absolute;
+  width: 785px;
+  height: 452px;
+  margin-top: 528px;
+  left: 535px;
+  transform: translate(-40px);
+}
+
+.section3__wrapper {
+  position: absolute;
+  width: 785px;
+  height: 1331px;
+  left: 535px;
+  margin-top: 1050px;
+  transform: translate(-40px);
+}
+
+.section4__wrapper {
+  position: absolute;
+  width: 785px;
+  left: 535px;
+  margin-top: 2451px;
+  transform: translate(-40px);
+}
+
+h1,
+.h1 {
   font-family: "francois_oneregular";
   font-weight: 400;
   font-size: 36px;
@@ -83,20 +185,20 @@ sup {
 }
 
 p {
-    font-family: 'pt_sansregular';
-    font-weight: 400;
-font-size: 28px;
-line-height: 48px;
+  font-family: "pt_sansregular";
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 48px;
 }
 
 .p__italic {
-    font-style: italic;
+  font-style: italic;
 }
 
 .p__background {
-    background-color: #E8E8E8;
+  background-color: #e8e8e8;
 }
 
 .p__bold {
-    font-family: 'pt_sansbold';
+  font-family: "pt_sansbold";
 }
