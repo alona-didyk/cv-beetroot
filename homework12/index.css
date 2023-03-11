@@ -3,8 +3,7 @@
 @import url(./assets/fonts/ptsans/stylesheet.css);
 @import url(./assets/fonts/staatliches/stylesheet.css);
 @import url(./assets/fonts/tourney/stylesheet.css);
-@import url(./assets/fonts/webfontkit-20230308-102133/stylesheet.css);
-@import url(./assets/fonts/webfontkit-20230308-102133/stylesheet.css);
+@import url(./assets/fonts/ptsansbold/stylesheet.css);
 
 html {
   box-sizing: border-box;
