@@ -52,6 +52,7 @@ h2 {
 }
 
 .menu {
+  position: absolute;
   display: flex;
   flex-direction: row;
   margin-left: 220px;
@@ -140,7 +141,6 @@ hr.solid2 {
 .section2__wrapper {
   position: absolute;
   width: 785px;
-  height: 452px;
   margin-top: 528px;
   left: 535px;
   transform: translate(-40px);
@@ -149,7 +149,6 @@ hr.solid2 {
 .section3__wrapper {
   position: absolute;
   width: 785px;
-  height: 1331px;
   left: 535px;
   margin-top: 1050px;
   transform: translate(-40px);
