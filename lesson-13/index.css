@@ -1,0 +1,67 @@
+@import url(./assets/fonts/inter-roboto/stylesheet.css);
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  transition: 0.5s;
+  padding: 20px;
+}
+
+.container .content {
+  position: relative;
+  max-width: 570px;
+  max-height: 590px;
+  font-family: "robotoregular";
+}
+
+.main__head {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  display: flex;
+  margin-top: 20px;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.first {
+  display: flex;
+  flex-direction: column;
+}
+
+.last {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+label {
+  width: 245px;
+  height: 38px;
+  border: 1px solid #E4E4E4;
+border-radius: 6px;
+}
+
+input:hover {
+    border: 1px solid #007BFF;
+}
+
+#email {
+    width: 500px;
+}
