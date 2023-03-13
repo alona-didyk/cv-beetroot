@@ -63,7 +63,9 @@
                 </div>
               </div>
 
-              <button type="submit" class="signupbtn" onclick="toggle()">Sign Up</button>
+              <button type="submit" class="signupbtn" onclick="toggle()">
+                Sign Up
+              </button>
               <div class="end">
                 <span class="">
                   By clicking the 'Sign Up' button, you confirm that you accept
@@ -80,20 +82,20 @@
           </div>
         </div>
         <div id="popup">
-            <button type="submit" class="signupbtn"  onclick="toggle(clear)">  <a class="signup" href="./index2.html">Sign Up</a> </button>
-       
+          <button type="submit" class="signupbtn" onclick="toggle(clear)">
+            <a class="signup" href="./index2.html">Sign Up</a>
+          </button>
         </div>
       </main>
     </div>
 
     <script type="text/javascript">
-        function toggle(){
-            var blur = document.getElementById('blur')
-            blur.classList.toggle('active')
-            var popup = document.getElementById('popup')
-            popup.classList.toggle('active')
-        }
-
+      function toggle() {
+        var blur = document.getElementById("blur");
+        blur.classList.toggle("active");
+        var popup = document.getElementById("popup");
+        popup.classList.toggle("active");
+      }
     </script>
   </body>
 </html>
