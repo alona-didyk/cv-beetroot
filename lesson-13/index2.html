@@ -13,10 +13,32 @@
 <body>
     <div class="main">
         <main>
+            
+      
           <div class="container" id="blur">
             <div class="content">
+              
               <h1 class="main__head">Profile</h1>
               <form action="#">
+                <div class="photo">
+                  <div class="avatar">
+                    <img src="./assets/img/📷 Image.svg" alt="">
+                  </div>
+                 <div class="fileupload">
+                  <input type="text" readonly>
+                  <label>
+                    <input class="hidden" style="display: none; cursor: pointer;" type="file" readonly>
+                    <img src="./assets/icons/🔹 Icon Color.svg" alt="">
+                    <span>Up to 1 MB (300x300 px)</span>
+                  </label>
+                  <div class="reset">
+                    <input type="search" readonly>
+                  <img src="./assets/icons/dump.svg" alt="">
+                  </div>
+                </div>
+                 </div>
+                 
+                
                 <div class="name">
                   <div class="first">
                     <label for="firstname">Name</label>
@@ -24,22 +46,11 @@
                   </div>
                   <div class="last">
                     <label for="email">Email</label>
-                    <input class="email2" type="text" name="email" id="email" required />
+                    <input class="email2" type="text" name="email" required />
                   </div>
                 
             </div>
-                <div class="gender">
-                  <label class="container1"
-                    >Male
-                    <input type="radio" checked="checked" name="radio" />
-                    <span class="checkmark"></span>
-                  </label>
-                  <label class="container1"
-                    >Female
-                    <input type="radio" name="radio" />
-                    <span class="checkmark"></span>
-                  </label>
-                </div>
+            
   
                 <div class="world">
                   <div class="country">
@@ -54,24 +65,26 @@
                     <input type="text" id="city" name="city" /> <br />
                   </div>
                 </div>
+                <div class="contacts">
+                  <div class="zip">
+                    <label>ZIP Code</label>
+                    <input type="text" pattern="[0-9]{5}" title="Five digit zip code" />
+                  </div>
+                  <div class="phone">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                  </div>
+                  
+                </div>
+                
   
-                <button type="submit" class="signupbtn" >Sign Up</button>
-                <div class="end">
-                  <span class="">
-                    By clicking the 'Sign Up' button, you confirm that you accept
-                    our
-                    <a href="#">Terms of Use</a> and
-                    <a href="#">Privacy Policy</a> .
-                  </span>
-                </div>
-                <hr />
-                <div class="login">
-                  <p>Have an account? <a href="#">Log In</a></p>
-                </div>
+                <button type="submit" class="update" >Update</button>
+                
               </form>
             </div>
           </div>
         </main>
       </div>
+    
 </body>
 </html>
