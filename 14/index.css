@@ -1,0 +1,17 @@
+body {
+    box-sizing: border-box;
+}
+
+.header__wrapper {
+display: flex;
+width: 100%;
+}
+
+.container > img {
+    margin: 25px;
+    margin-left: 42px;
+  }
+
+  hr {
+    width: 1440px;
+  }
