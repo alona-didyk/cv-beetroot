@@ -143,11 +143,11 @@ footer svg {
   padding-top: 25%;
 }
 
-.iconhover {
+.hidden {
   fill: #0d0d0d;
   cursor: pointer;
 } 
 
-.iconhover:hover > .iconhover>svg {
+.hidden:hover {
   fill: #3db370;
 }
