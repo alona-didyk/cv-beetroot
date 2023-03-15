@@ -1,17 +1,153 @@
+@import url(./assets/fonts/roboto-nunito/stylesheet.css);
+
 body {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "robotoregular", sans-serif;
 }
 
 .header__wrapper {
-display: flex;
-width: 100%;
+  width: 100%;
+  height: 80px;
+  
 }
 
-.container > img {
-    margin: 25px;
-    margin-left: 42px;
-  }
+.header__wrapper > img {
+  margin: 25px;
+  margin-left: 71px;
+}
 
-  hr {
-    width: 1440px;
-  }
+hr {
+  border: 1px solid #efeef3;
+}
+
+.main__wrapper {
+  padding: 10vh;
+  justify-content: center;
+}
+
+footer {
+  height: 193px;
+  background-color: #16133d;
+}
+
+.build {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+h1 {
+  font-family: "nunito_sansregular", serif;
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: 0.2px;
+}
+
+h3 {
+  color: #7690a8;
+}
+
+h2 {
+  font-family: "robotoregular", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 21px;
+  letter-spacing: 0.2px;
+  color: #16133d;
+  padding-bottom: 20px;
+}
+
+p {
+  font-family: "robotoregular", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  width: 275px;
+  height: 80px;
+}
+
+a {
+  display: inline-block;
+  color: #3db370;
+  font-size: 16px;
+  line-height: 19px;
+  margin-top: 30px;
+  text-decoration: none;
+}
+
+footer > img {
+  padding: 42px;
+}
+
+/* colours of features list */
+.list {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.item {
+  display: block;
+  box-sizing: border-box;
+  width: 370px;
+  height: 345px;
+  padding: 40px;
+  background: #ffffff;
+  border: 1px solid #e5eaf4;
+  border-radius: 8px;
+}
+
+.item:hover {
+  border-color: #3db370;
+}
+
+.icon {
+  height: 64px;
+  width: 64px;
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid #c0c0c0;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  padding: 13px;
+  box-shadow: 0px 0px 0px 13px white inset;
+}
+
+.icon:hover {
+  fill: #3db370;
+}
+
+.icon:hover {
+  fill: #3db370;
+}
+
+footer ul {
+  margin-left: 42px;
+  display: flex;
+  gap: 10px;
+}
+
+footer li {
+  width: 38px;
+  height: 38px;
+  left: 144px;
+  background: #efeef3;
+  border-radius: 5px;
+} 
+
+footer svg {
+  margin: auto;
+  display: block;
+  padding-top: 25%;
+}
+
+.iconhover {
+  fill: #0d0d0d;
+  cursor: pointer;
+} 
+
+.iconhover:hover > .iconhover>svg {
+  fill: #3db370;
+}

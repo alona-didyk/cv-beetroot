@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,46 +16,98 @@
   </head>
   <body>
     <header class="header__wrapper">
-        <div class="container">
-            <img src="./assets/icons/Logo.svg" alt="">
-            <hr>
-            <!-- <svg class="icon">
-                <use xlink:href="./assets/icons/sprite.svg#Vector (12)"></use>
-            </svg> -->
-        </div>
+      <img src="./assets/icons/Logo.svg" alt="logo" />
+      <hr />
     </header>
-    <main>
-        <h3>OUR SERVICES</h3>
-            <h1>We build experience</h1>
 
-            <ul class="feat-list">
-                <li class="feat-item">
-                    <div class="item-icon design">
-                        <svg class="icon" style="width: 38.7px;height:36px">
-                            <use xlink:href="./assets/icons/sprite.svg#Vector (11)"></use>
-                          </svg>
-                        </div>
-                    <h2>Design</h2>
-                    <p>Lorem ipsum dolor sit amet, coectetur adipiscing elit. Suspendisse varius enim in eros .</p>
-                    <a href="#">Learn more</a>
-                </li>
-                <li class="feat-item">
-                    <div class="item-icon ecommerce">
-                        
-                        </div>
-                    <h2>Ecommerce</h2>
-                    <p>Lorem ipsum dolor sit amet, coectetur adipiscing elit. Suspendisse varius enim in eros .</p>
-                    <a href="#">Learn more</a>
-                </li>
-                <li class="feat-item">
-                    <div class="item-icon app">
-                       
-                        </div>
-                    <h2>Application</h2>
-                    <p>Lorem ipsum dolor sit amet, coectetur adipiscing elit. Suspendisse varius enim in eros .</p>
-                    <a href="#">Learn more</a>
-                </li>
-            </ul>
+    <main class="main__wrapper">
+      <div class="build">
+        <h3>OUR SERVICES</h3>
+        <h1>We build experience</h1>
+      </div>
+
+      <div class="list">
+        <div class="item">
+          <div class="icon_design">
+            <svg class="icon">
+              <use xlink:href="./assets/icons/sprite.svg#megaphone-icon"></use>
+            </svg>
+          </div>
+          <h2>Design</h2>
+          <p>
+            Lorem ipsum dolor sit amet, coectetur adipiscing elit. Suspendisse
+            varius enim in eros .
+          </p>
+          <a href="#">Learn more</a>
+        </div>
+        <div class="item">
+          <div class="icon_ecommerce">
+            <svg class="icon">
+              <use xlink:href="./assets/icons/sprite.svg#building-blue"></use>
+            </svg>
+          </div>
+          <h2>Ecommerce</h2>
+          <p>
+            Lorem ipsum dolor sit amet, coectetur adipiscing elit. Suspendisse
+            varius enim in eros .
+          </p>
+          <a href="#">Learn more</a>
+        </div>
+        <div class="item">
+          <div class="icon_app">
+            <svg class="icon">
+              <use xlink:href="./assets/icons/sprite.svg#phone-blue"></use>
+            </svg>
+          </div>
+          <h2>Application</h2>
+          <p>
+            Lorem ipsum dolor sit amet, coectetur adipiscing elit. Suspendisse
+            varius enim in eros .
+          </p>
+          <a href="#">Learn more</a>
+        </div>
+      </div>
     </main>
+
+    <footer>
+      <img src="./assets/icons/Logo-white.svg" alt="logo" />
+      <ul>
+        <li>
+          <div class="iconhover">
+            <svg width="21" height="21">
+              <use xlink:href="./assets/icons/sprite.svg#instagram-icon"></use>
+            </svg>
+          </div>
+        </li>
+        <li>
+          <div class="iconhover">
+            <svg width="10" height="19">
+              <use xlink:href="./assets/icons/sprite.svg#facebook-icon"></use>
+            </svg>
+          </div>
+        </li>
+        <li>
+          <div class="iconhover">
+            <svg width="20" height="20">
+              <use xlink:href="./assets/icons/sprite.svg#github-icon"></use>
+            </svg>
+          </div>
+        </li>
+        <li>
+          <div class="iconhover">
+            <svg width="20" height="20">
+              <use xlink:href="./assets/icons/sprite.svg#dribbble-icon"></use>
+            </svg>
+          </div>
+        </li>
+        <li>
+          <div class="iconhover">
+            <svg width="20" height="17">
+              <use xlink:href="./assets/icons/sprite.svg#twitter-icon"></use>
+            </svg>
+          </div>
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>
