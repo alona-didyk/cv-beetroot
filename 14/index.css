@@ -21,7 +21,7 @@ hr {
 }
 
 .main__wrapper {
-  margin-top: 45px;
+  margin-top: 20px;
   padding: 10vh;
   justify-content: center;
 }
@@ -50,7 +50,7 @@ h3 {
 
 h2 {
   font-family: "robotoregular", sans-serif;
-  font-style: normal;
+ 
   font-weight: 400;
   font-size: 24px;
   line-height: 21px;
@@ -117,7 +117,7 @@ footer > img {
 }
 
 .icon {
-  stroke: #007ffc;
+  /* stroke: #007ffc; */
   fill: #b9dcff;
   cursor: pointer;
   stroke-width: 1px;
@@ -126,7 +126,6 @@ footer > img {
 .icon:hover {
   fill: #E1F4F5;
   stroke: #52C29D;
-  stroke-width: 1px;
 }
 
 footer > img {
