@@ -1,0 +1,110 @@
+@mixin hrDivider {
+  border: 1px solid #ffcc00;
+  color: $goldcolor;
+}
+
+@mixin teamContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  gap: 40px;
+  width: 450px;
+  height: 400px;
+  margin-top: 121px;
+}
+
+@mixin text {
+  font-family: $font-main;
+  font-weight: 500;
+  font-size: $main-font-size;
+  line-height: $main-subfont-size;
+  text-transform: uppercase;
+}
+
+@mixin title {
+  font-family: $font-logo;
+  font-weight: 900;
+  font-size: $font-logo-size;
+  text-transform: uppercase;
+}
+
+@mixin divider {
+  width: 450px;
+  height: 20px;
+}
+
+@mixin verDivider {
+  height: 65%;
+  border-left: 1px solid $goldcolor;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 318px;
+  width: 560px;
+}
+
+@mixin img {
+  width: 430px;
+  height: 430px;
+  display: block;
+}
+
+@mixin infoContainer {
+  box-sizing: border-box;
+  width: 430px;
+  height: 420px;
+  padding: 40px 80px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 1000px;
+  top: -590px;
+  gap: 30px;
+}
+
+@mixin name {
+  font-family: $font-logo;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  text-transform: capitalize;
+  color: $color;
+}
+
+@mixin position {
+  font-family: $font-main;
+  font-weight: 400;
+  font-size: $main-subfont-size;
+  line-height: 36px;
+  text-align: center;
+  text-transform: capitalize;
+  color: $color;
+}
+
+@mixin description {
+  width: 430px;
+  height: 116px;
+  font-family: $font-main;
+  font-weight: 500;
+  font-size: $font-size;
+  line-height: $main-subfont-size;
+  text-align: center;
+  color: #333333;
+  margin-left: -80px;
+}
+
+@mixin btn {
+  font-family: $font-profile;
+  font-size: $font-size;
+  line-height: $line-height;
+  margin-left: 80px;
+  background-color: transparent;
+  border: 1px solid $goldcolor;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 118px;
+  height: 24px;
+  padding: 5px 10px;
+}

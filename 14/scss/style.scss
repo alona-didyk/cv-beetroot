@@ -1,0 +1,97 @@
+@import "./_reset";
+@import "./fonts";
+@import "./mixins";
+@import "./variables";
+
+.team__container {
+  @include teamContainer;
+
+  &--text {
+    @include text;
+    color: $colorhead;
+  }
+
+  &--title {
+    @include title;
+    color: $goldcolor;
+  }
+
+  &--devider {
+    width: 110%;
+    height: 1px;
+    display: flex;
+
+    background: linear-gradient(
+      to left,
+      $goldcolor 45%,
+      #fff 45%,
+      #fff 55%,
+      $goldcolor 55%
+    );
+  }
+
+  &__bonfire {
+    margin: 0 auto;
+    color: $goldcolor;
+    position: relative;
+    bottom: 12px;
+  }
+
+  &__ver-devider {
+    @include verDivider;
+  }
+}
+
+.img__container {
+  @include img;
+
+  &-img {
+    left: 0;
+    margin-top: -120px;
+    margin-left: 370px;
+  }
+}
+
+.info__container {
+  @include infoContainer;
+
+  &--name {
+    @include name;
+  }
+
+  &__hor-devider-1 {
+    width: 100px;
+    border-bottom: 1px solid $goldcolor;
+    margin: 0 auto;
+  }
+
+  &--position {
+    @include position;
+  }
+
+  &--socials {
+    display: flex;
+    flex-direction: row;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    gap: 5px;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 80px;
+  }
+
+  &__description {
+    @include description;
+  }
+
+  &__hor-devider-2 {
+    width: 40px;
+    border-bottom: 5px dashed $goldcolor;
+    margin: 0 auto;
+  }
+
+  &--btn {
+    @include btn;
+  }
+}
