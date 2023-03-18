@@ -68,7 +68,21 @@
             </h1>
           </div>
   
-        <img src="./assets/img/bg-image.jpg" alt="">
+          <picture>
+            <source
+            srcset="assets/img/bg-image.jpg"
+            media="(min-width: 1024px)"
+          />
+          <source
+            srcset="assets/img/bg-image-tablet.jpg"
+            media="(min-width: 768px)"
+          />
+            <img
+              class="first-screen__img"
+              src="./assets/img/bg-image-mobile.jpg"
+              alt="photo"
+            />
+          </picture>
         </section>
         <section class="blog">
           <div class="wrapper">
@@ -258,18 +272,15 @@
   
                 <div class="description">
                   <div class="description-date">
-                    <p>Interface Design</p>
+                    <p>Visual Design</p>
                     <p>8 June, 2020</p>
                   </div>
   
                   <h4 class="item__sub-title">
-                    Mentorship Match — How a simple LinkedIn feature can boost
-                    diversity
+                    Creativity vs. UX
                   </h4>
                   <p class="item__description">
-                    LinkedIn is on a clear mission to make professionals more
-                    successful by connecting the global workforce and as we
-                    learned — diversity and success go hand in hand
+                    Is it possible to create a delightful user experience without following best UX practices?
                   </p>
                 </div>
               </div>
