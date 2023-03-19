@@ -1,6 +1,10 @@
 @mixin Header {
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    transition: 0.3s;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 100%;
+  width: 94%;
+  margin: 0 auto;
 }
+

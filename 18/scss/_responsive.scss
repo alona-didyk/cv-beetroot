@@ -1,65 +1,59 @@
-// Small tablets and large smartphones (landscape view)
-$screen-sm-min: 576px;
-
-// Small tablets (portrait view)
-$screen-md-min: 768px;
-
-// Tablets and small desktops
-$screen-lg-min: 992px;
-
-// Large tablets and desktops
-$screen-xl-min: 1200px;
-
-// For than Large device
-$screen-xxl-min: 1400px;
-
-
-// Small devices
-@mixin sm {
-    @media (min-width: #{$screen-sm-min}) {
-        @content;
-    }
- }
- 
- // Medium devices
- @mixin md {
-    @media (min-width: #{$screen-md-min}) {
-        @content;
-    }
- }
- 
- // Large devices
- @mixin lg {
-    @media (min-width: #{$screen-lg-min}) {
-        @content;
-    }
- }
- 
- // Extra large devices
- @mixin xl {
-    @media (min-width: #{$screen-xl-min}) {
-        @content;
-    }
- }
- 
- // For than Large device
- @mixin xxl {
-    @media (min-width: #{$screen-xxl-min}) {
-        @content;
-    }
- }
-
-
-// Custom devices
-@mixin cwd($screen) {
-    @media (min-width: $screen) {
-        @content;
-    }
+@mixin media1 {
+    @media screen and (min-width: 768px) {
+        .header {
+          &.open .wrapper {
+            padding-bottom: 70px;
+          }
+        }
+        .nav {
+          &__list {
+            flex-direction: row;
+            gap: 42px;
+          }
+          .header.open &__list {
+            transform: translate(-50%) scaleY(1);
+          }
+          &__link {
+            font-size: 14px;
+            &-line {
+              visibility: hidden;
+              position: relative;
+              top: 5px;
+              left: 50%;
+              height: 1px;
+              width: 40px;
+              background-color: $backgroundcolor;
+              transform: translate(-50%, -50%) scaleX(0);
+              transition: transform 0.2s ease-in-out;
+            }
+          }
+          &__link:hover ~ &__link-line {
+            visibility: visible;
+            transform: translate(-50%, -50%) scaleX(1);
+          }
+        }
+        .first-screen {
+          height: 320px;
+          .wrapper {
+            padding-top: 30px;
+          }
+          &__title {
+            font-size: 36px;
+          }
+        }
+      }
 }
 
-// Range width devices
-@mixin rwd($min, $max) {
-    @media (min-width: $min) and (max-width: $max) {
-        @content;
-    }
+@mixin media768 {
+    @media screen and (min-width: 768px) {
+        width: 90%;
+      }
 }
+
+@mixin media1024 {
+    @media screen and (min-width: 1024px) {
+        width: 86%;
+        max-width: 1200px;
+      }
+}
+
