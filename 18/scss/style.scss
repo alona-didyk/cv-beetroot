@@ -208,12 +208,7 @@
     @include width100;
     align-items: center;
     justify-content: center;
-    font-family: "RedHatDisplay", sans-serif;
-    font-size: 48px;
-    font-weight: 400;
-    line-height: 64px;
-    letter-spacing: 0.05em;
-    color: $pcolor;
+    @include blog;
     @media screen and (min-width: 768px) {
       display: $display;
       justify-content: left;
@@ -255,6 +250,7 @@
     font-size: 28px;
     line-height: 36px;
     letter-spacing: 0.05em;
+    margin-bottom: 46px;
   }
 
   a {
@@ -284,6 +280,7 @@
 
   .mostPopular-img {
     @include width100;
+    padding-bottom: 20px;
   }
 
   @media screen and (min-width: 481px) {
@@ -313,6 +310,12 @@
     display: $display;
     justify-content: space-between;
   }
+  
+}
+
+.description2 {
+  margin-bottom: 65px;
+  margin-top: 20px;
 }
 
 .card__container-item {
@@ -371,9 +374,10 @@
 }
 
 .description-date {
-  display: $display;
+  display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  
+  
 
   p {
     font-family: "Lato", sans-serif;
@@ -381,7 +385,7 @@
     font-size: 16px;
     line-height: 166%;
     letter-spacing: 0.1em;
-    color: #7b7b7b;
+    color: $color;
   }
 }
 
@@ -408,13 +412,14 @@
 
     .description {
       @include width100;
+     
     }
   }
 }
 
 .load-more-button {
   display: block;
-  margin: 0 auto 20px;
+  margin: 0 auto  20px;
   width: 180px;
   height: 46px;
   background-color: $colorhead;
@@ -586,6 +591,7 @@
 
   &__copyright {
     @include small14px;
+    margin: 0 auto;
   }
 
   @media screen and (min-width: 768px) {
