@@ -8,3 +8,11 @@
   margin: 0 auto;
 }
 
+@mixin width {
+  width: 23px;
+}
+
+@mixin width100 {
+  width: 100%;
+}
+

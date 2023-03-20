@@ -57,3 +57,49 @@
       }
 }
 
+@mixin mediagap {
+  @media screen and (min-width: 1024px) {
+    gap: 90px;
+  }
+}
+
+@mixin media1024nav {
+  @media screen and (min-width: 1024px) {
+    .header {
+      .wrapper {
+        height: 100px;
+      }
+      &__burger {
+        display: none;
+      }
+      &__menu {
+        gap: 84px;
+      }
+    }
+    .nav {
+      &__list {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        left: 0;
+        transform-origin: top;
+        transform: none;
+        top: 0;
+        transition: top 0.3s, transform 0.2s ease-in-out;
+      }
+      &__link {
+        letter-spacing: 0.3em;
+      }
+    }
+    .first-screen {
+      height: 600px;
+      .wrapper {
+        padding-top: 100px;
+      }
+      &__title {
+        font-size: 48px;
+        line-height: 64px;
+      }
+    }
+  }
+}

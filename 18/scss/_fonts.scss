@@ -25,3 +25,16 @@ letter-spacing: 0.05em;
 color: #565656;
 }
 
+@mixin weight600 {
+	font-weight: 600;
+}
+
+@mixin lato {
+	flex-direction: column-reverse;
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    color: $color;
+}
