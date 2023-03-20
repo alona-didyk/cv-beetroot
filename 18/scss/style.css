@@ -697,7 +697,6 @@ textarea {
   display: flex;
   justify-content: center;
   overflow: hidden;
-  margin-top: 30px;
 }
 .img-container .latestPost-img {
   width: 100%;
