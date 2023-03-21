@@ -8,20 +8,16 @@
   display: flex;
   width: 94%;
   margin: 0 auto;
-
   @include media768;
-
   @include media1024;
 }
 
 .main {
   display: $display;
-  flex-direction: column;
+  @include column;
   gap: 70px;
-
   @include mediagap;
-  }
-
+}
 
 //header//
 
@@ -34,7 +30,7 @@
   }
   &__menu {
     display: $display;
-    align-items: center;
+    @include itemsCenter;
     gap: 20px;
   }
   &__search {
@@ -45,14 +41,14 @@
   &__burger {
     position: relative;
     height: 20px;
-    width: 34px;
+    @include width34;
     border: none;
     background: none;
     padding: 5px 0;
   }
   .burger__line {
     position: absolute;
-    width: 34px;
+    @include width34;
     height: 2px;
     background-color: $background;
     border-radius: 2px;
@@ -64,7 +60,6 @@
     &:nth-child(3) {
       transform: translateY(10px);
     }
-   
   }
 
   &.open .burger__line {
@@ -92,10 +87,9 @@
     top: 60px;
     z-index: 0;
     display: $display;
-    flex-direction: column;
-    text-align: center;
+    @include column;
+    @include textCenter;
     gap: 30px;
-    
     transition: top 0.3s, transform 0.2s ease-in-out;
   }
   &__link {
@@ -116,7 +110,7 @@
   &__title {
     @include big600;
     font-size: 30px;
-   @include weight600;
+    @include weight600;
     line-height: 50px;
     letter-spacing: 0.05em;
   }
@@ -138,9 +132,9 @@
 //main//
 
 .blog {
-  flex-direction: column;
+  @include column;
   .wrapper {
-    flex-direction: column;
+    @include column;
     gap: 50px;
     padding-top: 70px;
 
@@ -152,39 +146,30 @@
   &__post {
     display: $display;
     @include width100;
-
     @include lato;
-    
-
-    @media screen and (min-width: 768px) {
-      flex-direction: row;
-      justify-content: left;
-      gap: 20px;
-      &--reverse {
-        flex-direction: row-reverse;
-      }
-    }
+    @include mediapost;
     @media screen and (min-width: 1024px) {
-      align-items: center;
+      @include itemsCenter;
     }
 
     &-text {
       margin-bottom: 37px;
+      @include px;
       @media screen and (min-width: 768px) {
         line-height: 27px;
         margin-bottom: 0;
       }
     }
 
+    &-subtitle {
+      color: $color;
+      @include subtitle;
+    }
+
     &-title {
       width: 300px;
       @include width100;
-      font-family: "Red Hat Display", sans-serif;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 22px;
-      letter-spacing: 0.1em;
-      color: $pcolor;
+      @include red500;
       margin-top: -20px;
       @media screen and (min-width: 768px) {
         letter-spacing: 0.05em;
@@ -194,7 +179,7 @@
   &__content {
     display: $display;
     height: 320px;
-    flex-direction: column;
+    @include column;
     justify-content: space-between;
     @media screen and (min-width: 768px) {
       display: $display;
@@ -206,8 +191,8 @@
   &-title {
     display: $display;
     @include width100;
-    align-items: center;
-    justify-content: center;
+    @include itemsCenter;
+    @include contentCenter;
     @include blog;
     @media screen and (min-width: 768px) {
       display: $display;
@@ -228,13 +213,14 @@
 }
 .latestPost {
   .wrapper {
-    flex-direction: column;
+    @include column;
+    margin-bottom: 20px;
   }
 }
 
 .mostPopular {
   .wrapper {
-    flex-direction: column;
+    @include column;
   }
 }
 
@@ -244,34 +230,23 @@
 
 .title-container {
   h3 {
-    margin-bottom: 10px;
-    font-family: "RedHatDisplay", sans-serif;
+    margin-bottom: 50px;
     @include weight600;
-    font-size: 28px;
-    line-height: 36px;
-    letter-spacing: 0.05em;
-    margin-bottom: 46px;
+    @include h3;
   }
 
   a {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 166%;
-    letter-spacing: 0.1em;
-    color: #7b7b7b;
+    @include px;
+    color: $color;
+    margin-bottom: 50px;
   }
 
-  @media screen and (min-width: 768px) {
-    display: $display;
-    justify-content: space-between;
-    align-items: center;
-  }
+  @include mediaA;
 }
 
 .img-container {
   display: $display;
-  justify-content: center;
+  @include contentCenter;
   overflow: hidden;
 
   .latestPost-img {
@@ -296,7 +271,6 @@
   @media screen and (min-width: 1024px) {
     .latestPost-img {
       @include width100;
-      
     }
 
     .mostPopular-img {
@@ -310,7 +284,6 @@
     display: $display;
     justify-content: space-between;
   }
-  
 }
 
 .description2 {
@@ -323,19 +296,11 @@
 
   h4 {
     margin: 25px 0 20px;
-    font-family: "Red Hat Display", sans-serif;
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 166%;
+    @include h4;
   }
 
   p {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 166%;
-    letter-spacing: 0.05em;
-    color: #565656;
+    @include lato400;
   }
 
   @media screen and (min-width: 768px) {
@@ -356,70 +321,31 @@
     }
   }
 
-  @media screen and (min-width: 1024px) {
-    width: 30%;
-
-    .latestPost-img-card {
-      @include width100;
-    }
-
-    .description {
-      @include width100;
-    }
-
-    .arrow {
-      order: 0;
-    }
-  }
+  @include mediaImg;
 }
 
 .description-date {
   display: flex;
   justify-content: space-between;
-  
-  
 
   p {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 166%;
-    letter-spacing: 0.1em;
+    margin-top: 25px;
+    @include lato400;
     color: $color;
   }
 }
 
 .mostPopular {
   .card__container-item {
-    flex-direction: column;
+    @include column;
   }
 
-  @media screen and (min-width: 768px) {
-    .card__container {
-      display: $display;
-      flex-direction: row;
-      gap: 30px;
-    }
-
-    .card__container-item {
-      width: 50%;
-      overflow: hidden;
-    }
-
-    .mostPopular-card {
-      @include width100;
-    }
-
-    .description {
-      @include width100;
-     
-    }
-  }
+  @include mediaPopular;
 }
 
 .load-more-button {
   display: block;
-  margin: 0 auto  20px;
+  margin: 0 auto 20px;
   width: 180px;
   height: 46px;
   background-color: $colorhead;
@@ -427,12 +353,8 @@
 
   a {
     text-decoration: none;
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 166%;
-    letter-spacing: 0.1em;
-    color: #ffffff;
+    @include lato400;
+    color: $colorwhite;
   }
 }
 
@@ -444,13 +366,13 @@
 
   .wrapper {
     display: flex;
-    flex-direction: column;
+    @include column;
     gap: 35px;
   }
 
   &-title {
     display: f$display;
-    flex-direction: column;
+    @include column;
     gap: 15px;
 
     img {
@@ -458,61 +380,16 @@
     }
 
     p {
-      font-family: "RedHatDisplay", sans-serif;
-      font-weight: 400;
-      font-size: 24px;
-      line-height: 166%;
-      letter-spacing: 0.1em;
+      @include red500;
       color: $pcolor;
     }
   }
 
   &-description {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 32px;
-    letter-spacing: 0.05em;
-    color: $colorhead;
+    @include latodesc;
   }
 
-  @media screen and (min-width: 768px) {
-    .wrapper {
-      justify-content: flex-end;
-    }
-
-    &-title {
-      justify-content: flex-start;
-
-      p {
-        font-size: 23px;
-      }
-    }
-
-    &-description {
-      display: $display;
-      justify-content: flex-end;
-      text-align: end;
-      font-size: 19px;
-    }
-  }
-
-  @media screen and (min-width: 1024px) {
-    margin-top: 90px;
-    .wrapper {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-    &-title {
-      max-width: 42%;
-    }
-
-    &-description {
-      text-align: start;
-      max-width: 42%;
-    }
-  }
+  @include mediaDesc;
 }
 
 .footer {
@@ -520,39 +397,31 @@
   padding: 70px 0 70px;
   background-color: $backcolor;
   .wrapper {
-    flex-direction: column;
+    @include column;
     gap: 40px;
   }
 
   &__contacts {
     display: $display;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include column;
+    @include itemsCenter;
+    @include contentCenter;
     gap: 20px;
     margin-bottom: 50px;
 
     h2 {
-      font-family: "RedHatDisplay";
-      font-weight: 400;
-      font-size: 32px;
-      line-height: 42px;
-      letter-spacing: 0.05em;
-      color: $pcolor;
+      @include h2;
     }
 
     &-items {
       display: $display;
-      flex-direction: column;
+      @include column;
       gap: 15px;
     }
 
     &-item {
-      font-family: "Lato";
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 166%;
-      text-align: center;
+      @include latodesc;
+      @include textCenter;
       letter-spacing: 0.1em;
       color: $pcolor;
       text-decoration: none;
@@ -562,28 +431,27 @@
   &__social {
     display: $display;
     gap: 23px;
-    justify-content: center;
+    @include contentCenter;
 
     &-item {
       display: $display;
-      align-items: center;
-      justify-content: center;
+      @include itemsCenter;
+      @include contentCenter;
       width: 50px;
       height: 50px;
-
-      border: 1px solid #565656;
+      border: 1px solid $colorhead;
 
       &:hover {
         background-color: $colorhead;
 
         .icon {
-          fill: #ffffff;
+          fill: $colorwhite;
         }
       }
     }
 
     .icon {
-      fill: #565656;
+      fill: $colorhead;
       width: 25px;
       height: 25px;
     }
@@ -594,34 +462,5 @@
     margin: 0 auto;
   }
 
-  @media screen and (min-width: 768px) {
-    margin-top: 90px;
-
-    h2 {
-      font-size: 48px;
-      line-height: 64px;
-    }
-
-    &__contacts-item {
-      font-size: 16px;
-      line-height: 27px;
-    }
-
-    &__copyright {
-      font-size: 12px;
-      line-height: 20px;
-    }
-  }
-
-  @media screen and (min-width: 1024px) {
-    &__container {
-      display: $display;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    &__contacts {
-      gap: 30px;
-    }
-  }
+  @include mediaCopy;
 }

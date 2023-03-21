@@ -1,9 +1,9 @@
 @mixin Header {
-    justify-content: space-between;
-    height: 60px;
-    align-items: center;
-    transition: 0.3s;
-    display: flex;
+  justify-content: space-between;
+  height: 60px;
+  align-items: center;
+  transition: 0.3s;
+  display: flex;
   width: 94%;
   margin: 0 auto;
 }
@@ -16,3 +16,22 @@
   width: 100%;
 }
 
+@mixin column {
+  flex-direction: column;
+}
+
+@mixin width34 {
+  width: 34px;
+}
+
+@mixin itemsCenter {
+  align-items: center;
+}
+
+@mixin textCenter {
+  text-align: center;
+}
+
+@mixin contentCenter {
+  justify-content: center;
+}

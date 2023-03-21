@@ -1,60 +1,60 @@
 @mixin media1 {
-    @media screen and (min-width: 768px) {
-        .header {
-          &.open .wrapper {
-            padding-bottom: 70px;
-          }
-        }
-        .nav {
-          &__list {
-            flex-direction: row;
-            gap: 42px;
-          }
-          .header.open &__list {
-            transform: translate(-50%) scaleY(1);
-          }
-          &__link {
-            font-size: 14px;
-            &-line {
-              visibility: hidden;
-              position: relative;
-              top: 5px;
-              left: 50%;
-              height: 1px;
-              width: 40px;
-              background-color: $backgroundcolor;
-              transform: translate(-50%, -50%) scaleX(0);
-              transition: transform 0.2s ease-in-out;
-            }
-          }
-          &__link:hover ~ &__link-line {
-            visibility: visible;
-            transform: translate(-50%, -50%) scaleX(1);
-          }
-        }
-        .first-screen {
-          height: 320px;
-          .wrapper {
-            padding-top: 30px;
-          }
-          &__title {
-            font-size: 36px;
-          }
+  @media screen and (min-width: 768px) {
+    .header {
+      &.open .wrapper {
+        padding-bottom: 70px;
+      }
+    }
+    .nav {
+      &__list {
+        flex-direction: row;
+        gap: 42px;
+      }
+      .header.open &__list {
+        transform: translate(-50%) scaleY(1);
+      }
+      &__link {
+        font-size: 14px;
+        &-line {
+          visibility: hidden;
+          position: relative;
+          top: 5px;
+          left: 50%;
+          height: 1px;
+          width: 40px;
+          background-color: $backgroundcolor;
+          transform: translate(-50%, -50%) scaleX(0);
+          transition: transform 0.2s ease-in-out;
         }
       }
+      &__link:hover ~ &__link-line {
+        visibility: visible;
+        transform: translate(-50%, -50%) scaleX(1);
+      }
+    }
+    .first-screen {
+      height: 320px;
+      .wrapper {
+        padding-top: 30px;
+      }
+      &__title {
+        font-size: 36px;
+      }
+    }
+  }
 }
 
 @mixin media768 {
-    @media screen and (min-width: 768px) {
-        width: 90%;
-      }
+  @media screen and (min-width: 768px) {
+    width: 90%;
+  }
 }
 
 @mixin media1024 {
-    @media screen and (min-width: 1024px) {
-        width: 86%;
-        max-width: 1200px;
-      }
+  @media screen and (min-width: 1024px) {
+    width: 86%;
+    max-width: 1200px;
+  }
 }
 
 @mixin mediagap {
@@ -100,6 +100,139 @@
         font-size: 48px;
         line-height: 64px;
       }
+    }
+  }
+}
+
+@mixin mediapost {
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: left;
+    gap: 20px;
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+@mixin mediaA {
+  @media screen and (min-width: 768px) {
+    display: $display;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@mixin mediaImg {
+  @media screen and (min-width: 1024px) {
+    width: 30%;
+
+    .latestPost-img-card {
+      @include width100;
+    }
+
+    .description {
+      @include width100;
+    }
+
+    .arrow {
+      order: 0;
+    }
+  }
+}
+
+@mixin mediaPopular {
+  @media screen and (min-width: 768px) {
+    .card__container {
+      display: $display;
+      flex-direction: row;
+      gap: 30px;
+    }
+
+    .card__container-item {
+      width: 50%;
+      overflow: hidden;
+    }
+
+    .mostPopular-card {
+      @include width100;
+    }
+
+    .description {
+      @include width100;
+    }
+  }
+}
+
+@mixin mediaDesc {
+  @media screen and (min-width: 768px) {
+    .wrapper {
+      justify-content: flex-end;
+    }
+
+    &-title {
+      justify-content: flex-start;
+
+      p {
+        font-size: 23px;
+      }
+    }
+
+    &-description {
+      display: $display;
+      justify-content: flex-end;
+      text-align: end;
+      font-size: 19px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    margin-top: 90px;
+    .wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &-title {
+      max-width: 42%;
+    }
+
+    &-description {
+      text-align: start;
+      max-width: 42%;
+    }
+  }
+}
+
+@mixin mediaCopy {
+  @media screen and (min-width: 768px) {
+    margin-top: 90px;
+
+    h2 {
+      font-size: 48px;
+      line-height: 64px;
+    }
+
+    &__contacts-item {
+      font-size: 16px;
+      line-height: 27px;
+    }
+
+    &__copyright {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    &__container {
+      display: $display;
+      justify-content: space-between;
+      @include itemsCenter;
+    }
+
+    &__contacts {
+      gap: 30px;
     }
   }
 }

@@ -1,50 +1,115 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Red+Hat+Display:wght@400;500;600&display=swap'); 
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Red+Hat+Display:wght@400;500;600&display=swap");
 @import url(./_variables);
 
 @mixin small14px {
-    font-family: "Lato", sans-serif;
-		cursor: $cursor;
-		font-size: 16px;
-		font-weight: 400;
-		line-height: 17px;
-		text-transform: uppercase;
-		text-decoration: none;
-		color: #000;
+  font-family: "Lato", sans-serif;
+  cursor: $cursor;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
 }
 
 @mixin big600 {
-    font-family: 'Red Hat Display', sans-serif;
+  font-family: "Red Hat Display", sans-serif;
 }
 
 @mixin lato400 {
-    font-family: 'Lato';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 166%;
-letter-spacing: 0.05em;
-color: #565656;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 166%;
+  letter-spacing: 0.05em;
+  color: #565656;
 }
 
 @mixin weight600 {
-	font-weight: 600;
+  font-weight: 600;
 }
 
 @mixin lato {
-	flex-direction: column-reverse;
-    font-family: "Lato", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    letter-spacing: 0.1em;
-    color: $color;
+  flex-direction: column-reverse;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  letter-spacing: 0.1em;
+  font-size: 23px;
 }
 
 @mixin blog {
-	font-family: 'Red Hat Display', sans-serif ;
-    font-size: 48px;
-    font-weight: 400;
-    line-height: 64px;
-    letter-spacing: 0.05em;
-    color: $pcolor;
+  @include big600;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 64px;
+  letter-spacing: 0.05em;
+  color: $pcolor;
+}
+
+@mixin red500 {
+  @include big600;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  font-size: 23px;
+  line-height: 166%;
+  color: $colorhead;
+}
+
+@mixin h3 {
+  @include big600;
+  line-height: 36px;
+  letter-spacing: 0.05em;
+  margin-bottom: 46px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 166%;
+}
+
+@mixin subtitle {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+}
+
+@mixin px {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 186%;
+  letter-spacing: 0.05em;
+  color: $colorhead;
+}
+
+@mixin h4 {
+  @include big600;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 166%;
+}
+
+@mixin latodesc {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 0.05em;
+  color: $colorhead;
+}
+
+@mixin h2 {
+  @include big600;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 42px;
+  letter-spacing: 0.05em;
+  color: $pcolor;
 }
