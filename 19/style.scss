@@ -1,152 +1,245 @@
 @import url(./_reset);
-@import url(./assets/fonts/stylesheet.css);
 @import url(./_variables);
+@import url(./assets/fonts/stylesheet.css);
+
+$color: white;
+$colortext: #bdbdbd;
+$font-family: "montserratthin";
+$background: #161d31;
+$background-color: #283046;
+$background-hover: #9e8cfc;
 
 .body {
-	display: flex;
-    box-sizing: border-box;
+  display: flex;
+  box-sizing: border-box;
 }
 .sidebar-nav {
-	background: #283046;
-	width: 80px;
-	position: relative;
+  background: $background-color;
+  width: 80px;
+  position: relative;
+  transition: width 2s, height 2s, transform 2s;
 }
 .sidebar-nav_item {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 80px;
-	cursor: pointer;
-	svg {
-		fill: #BDBDBD;
-	}
-	&:hover {
-		background: #9E8CFC;
-		box-shadow: 0 0 20px rgba(158, 140, 252, 0.7);
-		svg {
-			fill: white;
-		}
-		.sidebar-nav__text {
-			color: $color_1;
-		}
-	}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  cursor: pointer;
+  svg {
+    fill: $colortext;
+  }
+  &:hover {
+    background: $background-hover;
+    box-shadow: 0 0 20px rgba(158, 140, 252, 0.7);
+    svg {
+      fill: $color;
+    }
+    .sidebar-nav__text {
+      color: $color;
+    }
+  }
 }
 .lightBoard {
-	display: flex;
-	height: 62px;
-	justify-content: center;
-	padding-top: 30px;
-	margin: 0 auto 40px auto;
+  display: flex;
+  height: 62px;
+  justify-content: center;
+  padding-top: 30px;
+  margin: 0 auto 40px auto;
 }
 .lines {
-	height: 25px;
-	margin-top: 30px;
-	text-align: center;
+  height: 25px;
+  margin-top: 30px;
+  text-align: center;
 }
 .switch--view {
-	z-index: 1;
-	background-image: url('./assets/img/right.svg');
-	position: absolute;
-	height: 20px;
-	width: 20px;
-	top: 36px;
-	right: -10px;
+  z-index: 1;
+  background-image: url("./assets/img/right.svg");
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  top: 36px;
+  right: -10px;
 }
 .sidebar-nav__link {
-	display: flex;
-	justify-content: center;
-	height: 60px;
-	flex-direction: column;
-	align-items: center;
-	text-decoration: none;
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
 }
 .sidebar-nav__text {
-	display: none;
-	font-family: $font-family_1;
-	font-size: 14px;
-	line-height: 17px;
-	color: $color_2;
+  display: none;
+  font-family: $font-family;
+  font-size: 14px;
+  line-height: 17px;
+  color: $colortext;
 }
 .switch-view__full {
-	background-image: url('./assets/img/left.svg');
+  background-image: url("./assets/img/left.svg");
 }
 .sidebar-nav__full {
-	width: 110px;
-	.sidebar-nav__text {
-		display: block;
-	}
-	.sidebar-nav__link {
-		justify-content: space-between;
-	}
+  width: 110px;
+  .sidebar-nav__text {
+    display: block;
+  }
+  .sidebar-nav__link {
+    justify-content: space-between;
+  }
 }
 .main {
-	background-color: $background-color_1;
-	width: 100%;
+  background-color: $background;
+  width: 100%;
 }
 .header {
-	height: 80px;
-	margin: 30px 80px 20px 80px;
-	background: #283046;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-	border-radius: 10px;
-	padding-right: 20px;
-	padding-left: 20px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  height: 80px;
+  margin: 30px 80px 20px 80px;
+  background: $background-color;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .quick-panel {
-	svg {
-		fill: #BDBDBD;
-		&:hover {
-			fill: white;
-		}
-	}
-	.icon {
-		width: 26px;
-		height: 26px;
-		margin-right: 20px;
-		cursor: pointer;
-		&:last-child {
-			margin-right: 0;
-		}
-	}
+  svg {
+    fill: $colortext;
+    &:hover {
+      fill: $color;
+    }
+  }
+  .icon {
+    width: 26px;
+    height: 26px;
+    margin-right: 20px;
+    cursor: pointer;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 .quick-settings {
-	svg {
-		fill: #BDBDBD;
-		&:hover {
-			fill: white;
-		}
-	}
-	.icon {
-		width: 26px;
-		height: 26px;
-		margin-right: 20px;
-		cursor: pointer;
-		&:last-child {
-			margin-right: 0;
-		}
-	}
-	display: flex;
-	justify-content: space-between;
-	width: 374px;
+  svg {
+    fill: $colortext;
+    &:hover {
+      fill: $color;
+    }
+  }
+  .icon {
+    width: 26px;
+    height: 26px;
+    margin-right: 20px;
+    cursor: pointer;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  display: flex;
+  justify-content: space-between;
+  width: 374px;
 }
 .lang__settings {
-	img {
-		margin-right: 20px;
-	}
-	span {
-		font-family: $font-family_1;
-		font-size: 18px;
-		line-height: 22px;
-		color: $color_2;
-	}
+  img {
+    margin-right: 20px;
+  }
+  span {
+    font-family: $font-family;
+    font-size: 18px;
+    line-height: 22px;
+    color: $colortext;
+  }
 }
 .content {
-	margin: 0 80px 130px 80px;
-	img {
-		width: 100%;
-	}
+  margin: 0 80px 130px 80px;
+  img {
+    width: 100%;
+  }
 }
 
+.quick-panel,
+.quick-settings {
+  svg {
+    fill: $colortext;
+    &:hover {
+      fill: $color;
+    }
+  }
+  .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sidebar-nav_item {
+    max-height: 60px;
+    justify-content: center;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+    .sidebar-nav__text {
+      display: none;
+    }
+  }
+  .sidebar-nav__link {
+    height: 60px;
+    justify-content: center;
+    flex-direction: row;
+    margin-right: 0;
+    .sidebar-nav__text {
+      display: none;
+    }
+  }
+  .quick-panel,
+  .quick-settings {
+    .icon {
+      width: 22px;
+      height: 22px;
+      margin-right: 12px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.quick-panel,
+.quick-settings {
+  svg {
+    fill: $colortext;
+    &:hover {
+      fill: $color;
+    }
+  }
+  .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .quick-panel,
+  .quick-settings {
+    .icon {
+      width: 22px;
+      height: 22px;
+      margin-right: 8px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
