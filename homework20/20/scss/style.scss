@@ -1,0 +1,293 @@
+@import url(./_reset);
+@import url(./_mixins);
+@import url(./_variables);
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600&display=swap");
+@import url(./assets/fonts/lato/stylesheet.css);
+
+.header {
+  width: 100%;
+
+  &__wrapper {
+    // @include center;
+    width: 95%;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__title {
+    font-family: "latoregular", sans-serif;
+    width: 168px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+}
+
+.main {
+  width: 100%;
+
+  &__wrapper {
+    // @include center;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 48px;
+    line-height: 64px;
+    text-align: left;
+    letter-spacing: 0.05em;
+    max-width: 470px;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__subtitle {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 28px;
+    line-height: 166%;
+    letter-spacing: 0.1em;
+    margin-top: 90px;
+  }
+
+  &__text {
+    font-family: "latoregular", sans-serif;
+    font-size: 19px;
+    line-height: 32px;
+    letter-spacing: 0.05em;
+    color: #565656;
+    text-align: justify;
+    max-width: 570px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__title {
+      font-size: 33px;
+    }
+
+    &__subtitle {
+      font-size: 28px;
+    }
+
+    &__text {
+      font-size: 19px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    &__title {
+      font-size: 48px;
+      line-height: 64px;
+      font-weight: 600;
+    }
+  }
+
+  @media screen and (min-width: 320px) {
+    &__title {
+      font-size: 26px;
+      line-height: 166%;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 32px;
+      margin-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
+
+.section {
+  width: 100%;
+
+  &__wrapper {
+    // @include center;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 166%;
+    letter-spacing: 0.1em;
+    margin-top: 90px;
+    margin-bottom: 50px;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__text {
+    font-family: "latoregular", sans-serif;
+    font-size: 19px;
+    line-height: 35px;
+    letter-spacing: 0.05em;
+    color: #565656;
+    word-spacing: 1px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__title {
+      font-size: 28px;
+    }
+
+    &__text {
+      font-size: 19px;
+    }
+  }
+
+  @media screen and (min-width: 320px) {
+    &__title {
+      font-size: 26px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  background-color: #f4f4f4;
+  margin-top: 90px;
+
+  &__wrapper {
+    // @include center;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: 0.05em;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__contact {
+    font-family: "latoregular", sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+  }
+
+  &__icons {
+    width: 269px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px 0;
+  }
+
+  .icon {
+    fill: #565656;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #565656;
+    padding: 10px;
+  }
+
+  &__icon:hover .icon {
+    background-color: #565656;
+    fill: #ffffff;
+  }
+
+  &__text {
+    font-family: "latoregular", sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 3px;
+    margin-top: 26px;
+  }
+  @media screen and (min-width: 768px) {
+    &__title {
+      font-size: 48px;
+      line-height: 64px;
+    }
+
+    &__contact {
+      font-size: 16px;
+      line-height: 27px;
+    }
+
+    &__text {
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    br {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    &__wrapper {
+      width: 95%;
+      position: relative;
+      align-items: inherit;
+    }
+
+    &__title {
+      margin-top: 70px;
+      margin-bottom: 30px;
+    }
+
+    &__contacts {
+      align-items: flex-start;
+    }
+
+    &__icons {
+      position: absolute;
+      right: 0;
+      top: 100px;
+    }
+
+    &__text {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 320px) {
+    &__title {
+      font-size: 32px;
+      line-height: 42px;
+    }
+
+    &__contact {
+      font-size: 16px;
+      line-height: 27px;
+    }
+
+    &__text {
+        font-size: 10px;
+        line-height: 156%;
+        text-align: center;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import url(./_reset);
+@import url(./_mixins);
+@import url(./_variables);
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600&display=swap");
+@import url(./assets/fonts/lato/stylesheet.css);
+.header {
+  width: 100%;
+}
+.header__wrapper {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+  width: 90%;
+}
+.header__title {
+  font-family: "latoregular", sans-serif;
+  width: 168px;
+  font-size: 16px;
+  line-height: 24px;
+}
+/*# sourceMappingURL=style.css.map */
