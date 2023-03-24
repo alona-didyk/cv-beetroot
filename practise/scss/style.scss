@@ -1,146 +1,195 @@
-
 @import url(./_reset);
 @import url(./_variables);
-
+@import url(./_mixins);
 @import url(./_fonts);
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Source+Sans+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Source+Sans+Pro&display=swap");
 
-*{
-    padding: 0;
-    margin: 0;
-    background-color: black;
-  }
-  header{
-    background-color: black;
-  }
-  li{
-    list-style: none;
-  }
-  a{
-    color: white;
-    text-decoration: none;
-    font-family: 'Source Sans Pro';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 22px;
-  }
+* {
+  padding: 0;
+  margin: 0;
+  background-color: $background;
+}
+header {
+  background-color: $background;
+}
+li {
+  list-style: none;
+}
+a {
+  color: $color;
+  @include a;
+}
 
-  .container{
-    max-width: 1224px;
-    width: 90%;
-    margin: 0 auto;
-  }
+.container {
+  max-width: 1224px;
+  width: 90%;
+  margin: 0 auto;
 
-  .navbar{
+  &navbar {
     min-height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     display: flex;
     justify-content: right;
+    //   margin-right: 200px;
   }
-  .nav-branding{
+  &nav-branding {
     font-size: 2rem;
   }
-  .nav-menu{
+  &nav-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 60px;
   }
-  .nav-link{
+  &nav-link {
     transition: 0.3s ease-out;
   }
-  .nav-link:hover{
-    color: white;
-  }
-  .hamburger{
+
+  &hamburger {
     display: none;
     cursor: pointer;
   }
-  .bar{
+  &bar {
     display: block;
     width: 25px;
     height: 3px;
     margin: 5px auto;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    background-color: white;
+    background-color: $color;
   }
 
-  @media(max-width:1024px){
-    .hamburger{
+  @media (max-width: 1024px) {
+    &hamburger {
       display: block;
     }
-   .hamburger.active .bar:nth-child(2){
+    &hamburger.active .bar:nth-child(2) {
       opacity: 0;
     }
-   .hamburger.active .bar:nth-child(1){
+    &hamburger.active .bar:nth-child(1) {
       transform: translateY(8px) rotate(45deg);
     }
-   .hamburger.active .bar:nth-child(3){
+    &hamburger.active .bar:nth-child(3) {
       transform: translateY(-8px) rotate(-45deg);
     }
-   .nav-menu{
+    &nav-menu {
       position: fixed;
       left: -100%;
       top: 70px;
       gap: 0;
       flex-direction: column;
-      background-color: black;
+      background-color: $background;
       width: 100%;
       text-align: center;
       transition: 0.3s;
     }
-   .nav-item{
+    &nav-item {
       margin: 16px 0;
     }
-   .nav-menu.active{
+    .nav-menu.active {
       left: 0;
     }
   }
+}
 
-  .wrapper {
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    // padding: 250px 250px;
+.wrapper {
+  background-color: $background;
+  @include center;
+  //   display: flex;
+  flex-direction: column;
+  //   justify-content: center;
+  //   align-items: center;
 
-    &__head {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 200px;
-        
-        &-h {
-            color: white;
-            font-family: 'Poppins';
-font-style: normal;
-font-weight: 500;
-font-size: 84px;
-line-height: 102px;
-        }
-    }
+  &__head {
+    @include center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    padding-top: 200px;
 
-    &__text {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 28px;
-        &-p {
-            color: white;
-            font-family: 'Source Sans Pro';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 22px;
-            line-height: 34px; 
-            text-align: center;
-        }
-    }
-    picture {
-        padding-top: 45px;
+    &-h {
+      @include h1;
+      color: $color;
+      //   color: white;
+      //   font-family: "Poppins";
+      //   font-style: normal;
+      //   font-weight: 500;
+      //   font-size: 84px;
+      //   line-height: 102px;
     }
   }
+
+  &__text {
+    @include center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    padding-top: 28px;
+    &-p {
+      color: $color;
+      @include p;
+    }
+  }
+  picture {
+    padding-top: 45px;
+  }
+  @media screen and (max-width: 768px) {
+    &__head {
+      @include center;
+      //   display: flex;
+      //   justify-content: center;
+      //   align-items: center;
+      padding-top: 200px;
+
+      &-h {
+        color: $color;
+        font-family: "Poppins";
+        font-size: 72px;
+        line-height: 83px;
+      }
+    }
+    &__text {
+      @include center;
+      //   display: flex;
+      //   justify-content: center;
+      //   align-items: center;
+      padding-top: 22px;
+      &-p {
+        color: $color;
+        @include p;
+        padding-left: 97px;
+        padding-right: 97px;
+      }
+    }
+  }
+  @media screen and (max-width: 320px) {
+    &__head {
+      @include center;
+      //   display: flex;
+      //   justify-content: center;
+      //   align-items: center;
+      padding-top: 200px;
+
+      &-h {
+        color: $color;
+        @include h2;
+      }
+    }
+    &__text {
+      @include center;
+      //   display: flex;
+      //   justify-content: center;
+      //   align-items: center;
+      padding-top: 22px;
+      &-p {
+        color: $color;
+        @include p2;
+        padding-left: 52px;
+        padding-right: 51px;
+        
+      }
+    }
+  }
+}
