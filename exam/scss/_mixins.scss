@@ -1,0 +1,39 @@
+@mixin button {
+  height: 60px;
+  width: 213px;
+  background-color: $color-button;
+  border: none;
+  text-transform: uppercase;
+  color: $color-title;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 2px;
+}
+
+@mixin font-aleo {
+  font-family: "aleoregular", serif;
+  font-weight: 400;
+}
+
+@mixin title {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: $color-title;
+  letter-spacing: 2px;
+}
+
+@mixin text {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  letter-spacing: 4px;
+  color: $color-title;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+@mixin background {
+  background-size: cover;
+  background-repeat: no-repeat;
+}

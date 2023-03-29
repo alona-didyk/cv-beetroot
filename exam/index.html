@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png" />
-    <link rel="stylesheet" href="./scss/style.css">
-    <title>Document</title>
-</head>
-<body>
-    <h1>gjhfv</h1>
-</body>
+    <link rel="stylesheet" href="./scss/style.css" />
+    <title>Bhromaon</title>
+  </head>
+  <body>
+    <header class="header">
+        <div class="header__image-wrapper"></div>
+        <div class="header__wrapper">
+          <h1 class="header__title">Bhromaon</h1>
+          <p class="header__text">Safe Travel Anywhere</p>
+          <form class="header__form">
+            <input
+              class="header__input"
+              type="text"
+              placeholder="Search Your Travel Destination"
+            />
+            <button class="header__button" type="button">
+              <svg class="header__icon--search">
+                <use xlink:href="./assets/icons/sprite.svg#search"></use>
+              </svg>
+              Search
+            </button>
+          </form>
+  
+          <div class="header__icon-wrapper">
+            <a href="#navigation" class="header__icon__link">
+              <p class="header__scroll-down">Scroll Down</p>
+              <svg class="header__icon--chevron">
+                <use xlink:href="./assets/icons/sprite.svg#chevron-down"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </header>
+  </body>
 </html>

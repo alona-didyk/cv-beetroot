@@ -2,10 +2,150 @@
 @import "./mixins";
 @import "./variables";
 @import url("./assets/fonts/aleo/aleo.css");
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
 
-body {
-    background-color: blue;
-    background-color: aqua;
+.header {
+  width: 100%;
+  position: relative;
+
+  &__image-wrapper {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../assets/img/header.jpg");
+    @include background;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__title {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 52px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 10px;
+    color: #ffffff;
+    margin-bottom: 48px;
+  }
+
+  &__form {
+    position: relative;
+  }
+
+  &__input {
+    width: 650px;
+    height: 60px;
+    border-radius: 0%;
+    border: none;
+  }
+
+  &__input::placeholder {
+    padding-left: 26px;
+    color: #999999;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 4px;
+  }
+
+  &__input:focus {
+    outline: 2px solid #5373fd;
+  }
+
+  &__button {
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    height: 52px;
+    width: 139px;
+    background-color: #5373fd;
+    border: none;
+
+    @include font-aleo;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 3px;
+    color: #ffffff;
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.5s ease-out;
+  }
+
+  &__icon--search {
+    width: 16px;
+    height: 16px;
+    fill: #ffffff;
+    transition: all 0.5s ease-out;
+  }
+
+  &__button:hover {
+    background-color: #ffffff;
+    outline: 2px solid #5373fd;
+    color: #5373fd;
+  }
+
+  &__button:hover &__icon--search {
+    fill: #5373fd;
+  }
+
+  &__icon__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+    gap: 8px;
+    text-decoration: none;
+  }
+
+  &__scroll-down {
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    transition: 0.5s;
+  }
+
+  &__icon--chevron {
+    height: 16px;
+    width: 16px;
+    fill: #ffffff;
+    transition: 0.5s;
+  }
+
+  &__icon__link:hover &__scroll-down {
+    color: #999999;
+    transform: translateY(10px);
+  }
+
+  &__icon__link:hover &__icon--chevron {
+    transform: translateY(10px);
+    fill: #999999;
+  }
 }
