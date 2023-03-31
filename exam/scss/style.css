@@ -1212,12 +1212,12 @@ textarea {
     max-width: 720px;
     width: 720px;
     max-height: 659px;
-    height: 659px;
     margin-left: 14rem;
     padding-bottom: 60px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    gap: 2px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1238,8 +1238,8 @@ textarea {
     line-height: 40px;
     text-transform: capitalize;
     color: #FFFFFF;
-    padding-top: -22px;
-    padding-bottom: 24px;
+    padding-top: -2px;
+    margin-top: 20px;
     text-align: center;
   }
   .info__content--text {
@@ -1256,6 +1256,7 @@ textarea {
     text-align: center;
   }
   .info .btn--blue {
+    margin-top: 5px;
     width: 149px;
     background-color: #5373FD;
     text-transform: uppercase;
