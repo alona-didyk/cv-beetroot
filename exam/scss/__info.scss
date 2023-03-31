@@ -1,0 +1,176 @@
+.info {
+  background-image: url("../../exam/assets/img/why-background.jpg");
+  @include background;
+  background-position: center;
+  padding: 190px 2rem;
+
+  .wrapper {
+    display: flex;
+    padding-left: 60px;
+    padding-right: 110px;
+  }
+  &__content {
+    color: $color-title;
+    max-width: 900px;
+    width: 558px;
+    margin-right: 11rem;
+    padding-bottom: 15px;
+    &--title {
+      @include title;
+      padding-bottom: 24px;
+    }
+    &--text {
+      @include text;
+      width: 558px;
+      height: 118px;
+      margin-bottom: 2px;
+    }
+  }
+
+  .btn--blue {
+    @include button;
+    text-align: center;
+    height: 30px;
+    padding: 25px 38px;
+    text-transform: uppercase;
+    margin-top: 4.5rem;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1.2px;
+    // display: inline-block;
+  }
+  &__images {
+    // padding-left: 20px;
+    img:last-child {
+      margin-top: 16px;
+        margin-left: 11rem;
+      display: inline-block;
+    }
+  }
+}
+
+@media screen and (max-width: 1360px) and (min-width: 1024px) {
+  .info {
+    background-image: url("../../exam/assets/img/why-background.jpg");
+    @include background;
+    background-position: center;
+    padding: 190px 2rem;
+
+    .wrapper {
+      display: flex;
+      padding-left: 60px;
+      padding-right: 110px;
+    }
+    &__content {
+      color: $color-title;
+      max-width: 900px;
+      width: 558px;
+      margin-right: 11rem;
+      padding-bottom: 15px;
+      &--title {
+        @include title;
+        padding-bottom: 24px;
+      }
+      &--text {
+        @include text;
+        width: 558px;
+        height: 118px;
+        margin-bottom: 2px;
+      }
+    }
+
+    .btn--blue {
+      @include button;
+      text-align: center;
+      height: 30px;
+      padding: 25px 38px;
+      text-transform: uppercase;
+      margin-top: 4.5rem;
+      text-decoration: none;
+      font-size: 16px;
+      letter-spacing: 1.2px;
+      // display: inline-block;
+    }
+    &__images {
+      // padding-left: 20px;
+      img:last-child {
+        margin-top: 16px;
+        margin-left: 6rem;
+        display: inline-block;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .info {
+    background-image: url("../../exam/assets/img/whyBackground-768.jpg");
+    @include background;
+    background-position: center;
+    padding: 60px 5rem;
+    max-height: 659px;
+
+    .wrapper {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      //   padding-left: 60px;
+      //   padding-right: 110px;
+    }
+    &__content {
+      color: $color-title;
+      max-width: 720px;
+      width: 720px;
+      max-height: 659px;
+      height: 659px;
+      //   margin-right: 11rem;
+      margin-left: 14rem;
+      padding-bottom: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      &--title {
+        @include title;
+        padding-top: -22px;
+        padding-bottom: 24px;
+        text-align: center;
+      }
+      &--text {
+        @include text;
+        width: 720px;
+        height: 118px;
+        margin-bottom: 2px;
+        text-align: center;
+      }
+    }
+
+    .btn--blue {
+      @include button;
+      text-align: center;
+      height: 30px;
+      padding: 15px 38px;
+      text-transform: uppercase;
+      margin-top: 4.5rem;
+      text-decoration: none;
+      font-size: 16px;
+      letter-spacing: 1.2px;
+      // display: inline-block;
+    }
+    &__images {
+      width: 720px;
+      height: 219px;
+      padding-left: 50px;
+      display: flex;
+      flex-direction: row;
+      
+      gap: 24px;
+      img:last-child {
+        margin-top: 16px;
+          margin-left: 0.3rem;
+        display: inline-block;
+      }
+    }
+  }
+}

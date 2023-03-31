@@ -1,14 +1,51 @@
 @mixin button {
-  height: 60px;
-  width: 213px;
+  width: 149px;
   background-color: $color-button;
-  border: none;
   text-transform: uppercase;
   color: $color-title;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 2px;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+  
+  
+  &--blue {
+    background: $color-button;
+    color: $color-title;
+    padding: 16px 24px;
+    transition: background 0.5s ease;
+    &:hover {
+      background: rgba($color-button, 0.5);
+    }
+  }
+  &--two-part {
+    position: relative;
+    z-index: 1;
+    &:hover {
+      &::before {
+        width: 100%;
+        clip-path: polygon(0 1%, 100% 0, 100% 100%, 0% 100%);
+      }
+    }
+    &::before {
+      z-index: -1;
+      position: absolute;
+      content: "";
+      width: 50%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      transition: all 0.3s ease;
+      clip-path: polygon(0 1%, 70% 0, 100% 100%, 0% 100%);
+      background: $color-button-darker;
+    }
+  }
 }
+
+
 
 @mixin font-aleo {
   font-family: "aleoregular", serif;
@@ -16,21 +53,23 @@
 }
 
 @mixin title {
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
-  color: $color-title;
-  letter-spacing: 2px;
+  font-family: "aleoregular";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 40px;
+      text-transform: capitalize;
+      color: $color-title;
 }
 
 @mixin text {
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
-  letter-spacing: 4px;
-  color: $color-title;
-  font-size: 16px;
-  line-height: 28px;
+  font-family: $josefin;
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 28px;
+letter-spacing: 0.1em;
+color: $color-title;
 }
 
 @mixin background {

@@ -1,34 +1,49 @@
 @import "./_reset";
 @import "./_mixins";
 @import "./_variables";
+@import "./_responsive";
+@import "./header";
+@import "./_info";
+@import "./keyframes";
 @import url("./assets/fonts/aleo/aleo.css");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap");
 
 html {
-  font-size: 10px;
+  scroll-behavior: smooth;
 }
-body {
-  padding: 15px 15px 14px 15px;
-}
-.container {
-  max-width: 1121px;
+
+.wrapper {
+  max-width: 1360px;
   margin-left: auto;
   margin-right: auto;
 }
+  
+.only-responsive {
+  display: none;
+}
+
 .btn {
+  // height: 60px;
+  // width: 149px;
+  // background-color: $color-button;
+  text-transform: uppercase;
+  color: $color-title;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 2px;
   border: 0;
   outline: none;
   box-shadow: none;
   cursor: pointer;
-  background: transparent;
-
-  &--primary {
-    background: $primary;
-    color: #fff;
-    padding: 19px 17px 17px 34px;
+  
+  
+  &--blue {
+    background: $color-button;
+    color: $color-title;
+    padding: 16px 24px;
     transition: background 0.5s ease;
     &:hover {
-      background: rgba($primary, 0.5);
+      background: rgba($color-button, 0.5);
     }
   }
   &--two-part {
@@ -38,9 +53,10 @@ body {
       &::before {
         width: 100%;
         clip-path: polygon(0 1%, 100% 0, 100% 100%, 0% 100%);
+        background: $color-button-darker;
       }
     }
-    &::before {
+    &::after {
       z-index: -1;
       position: absolute;
       content: "";
@@ -50,378 +66,12 @@ body {
       left: 0;
       transition: all 0.3s ease;
       clip-path: polygon(0 1%, 70% 0, 100% 100%, 0% 100%);
-      background: #496bfe;
+      background: $color-button-darker;
     }
   }
 }
 
-input {
-  outline: none;
-  border: none;
-}
-
-.only-responsive {
-  display: none;
-}
-
-.header {
-  &__main {
-    background-image: url("../../exam/assets/img/header.jpg");
-    background-size: cover;
-    background-position: center;
-    min-height: 740px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  &__content {
-    text-align: center;
-    h1 {
-      font-size: 4.8rem;
-      font-weight: bold;
-      font-family: $josefin;
-      margin-bottom: 11px;
-      text-transform: uppercase;
-      letter-spacing: 4.8px;
-      color: #fff;
-    }
-    h2 {
-      font-family: $josefin;
-      font-weight: 400;
-      font-size: 2.2rem;
-      margin-bottom: 4.8rem;
-      letter-spacing: 6.82px;
-      color: #fff;
-    }
-  }
-  &__form {
-    max-width: 100%;
-    width: 65.3rem;
-    margin-bottom: 10.8rem;
-    .form__group {
-      max-height: 6.3rem;
-      background: #fff;
-      padding: 2px;
-      display: flex;
-      justify-content: space-between;
-    }
-    .btn {
-      display: flex;
-      align-items: center;
-      text-transform: uppercase;
-      font-family: $aleo;
-      font-size: 14px;
-      letter-spacing: 1.4px;
-      line-height: 26px;
-      font-weight: 400;
-      svg {
-        width: 20px;
-        display: inline-block;
-        margin-left: 15px;
-      }
-    }
-  }
-  &__input {
-    flex: 1;
-    font-size: 1.8rem;
-    font-family: $josefin;
-    &::placeholder {
-      text-align: center;
-      font-size: 14px;
-      color: #999999;
-      line-height: 1;
-      font-weight: 400;
-      letter-spacing: 2.8px;
-      font-family: $josefin;
-    }
-    padding: 16px 10px;
-  }
-  &__scroll {
-    p {
-      font-size: 14px;
-      letter-spacing: 2.8px;
-      line-height: 26px;
-      font-family: $josefin;
-      color: #fff;
-    }
-    span {
-      display: block;
-      text-align: center;
-      i {
-        color: #fff;
-        font-size: 14px;
-        animation: moveArrow 0.8s infinite alternate;
-      }
-    }
-  }
-  &__nav {
-    background: $primary;
-    padding: 30px 0px;
-    color: #fff;
-    .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      ul {
-        display: flex;
-        list-style: none;
-        li {
-          margin-left: 4.2rem;
-          a {
-            text-transform: uppercase;
-            text-decoration: none;
-            font-size: 14px;
-            line-height: 26px;
-            color: #fff;
-            transition: letter-spacing 0.5s ease;
-            display: inline-block;
-            &:hover {
-              letter-spacing: 2px;
-            }
-          }
-        }
-      }
-    }
-  }
-  &__logo {
-    font-weight: bold;
-    font-size: 2.4rem;
-    line-height: 2.6rem;
-    letter-spacing: 2.4px;
-    text-transform: uppercase;
-    font-family: $josefin;
-  }
-}
-
-.about {
-  background-image: url("../../exam/assets/img/why-background.jpg");
-  background-size: cover;
-  background-position: center;
-  padding: 11.5rem 0px;
-  .container {
-    display: flex;
-    align-items: flex-end;
-  }
-  &__content {
-    color: #fff;
-    max-width: 56rem;
-    margin-right: 11rem;
-    padding-bottom: 15px;
-    h2 {
-      font-family: $aleo;
-      font-weight: 400;
-      font-size: 3.6rem;
-      margin-bottom: 5rem;
-    }
-    p {
-      line-height: 26px;
-      font-size: 16px;
-      letter-spacing: 1.6px;
-      color: #e8e8e8;
-      margin-top: 3rem;
-      &:first-of-type {
-        margin-top: 0px;
-      }
-    }
-    .btn--primary {
-      padding: 21px 40px;
-      text-transform: uppercase;
-      margin-top: 4.5rem;
-      text-decoration: none;
-      font-size: 16px;
-      letter-spacing: 1.2px;
-      display: inline-block;
-    }
-  }
-  &__images {
-    img:last-child {
-      margin-top: 10px;
-      margin-left: 9rem;
-      display: inline-block;
-    }
-  }
-}
-
-.how-to {
-  background: #333;
-  padding: 4.4rem 0px 8rem 0px;
-  .container {
-    padding: 0px 5.6rem;
-  }
-  .decoration {
-    position: absolute;
-    top: 4%;
-    left: 11%;
-    z-index: 1;
-  }
-  &__items {
-    padding-top: 8rem;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    position: relative;
-  }
-  &__item {
-    text-align: center;
-    background: #333;
-    z-index: 2;
-    p {
-      font-size: 3.6rem;
-      color: #e8e8e8;
-      font-family: $aleo;
-      margin-top: 19px;
-    }
-  }
-}
-
-.place {
-  min-height: 70rem;
-  background-image: url("../../exam/assets/img/house.jpg");
-  background-position: center;
-  background-size: cover;
-  .container {
-    display: flex;
-    min-height: 70rem;
-  }
-  &.inverted {
-    background-image: url("../../exam/assets/img/mountain.jpg");
-    .container {
-      justify-content: flex-end;
-    }
-  }
-  &__content {
-    width: 50%;
-    align-self: flex-end;
-    margin-bottom: 9.9rem;
-    background: rgba(#232323, 0.9);
-    padding: 4.8rem 3rem;
-    color: #fff;
-    .sub {
-      font-size: 2rem;
-      letter-spacing: 1.5px;
-      margin-bottom: 2.3rem;
-    }
-    h2 {
-      text-transform: uppercase;
-      font-family: $josefin;
-      margin-bottom: 13px;
-      font-weight: 400;
-      font-size: 20px;
-    }
-    p {
-      line-height: 2.6rem;
-      font-size: 16px;
-      color: #e8e8e8;
-      margin-bottom: 4.6rem;
-      font-family: $josefin;
-    }
-    .btn--primary {
-      text-decoration: none;
-      text-transform: uppercase;
-      font-size: 16px;
-      letter-spacing: 1.2px;
-      padding: 21px 34px;
-      display: inline-block;
-    }
-  }
-}
-
-.testimonials {
-  min-height: 73rem;
-  background-image: url("../../exam/assets/img/tourist.jpg");
-  background-size: cover;
-  background-position: center;
-  padding-top: 12.8rem;
-  color: #fff;
-  &__title {
-    text-align: center;
-    text-transform: capitalize;
-    margin-bottom: 9rem;
-    font-family: $aleo;
-    font-size: 3.6rem;
-  }
-  &__item {
-    display: flex;
-    align-items: stretch;
-  }
-  &__image {
-    width: 40%;
-    object-fit: contain;
-    overflow: hidden;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-    &:hover {
-      img {
-        transform: scale(1.1);
-      }
-    }
-  }
-  &__content {
-    width: 60%;
-    padding: 4.9rem 2.5rem 3.9rem 5.9rem;
-    background: #333;
-    h3 {
-      text-transform: uppercase;
-      font-size: 20px;
-      margin-bottom: 8px;
-      font-family: $josefin;
-    }
-    p {
-      font-family: $josefin;
-      color: #e8e8e8;
-      font-size: 16px;
-      line-height: 26px;
-      i {
-        color: $primary;
-        font-size: 3.6rem;
-        display: inline-block;
-        margin-right: 5px;
-      }
-    }
-  }
-}
-
-.footer {
-  background: #232323;
-  display: flex;
-  justify-content: center;
-  padding-top: 12rem;
-  padding-bottom: 5rem;
-  &__content {
-    text-align: center;
-    color: #fff;
-    p {
-      font-size: 16px;
-      line-height: 26px;
-      font-family: $josefin;
-      letter-spacing: 1.6px;
-      margin-top: 8px;
-      margin-bottom: 29px;
-    }
-  }
-  &__icons {
-    a {
-      text-decoration: none;
-      display: inline-block;
-      margin-right: 24px;
-      font-size: 16px;
-      &:hover {
-        i {
-          color: $primary;
-        }
-      }
-      i {
-        color: #fff;
-        transition: color 0.5s ease;
-      }
-      &:last-child {
-        margin-right: 0px;
-      }
-    }
-  }
-}
+// @import "about";
+// @import "how-to";
+// @import "place";
+// @import "testimonials";

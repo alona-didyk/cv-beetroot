@@ -1,168 +1,84 @@
-// Small desktops
-@media screen and (max-width: 1024px) {
-    .container {
-      padding: 0px 30px;
-    }
-    .how-to .decoration {
-      width: 77%;
-    }
-  }
-  // Tablets
-  @media screen and (max-width: 768px) {
-    .only-responsive {
-      display: inline-block;
-    }
-    html {
-      font-size: 9px;
-    }
-    .about {
-      .container {
-        flex-direction: column;
-        align-items: center;
-      }
-      &__content {
-        margin-right: 0px;
-      }
-      &__images {
-        margin-top: 3rem;
-        text-align: center;
-      }
-    }
-    .header__form .form__group {
-      padding: 0px;
-    }
-    .header__nav .container {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      .hamburger {
-        position: absolute;
-        top: 10px;
-        right: 30px;
-        transform: translateY(-50%);
-        width: 30px;
-        height: 24px;
-        &.open {
-          span {
-            &:first-child {
-              top: 50%;
-              transform: translateY(-50%) rotate(45deg);
-            }
-            &:nth-child(2) {
-              display: none;
-            }
-            &:last-child {
-              top: 50%;
-              transform: translateY(-50%) rotate(-45deg);
-            }
-          }
-        }
-        span {
-          transition: transform 0.3s ease;
-          width: 100%;
-          height: 3px;
-          background: #fff;
-          position: absolute;
-          left: 0;
-          &:first-child {
-            top: 0;
-          }
-          &:nth-child(2) {
-            top: 8px;
-          }
-          &:last-child {
-            top: 16px;
-          }
-        }
-      }
-      ul {
-        margin-top: 3rem;
-        flex-direction: column;
-        position: absolute;
-        visibility: hidden;
-        opacity: 0;
-        li {
-          margin-left: 0px;
-          margin-bottom: 20px;
-          &:last-child {
-            margin-bottom: 0px;
-          }
-        }
-        &.open {
-          position: relative;
-          visibility: visible;
-          opacity: 1;
-        }
-      }
-    }
-  }
-  // Phones
-  @media screen and (max-width: 576px) {
-    html {
-      font-size: 7px;
-    }
-    body {
-      padding: 0px;
-    }
-    .container {
-      padding: 0px 15px;
-    }
-    .header__main {
-      min-height: 50rem;
-    }
-    .header__form {
-      .form__group {
-        flex-direction: column;
-      }
-      width: 100%;
-    }
-    .btn--primary {
-      display: flex;
-      justify-content: center;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      font-size: 2rem !important;
-    }
-    .about__images {
-      img {
-        width: 100%;
-      }
-      img:last-child {
-        margin-left: 0px;
-      }
-    }
-    .how-to {
-      padding-top: 8rem;
-    }
-    .how-to .decoration {
-      display: none;
-    }
-    .how-to__items {
-      align-items: center;
-      padding-top: 0px;
-    }
-    .how-to__item {
-      width: 100%;
-      margin-bottom: 7rem;
-      &:last-child {
-        margin-bottom: 0px;
-      }
-    }
-    .place__content {
-      width: 100%;
-    }
-    .testimonials {
-      padding-bottom: 5rem;
-      &__item {
-        flex-direction: column;
-      }
-      &__image {
-        width: 100%;
-      }
-      &__content {
-        width: 100%;
-        margin-top: -2px;
-      }
-    }
-  }
+// @media screen and (max-width: 1024px) {
+//     .wrapper {
+//       padding: 0px 30px;
+//     }
+//     .how-to .decoration {
+//       width: 77%;
+//     }
+//   }
+//   // Tablets
+//   @media screen and (max-width: 768px) {
+//     .only-responsive {
+//       display: inline-block;
+//     }
+//     html {
+//       font-size: 9px;
+//     }
+//     .info {
+//       .wrapper {
+//         flex-direction: column-reverse;
+//         align-items: center;
+//       }
+//       &__content {
+//         margin-right: 0px;
+//       }
+//       &__images {
+//         margin-top: 3rem;
+//         text-align: center;
+//       }
+//     }
+//   }
+//   // Phones
+//   @media screen and (max-width: 576px) {
+//     html {
+//       font-size: 7px;
+//     }
+//     body {
+//       padding: 0px;
+//     }
+//     .wrapper {
+//       padding: 0px 15px;
+//     }
+//     .info__images {
+//       img {
+//         width: 100%;
+//       }
+//       img:last-child {
+//         margin-left: 0px;
+//       }
+//     }
+//     .how-to {
+//       padding-top: 8rem;
+//     }
+//     .how-to .decoration {
+//       display: none;
+//     }
+//     .how-to__items {
+//       align-items: center;
+//       padding-top: 0px;
+//     }
+//     .how-to__item {
+//       width: 100%;
+//       margin-bottom: 7rem;
+//       &:last-child {
+//         margin-bottom: 0px;
+//       }
+//     }
+//     .place__content {
+//       width: 100%;
+//     }
+//     .testimonials {
+//       padding-bottom: 5rem;
+//       &__item {
+//         flex-direction: column;
+//       }
+//       &__image {
+//         width: 100%;
+//       }
+//       &__content {
+//         width: 100%;
+//         margin-top: -2px;
+//       }
+//     }
+//   }
+  
