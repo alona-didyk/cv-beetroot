@@ -43,7 +43,7 @@
     // padding-left: 20px;
     img:last-child {
       margin-top: 16px;
-        margin-left: 11rem;
+      margin-left: 11rem;
       display: inline-block;
     }
   }
@@ -96,6 +96,7 @@
       img:last-child {
         margin-top: 16px;
         margin-left: 6rem;
+        margin-right: 5rem;
         display: inline-block;
       }
     }
@@ -108,6 +109,8 @@
     background-position: center;
     padding: 60px 5rem;
     max-height: 659px;
+    height: 704px;
+    max-width: 1024px;
 
     .wrapper {
       display: flex;
@@ -122,7 +125,7 @@
       max-width: 720px;
       width: 720px;
       max-height: 659px;
-    //   height: 659px;
+      //   height: 659px;
       //   margin-right: 11rem;
       margin-left: 14rem;
       padding-bottom: 60px;
@@ -148,7 +151,7 @@
     }
 
     .btn--blue {
-        margin-top: 5px;
+      top: -60px;
       @include button;
       text-align: center;
       height: 30px;
@@ -166,12 +169,176 @@
       padding-left: 50px;
       display: flex;
       flex-direction: row;
-      
+
       gap: 24px;
       img:last-child {
         margin-top: 16px;
-          margin-left: 0.3rem;
+        margin-left: 0.3rem;
         display: inline-block;
+      }
+      img {
+        width: 348px;
+        height: 219px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 576px) {
+  .info {
+    background-image: url("../../exam/assets/img/whyBackground-768.jpg");
+    @include background;
+    background-position: center;
+    padding: 60px 5rem;
+    max-height: 659px;
+
+    .wrapper {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      //   padding-left: 60px;
+      //   padding-right: 110px;
+    }
+    &__content {
+      color: $color-title;
+      max-width: 720px;
+      width: 720px;
+      max-height: 659px;
+      //   height: 659px;
+      //   margin-right: 11rem;
+      margin-left: 14rem;
+      padding-bottom: 60px;
+      display: flex;
+      gap: 2px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      &--title {
+        @include title;
+        padding-top: -2px;
+        margin-top: 20px;
+        text-align: center;
+      }
+      &--text {
+        @include text;
+        width: 540px;
+        height: 118px;
+        margin-bottom: 2px;
+        text-align: center;
+      }
+    }
+
+    .btn--blue {
+      top: -60px;
+      @include button;
+      text-align: center;
+      height: 30px;
+      padding: 15px 38px;
+      text-transform: uppercase;
+      margin-top: 4.5rem;
+      text-decoration: none;
+      font-size: 16px;
+      letter-spacing: 1.2px;
+      // display: inline-block;
+    }
+    &__images {
+      width: 540px;
+      height: 219px;
+      padding-left: 50px;
+      display: flex;
+      flex-direction: row;
+
+      gap: 24px;
+      img:last-child {
+        margin-top: 2px;
+        margin-left: 0.3rem;
+        display: inline-block;
+      }
+      img {
+        width: 258px;
+        height: 162px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) and (min-width: 320px) {
+  .info {
+    background-image: url("../../exam/assets/img/whyBackground-768.jpg");
+    @include background;
+    background-position: center;
+    padding: 60px 5rem;
+    max-height: 659px;
+
+    .wrapper {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      //   padding-left: 60px;
+      //   padding-right: 110px;
+    }
+    &__content {
+      color: $color-title;
+      max-width: 720px;
+      width: 720px;
+      max-height: 659px;
+      //   height: 659px;
+      //   margin-right: 11rem;
+      margin-left: 14rem;
+      padding-bottom: 60px;
+      display: flex;
+      gap: 2px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      &--title {
+        @include title;
+        padding-top: -2px;
+        margin-top: 20px;
+        text-align: center;
+      }
+      &--text {
+        @include text;
+        width: 540px;
+        height: 118px;
+        margin-bottom: 2px;
+        text-align: center;
+      }
+    }
+
+    .btn--blue {
+      top: -60px;
+      @include button;
+      text-align: center;
+      height: 30px;
+      padding: 15px 38px;
+      text-transform: uppercase;
+      margin-top: 4.5rem;
+      text-decoration: none;
+      font-size: 16px;
+      letter-spacing: 1.2px;
+      // display: inline-block;
+    }
+    &__images {
+      width: 540px;
+      height: 219px;
+      padding-left: 50px;
+      display: flex;
+      flex-direction: row;
+
+      gap: 24px;
+      img:last-child {
+        margin-top: 2px;
+        margin-left: 0.3rem;
+        display: inline-block;
+      }
+      img {
+        width: 258px;
+        height: 162px;
       }
     }
   }
