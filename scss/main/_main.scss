@@ -1,0 +1,54 @@
+.btn {
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+  background: transparent;
+
+  &--primary {
+    background: $primary;
+    color: #fff;
+    padding: 19px 17px 17px 34px;
+    transition: background 0.5s ease;
+    &:hover {
+      background: rgba($primary, 0.5);
+    }
+  }
+  &--two-part {
+    position: relative;
+    z-index: 1;
+    &:hover {
+      &::before {
+        width: 100%;
+        clip-path: polygon(0 1%, 100% 0, 100% 100%, 0% 100%);
+      }
+    }
+    &::before {
+      z-index: -1;
+      position: absolute;
+      content: "";
+      width: 50%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      transition: all 0.3s ease;
+      clip-path: polygon(0 1%, 70% 0, 100% 100%, 0% 100%);
+      background: #496bfe;
+    }
+  }
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+.only-responsive {
+  display: none;
+}
+
+@import "about";
+@import "how-to";
+@import "place";
+@import "testimonials";
+@import "responsive";

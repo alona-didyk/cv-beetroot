@@ -1,0 +1,48 @@
+.about {
+  background-image: url("../../assets/images/about-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 11.5rem 0px;
+  .container {
+    display: flex;
+    align-items: flex-end;
+  }
+  &__content {
+    color: #fff;
+    max-width: 56rem;
+    margin-right: 11rem;
+    padding-bottom: 15px;
+    h2 {
+      font-family: $aleo;
+      font-weight: 400;
+      font-size: 3.6rem;
+      margin-bottom: 5rem;
+    }
+    p {
+      line-height: 26px;
+      font-size: 16px;
+      letter-spacing: 1.6px;
+      color: #e8e8e8;
+      margin-top: 3rem;
+      &:first-of-type {
+        margin-top: 0px;
+      }
+    }
+    .btn--primary {
+      padding: 21px 40px;
+      text-transform: uppercase;
+      margin-top: 4.5rem;
+      text-decoration: none;
+      font-size: 16px;
+      letter-spacing: 1.2px;
+      display: inline-block;
+    }
+  }
+  &__images {
+    img:last-child {
+      margin-top: 10px;
+      margin-left: 9rem;
+      display: inline-block;
+    }
+  }
+}

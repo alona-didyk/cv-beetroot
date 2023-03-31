@@ -1,0 +1,39 @@
+.footer {
+  background: #232323;
+  display: flex;
+  justify-content: center;
+  padding-top: 12rem;
+  padding-bottom: 5rem;
+  &__content {
+    text-align: center;
+    color: #fff;
+    p {
+      font-size: 16px;
+      line-height: 26px;
+      font-family: $josefin;
+      letter-spacing: 1.6px;
+      margin-top: 8px;
+      margin-bottom: 29px;
+    }
+  }
+  &__icons {
+    a {
+      text-decoration: none;
+      display: inline-block;
+      margin-right: 24px;
+      font-size: 16px;
+      &:hover {
+        i {
+          color: $primary;
+        }
+      }
+      i {
+        color: #fff;
+        transition: color 0.5s ease;
+      }
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+}

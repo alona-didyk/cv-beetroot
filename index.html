@@ -1,156 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML5 Семантичні елементи</title>
-</head>
-<body>
-    <header>
-        <h1>HTML5 Семантичні елементи</h1>
-        <p>Семантичний елемент чітко описує його значення як для браузера, так і
-для розробника.</p>
-         <p>Приклади не семантичних елементів: 
-            <li>< div ></li> 
-            <li> < span ></li> - нічого не говорить
-            про його вміст.</p>
-            <p>Приклади семантичних елементів: 
-                <li>< form ></li> 
-                <li>< table ></li> 
-                <li>< article ></li> - чітко
-                визначає його зміст.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo:wght@300;400;700&family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./dist/css/app.css" />
+    <title>Bhromaon</title>
+  </head>
+  <body>
+    <header class="header">
+      <section class="header__main">
+        <div class="header__content">
+          <h1>Bhromaon</h1>
+          <h2>Safe Travel Anywhere</h2>
+          <form class="header__form">
+            <div class="form__group">
+              <input
+                type="text"
+                class="header__input"
+                placeholder="Search Your Travel Destination"
+              />
+              <button type="submit" class="btn btn--primary">
+                Search
+                <svg
+                  width="20"
+                  height="22"
+                  viewBox="0 0 20 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M19.9928 19.9796L18.9488 21.0267L13.1819 15.2431C12.8501 15.5422 12.4858 15.8087 12.0881 16.0409C11.6904 16.2738 11.2756 16.4731 10.8451 16.6391C10.414 16.8059 9.95808 16.9306 9.47795 17.0131C8.99709 17.0964 8.5248 17.1379 8.0611 17.1379C6.93393 17.1379 5.88132 16.922 4.90415 16.4897C3.92609 16.0579 3.07241 15.476 2.3437 14.7446C1.61436 14.0137 1.04262 13.1576 0.628602 12.177C0.213704 11.1969 0.00708008 10.1577 0.00708008 9.0608C0.00708008 7.93126 0.213704 6.87557 0.628602 5.89496C1.04262 4.91484 1.61436 4.05872 2.3437 3.3271C3.07241 2.59647 3.92609 2.02318 4.90415 1.60721C5.88132 1.19199 6.93393 0.983765 8.0611 0.983765C9.15479 0.983765 10.1904 1.19199 11.1683 1.60721C12.1456 2.02318 12.9993 2.59647 13.7287 3.3271C14.4573 4.05872 15.0376 4.91484 15.4687 5.89496C15.899 6.87557 16.115 7.93126 16.115 9.0608C16.115 9.52666 16.0731 10.0004 15.9908 10.4818C15.9076 10.964 15.7834 11.4212 15.6179 11.8529C15.4517 12.2852 15.2528 12.7004 15.0213 13.0993C14.7891 13.4982 14.5242 13.8643 14.2259 14.196L19.9928 19.9796ZM0.852298 9.0608C0.852298 10.0579 1.03404 10.9889 1.39913 11.8529C1.76349 12.7175 2.27697 13.4817 2.94034 14.1464C3.60296 14.8116 4.3736 15.335 5.25208 15.7168C6.12992 16.0992 7.06675 16.2901 8.0611 16.2901C9.05535 16.2901 9.98296 16.0992 10.8451 15.7168C11.7067 15.335 12.4687 14.8116 13.1321 14.1464C13.7947 13.4817 14.3168 12.7175 14.6982 11.8529C15.0788 10.9889 15.2699 10.0579 15.2699 9.0608C15.2699 8.06364 15.0788 7.12505 14.6982 6.24396C14.3168 5.36367 13.7947 4.59077 13.1321 3.92559C12.4687 3.26091 11.7067 2.74616 10.8451 2.37982C9.98296 2.01452 9.05535 1.83149 8.0611 1.83149C7.06675 1.83149 6.12992 2.01452 5.25208 2.37982C4.3736 2.74616 3.60296 3.26091 2.94034 3.92559C2.27697 4.59077 1.76349 5.36367 1.39913 6.24396C1.03404 7.12505 0.852298 8.06364 0.852298 9.0608Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
+          </form>
+          <div class="header__scroll">
+            <p>Scroll down</p>
+            <span><i class="fas fa-chevron-down"></i></span>
+          </div>
+        </div>
+      </section>
+      <nav class="header__nav">
+        <div class="container">
+          <h2 class="header__logo">Bhromaon</h2>
+          <div class="only-responsive hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul>
+            <li>
+              <a href="#">Who we are</a>
+            </li>
+            <li>
+              <a href="#">What we do</a>
+            </li>
+            <li>
+              <a href="#">Travel with us</a>
+            </li>
+            <li>
+              <a href="#">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
-    <hr>
     <main>
-        <section>
-           <header>
-            <h2>Підтримка браузерів</h2>
-           </header>
-           <img src="img/ivrpowers-web-browser.007.jpg" alt="web-browser" width="400">
-           <p>Семантичні елементи HTML5 підтримуються у всіх сучасних браузерах.</p>
-           <p>Крім того, ви можете "навчити" старих браузерів, як обробляти "невідомі
-            елементи".</p>
-            <p>Прочитайте про це в <a href="https://www.w3big.com/html/html5-browsers.html#gsc.tab=0"> підтримці браузера HTML5 .</a></p>
-        </section>
-        <hr>
-        <section>
-        <header>
-            <h2>Нові семантичні елементи в HTML5</h2>
-        </header>
-        <article>
-            <p>HTML5 пропонує нові семантичні елементи для визначення різних частин
-                веб-сторінки:</p>
-                <ul>
-                    <li> <a href="#section">< section > </a></li>
-                    <li><a href="#article">< article ></a> ></li>
-                    <li><a href="#header">< header ></a></li>
-                    <li>< footer ></li>
-                </ul>
-        </article>
-        </section>
-        <hr>
-        <section id="section">
-            <article>
-                <header><strong>HTML5 < section > елемент</strong></header>
-                    <p>Елемент < section > визначає розділ в документі.
-                        Згідно з документацією в3к'с HTML5: "розділ представляє собою
-                        тематичну угруповання контенту, зазвичай з заголовком".
-                        <br>
-                        Домашня сторінка зазвичай може бути розділена на розділи для
-                        ознайомлення, змісту і контактної інформації.</p>
-                        <p><strong>Example</strong></p>
-                        <blockquote>
-                            <pre>
-                                <code>
-                                    &ltsection&gt
-                                    &lth1&gtWWF&lt/h1&gt
-                                    &ltp&gtThe World Wide Fund&lt/p&gt
-                                    &lt/section&gt
-                                </code>
-                            </pre>
-                        </blockquote>
-            </article>
-        </section>
-        <hr>
-        <section id="article">
-            <article>
-                <header><strong>HTML5 < article > елемент</strong></header>
-                    <p>Елемент < article > визначає незалежний, автономний вміст.
-                        Стаття повинна мати сенс самостійно, і вона повинна мати можливість
-                        читати його незалежно від іншої частини веб-сайту.
-                        <br>
-                        Приклади того, де можна використовувати елемент < article >:</p>
-                        <ol>
-                            <li>Повідомлення на форумі</li>
-                            <li>Блозі</li>
-                            <li>Газетна стаття</li>
-                        </ol>
-                        <p><strong>Example</strong></p>
-                        <blockquote>
-                            <pre>
-                                <code>
-                                    &ltarticle&gt
-                                    &lth1&gtWhat does wwf do?&lt/h1&gt
-                                    &ltp&gtThe World Wide Fund mission...&lt/p&gt
-                                    &lt/article&gt
-                                </code>
-                            </pre>
-                        </blockquote>
-            </article>
-        </section>
-        <hr>
-        <section id="header">
-            <article>
-                <header> <strong>HTML5 < header > елемент</strong> </header>
-                    <p>Елемент <header>задає заголовок для документа або розділу.
-                        <br>
-                        Елемент <header>повинен використовуватися в якості контейнера для
-                            вступного змісту.
-                            В одному документі може бути кілька елементів < header >.
-                            У наступному прикладі визначається заголовок для статті:</p>
-                        <p><strong>Example</strong></p>
-                        <blockquote>
-                            <pre>
-                                <code>
-                                    &ltarticle&gt
-                                    &ltheader&gt
-                                    &ltp&gtMission&lt/p&gt
-                                    &lt/header&gt
-                                    &ltp&gtThe World Wide Fund mission...&lt/p&gt
-                                    &lt/article&gt
-                                </code>
-                            </pre>
-                        </blockquote>
-            </article>
-        </section>
-        <hr>
-        <section id="footer">
-            <article>
-                <header> <strong>HTML5 < footer > елемент</strong> </header>
-                    <p>Елемент <footer>вказує нижній колонтитул для документа або розділу.
-                        <br>
-                        Нижній колонтитул зазвичай містить автора документа, інформацію про
-авторське право, посилання на умови використання, контактні дані і т.д.
-В одному документі може бути кілька елементів < footer >.</p>
-                        <p><strong>Example</strong></p>
-                        <blockquote>
-                            <pre>
-                                <code>
-                                    &ltfooter&gt
-                                    &ltp&gtPosted by - Hege Refsnes&lt/p&gt
-                                    &ltp&gtContact information - &lta href="mailto:someone@html5css.com"&gt&lt/a&gt&lt/p&gt
-                                    &lt/article&gt
-                                </code>
-                            </pre>
-                        </blockquote>
-            </article>
-        </section>
-        <hr>
-        <footer>
-            <header><strong>Source</strong></header>
-          <p><a href="https://www.w3schools.com/">W3School</a></p>
-        </footer>
+      <section class="about">
+        <div class="container">
+          <div class="about__content">
+            <h2>Why Choovse Us</h2>
+            <p>
+              Tion and dislike men who are so beguiled and demoralized by desire
+              by the charms of pleasure of the moment, so blinded by desire,
+              that they cannot foresee
+            </p>
+            <p>
+              Ddislike men who are so beguiled and demoralized by the charms of
+              pleasure of the moment, so blinded by desire, that.
+            </p>
+            <a href="#" class="btn--primary btn--two-part">Explore places</a>
+          </div>
+          <div class="about__images">
+            <img src="assets/images/about-image1.jpg" alt="House near a lake" />
+            <img
+              src="assets/images/about-image2.jpg"
+              alt="Girl on top of a mountain"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="how-to">
+        <div class="container">
+          <div class="how-to__items">
+            <img
+              class="decoration"
+              src="assets/icons/shape.svg"
+              alt="Decorative
+            shape"
+            />
+            <div class="how-to__item">
+              <img src="assets/icons/search.svg" alt="Search Places" />
+              <p>Search places</p>
+            </div>
+            <div class="how-to__item">
+              <img src="assets/icons/check.svg" alt="Select Places" />
+              <p>Select places</p>
+            </div>
+            <div class="how-to__item">
+              <img src="assets/icons/like.svg" alt="Book & Enjoy" />
+              <p>Book & Enjoy</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="place">
+        <div class="container">
+          <div class="place__content">
+            <p class="sub">Spain</p>
+            <h2>Grand Spain Madrid</h2>
+            <p>
+              But I must explain to you how all this mistaken idea of account to
+              denouncing pleasure and praising pain was account born and I
+              account will give you a complete account of the system
+            </p>
+            <a href="#" class="btn--primary btn--two-part">Book now</a>
+          </div>
+        </div>
+      </section>
+      <section class="place inverted">
+        <div class="container">
+          <div class="place__content">
+            <p class="sub">Spain</p>
+            <h2>Grand Spain Madrid</h2>
+            <p>
+              But I must explain to you how all this mistaken idea of account to
+              denouncing pleasure and praising pain was account born and I
+              account will give you a complete account of the system
+            </p>
+            <a href="#" class="btn--primary btn--two-part">Book now</a>
+          </div>
+        </div>
+      </section>
+      <section class="testimonials">
+        <div class="container">
+          <h2 class="testimonials__title">What our tourist say</h2>
+          <div class="testimonials__item">
+            <div class="testimonials__image">
+              <img
+                src="assets/images/testimonial-image.jpg"
+                alt="Guy with backpack"
+              />
+            </div>
+            <div class="testimonials__content">
+              <h3>Sam Sumon</h3>
+              <p>
+                <i class="fas fa-quote-left"></i>
+                But I must explain to you how all this mistaken idea of account
+                to denouncinpleasure and praising pain But I must explain to you
+                how all this mistaken idea of account to nai denouncing pleasure
+                and praising pain was account born and I account will give you a
+                complete account of the system was account born and I account
+                will give you a nai the complete account of the system
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-</body>
+    <footer class="footer">
+      <div class="footer__content">
+        <h2 class="header__logo">Bhromaon</h2>
+        <p>Safe Travel Anywhere</p>
+        <div class="footer__icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
 </html>
