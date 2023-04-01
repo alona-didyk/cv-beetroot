@@ -1,40 +1,64 @@
 .footer {
-    background: #232323;
-    display: flex;
-    justify-content: center;
-    padding-top: 12rem;
-    padding-bottom: 5rem;
-    &__content {
+  background-color: #232323;
+  padding: 120px 0 60px 0;
+  &-logo {
+      font-size: 24px;
+      letter-spacing: 3px;
+      line-height: 26px;
       text-align: center;
-      color: #fff;
-      p {
-        font-size: 16px;
-        line-height: 26px;
-        font-family: $josefin;
-        letter-spacing: 1.6px;
-        margin-top: 8px;
-        margin-bottom: 29px;
-      }
-    }
-    &__icons {
-      a {
-        text-decoration: none;
-        display: inline-block;
-        margin-right: 24px;
-        font-size: 16px;
-        &:hover {
-          i {
-            color: $primary;
-          }
-        }
-        i {
-          color: #fff;
-          transition: color 0.5s ease;
-        }
-        &:last-child {
-          margin-right: 0px;
-        }
-      }
-    }
+      margin: 0 0 10px 0;
   }
+  &__subtitle {
+      font-size: 16px;
+      letter-spacing: 2px;
+      line-height: 1.65em;
+      color: #ffffff;
+      font-family: "Josefin Sans";
+      text-align: center;
+      margin: 0 0 30px 0;
+  }
+  &-social {
+      display: flex;
+      justify-content: center;
+  }
+  &__social-link {
+      &:not(:last-child) {
+          margin: 0 24px 0 0;
+      }
+
+      i {
+          transition: all 0.4s;
+      }
+
+      font-size: 16px;
+      color: #e8e8e8;
+      text-decoration: none;
+
+      &:hover .fa-facebook-f {
+          color: #4267b2;
+      }
+      &:hover .fa-twitter {
+          color: #1da1f2;
+      }
+      &:hover .fa-linkedin-in {
+          color: #0e76a8;
+      }
+      &:hover .fa-youtube {
+          color: #ff0000;
+      }
+      &:hover .fa-pinterest {
+          color: #e60023;
+      }
+  }
+  @media screen and (max-width: 991px) {
+      padding: 100px 0 50px 0;
+  }
+  @media screen and (max-width: 767px) {
+      padding: 60px 0 40px 0;
+  }
+  @media screen and (max-width: 565px) {
+      padding: 30px 0;
+  }
+}
+
   

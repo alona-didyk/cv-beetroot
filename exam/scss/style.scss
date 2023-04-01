@@ -74,8 +74,55 @@ html {
     }
   }
 }
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
 
-// @import "about";
-// @import "how-to";
-// @import "place";
-// @import "testimonials";
+.flex {
+  display: flex;
+}
+
+.hotel-block {
+  background-color: rgba($color: #161616, $alpha: 0.8);
+  padding: 50px 30px 50px 70px;
+  flex: 0 1 49%;
+
+  &__country {
+      font-size: 20px;
+      letter-spacing: 2px;
+      line-height: 1;
+      color: #e8e8e8;
+      margin: 0 0 35px 0;
+  }
+  &__title {
+      font-size: 20px;
+      line-height: 1.3em;
+      color: #ffffff;
+      margin: 0 0 25px 0;
+  }
+  &__text {
+      font-size: 16px;
+      line-height: 1.65em;
+      color: #e8e8e8;
+      margin: 0 0 45px 0;
+  }
+
+  @media screen and (max-width: 991px) {
+      flex: 0 1 65%;
+  }
+  @media screen and (max-width: 767px) {
+      flex: 0 1 80%;
+  }
+
+  @media screen and (max-width: 575px) {
+      flex: 0 1 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+}
