@@ -29,18 +29,15 @@
     &-feedback__description {
         padding: 50px 50px 50px 60px;
         flex: 0 0 60%;
-        background-color: #333333;
+        background-color: $grey-background;
     }
     &-feedback__title {
+        @include text;
         font-size: 20px;
-        line-height: 1.3em;
-        color: #fefefe;
         margin: 0 0 42px 0;
     }
     &-feedback__blockquote {
-        font-size: 16px;
-        line-height: 1.65em;
-        color: #e8e8e8;
+        @include text;
         text-indent: 5px;
 
         i {
@@ -48,7 +45,7 @@
             font-size: 20px;
             left: -10px;
             transform: translateY(-50%);
-            color: #5474fd;
+            color: $blue-dark;
         }
     }
 
@@ -61,10 +58,18 @@
 
         &-feedback {
             flex-direction: column;
+            &__img {
+                display: flex;
+                flex-direction: column-reverse;
+                img {
+                    height: 336px;
+                }
+                
+            }
         }
     }
     @media screen and (max-width: 575px) {
-        padding: 30px 0;
+        padding: 60px 0;
 
         &__title {
             font-size: 28px;

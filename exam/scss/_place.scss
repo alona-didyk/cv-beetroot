@@ -1,28 +1,35 @@
 .section3 {
-    position: relative;
-    background: url(../../exam/assets/img/house.jpg) center top/cover no-repeat;
-    padding: 230px 0 100px 0;
+  position: relative;
+  background: url(../../exam/assets/img/house.jpg) center top/cover no-repeat;
+  padding: 230px 0 100px 0;
+
+  &-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  @media screen and (max-width: 991px) {
+    padding: 150px 0 70px 0;
+    background: url(../../exam/assets/img/house-1024.jpg) center top/cover
+      no-repeat;
+  }
+
+  @media screen and (max-width: 575px) {
+    padding: 0;
 
     &-container {
-        display: flex;
-        justify-content: flex-start;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    @media screen and (max-width: 991px) {
-        padding: 150px 0 70px 0;
-        background: url(../../exam/assets/img/house-1024.jpg) center top/cover no-repeat;
+    &-spain-block {
+      padding: 100px 20px 70px 20px;
+      max-width: 100%;
+      width: 720px;
+height: 348px;
+
     }
-
-    @media screen and (max-width: 575px) {
-        padding: 0;
-
-        &-container {
-            padding: 0;
-        }
-
-        &-hotel-block {
-            padding: 100px 20px 70px 20px;
-        }
-    }
+  }
 }
-  

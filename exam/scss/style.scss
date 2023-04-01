@@ -12,8 +12,7 @@
 @import "./keyframes";
 @import url("./assets/fonts/aleo/aleo.css");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Aleo&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Aleo&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -24,7 +23,7 @@ html {
 //   margin-left: auto;
 //   margin-right: auto;
 // }
-  
+
 .only-responsive {
   display: none;
 }
@@ -42,8 +41,7 @@ html {
   outline: none;
   box-shadow: none;
   cursor: pointer;
-  
-  
+
   &--blue {
     background: $color-button;
     color: $color-title;
@@ -198,43 +196,54 @@ a {
 //   }
 // }
 
-.hotel-block {
-  background-color: rgba($color: #161616, $alpha: 0.8);
+.spain-block {
+  background-color: rgba($card, $opacity);
   padding: 50px 30px 50px 70px;
   flex: 0 1 49%;
 
   &__country {
-      font-size: 20px;
-      letter-spacing: 2px;
-      line-height: 1;
-      color: #e8e8e8;
-      margin: 0 0 35px 0;
+    font-family: $josefin;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: $color-title;
   }
   &__title {
-      font-size: 20px;
-      line-height: 1.3em;
-      color: #ffffff;
-      margin: 0 0 25px 0;
+    font-family: $josefin;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: $color-title;
+    margin: 16px 0 16px 0;
   }
   &__text {
-      font-size: 16px;
-      line-height: 1.65em;
-      color: #e8e8e8;
-      margin: 0 0 45px 0;
+    @include text;
+    margin: 0 0 45px 0;
+  }
+  &__link {
+    .btn {
+      width: 213px;
+    }
   }
 
   @media screen and (max-width: 991px) {
-      flex: 0 1 65%;
+    flex: 0 1 65%;
   }
   @media screen and (max-width: 767px) {
-      flex: 0 1 80%;
+    flex: 0 1 80%;
+    justify-content: center;
+    align-items: center;
   }
 
   @media screen and (max-width: 575px) {
-      flex: 0 1 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    flex: 0 1 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
