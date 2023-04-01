@@ -45,12 +45,12 @@
 }
 
 @mixin font-aleo {
-  font-family: 'Aleo', serif;;
+  font-family: $aleo;
   font-weight: 400;
 }
 
 @mixin title {
-  font-family: 'Aleo', serif;
+  font-family: $aleo;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;

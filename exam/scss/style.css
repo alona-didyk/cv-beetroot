@@ -1258,7 +1258,7 @@ textarea {
     font-size: 16px;
     letter-spacing: 2px;
     line-height: 1.65em;
-    color: #e8e8e8;
+    color: #FFFFFF;
     font-weight: 400;
     height: 100%;
     max-height: 140px;
@@ -1283,7 +1283,7 @@ textarea {
     margin-right: 10px;
   }
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 576px) {
   .section1 {
     padding: 90px 0;
   }
@@ -1298,7 +1298,7 @@ textarea {
   }
   .section1-description .btn {
     margin: 0 auto;
-    margin-left: 180px;
+    margin-left: 160px;
     margin-top: 24px;
   }
 }
@@ -1538,9 +1538,9 @@ textarea {
 .section5__title {
   font-size: 36px;
   line-height: 1;
-  color: #ffffff;
+  color: #FFFFFF;
   font-weight: 400;
-  font-family: "Aleo";
+  font-family: "Aleo", serif;
   text-align: center;
   margin: 0 0 100px 0;
 }
@@ -1788,7 +1788,7 @@ html {
 }
 
 :root {
-  --color-white: #ffffff;
+  --color-white: $color-title;
   --pd-section: 120px;
 }
 

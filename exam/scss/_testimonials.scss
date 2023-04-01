@@ -5,9 +5,9 @@
     &__title {
         font-size: 36px;
         line-height: 1;
-        color: #ffffff;
+        color: $color-title;
         font-weight: 400;
-        font-family: "Aleo";
+        font-family: $aleo;
         text-align: center;
         margin: 0 0 100px 0;
     }

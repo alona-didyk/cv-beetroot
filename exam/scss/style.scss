@@ -18,20 +18,11 @@ html {
   scroll-behavior: smooth;
 }
 
-// .wrapper {
-//   max-width: 1360px;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
-
 .only-responsive {
   display: none;
 }
 
 .btn {
-  // height: 60px;
-  // width: 149px;
-  // background-color: $color-button;
   text-transform: uppercase;
   color: $color-title;
   font-size: 16px;
@@ -77,60 +68,9 @@ html {
     }
   }
 }
-// .container {
-//   max-width: 1140px;
-//   width: 100%;
-//   margin: 0 auto;
-//   padding: 0 15px;
-//   box-sizing: border-box;
-// }
 
-// .flex {
-//   display: flex;
-// }
-
-// .hotel-block {
-//   background-color: rgba($color: #161616, $alpha: 0.8);
-//   padding: 50px 30px 50px 70px;
-//   flex: 0 1 49%;
-
-//   &__country {
-//       font-size: 20px;
-//       letter-spacing: 2px;
-//       line-height: 1;
-//       color: #e8e8e8;
-//       margin: 0 0 35px 0;
-//   }
-//   &__title {
-//       font-size: 20px;
-//       line-height: 1.3em;
-//       color: #ffffff;
-//       margin: 0 0 25px 0;
-//   }
-//   &__text {
-//       font-size: 16px;
-//       line-height: 1.65em;
-//       color: #e8e8e8;
-//       margin: 0 0 45px 0;
-//   }
-
-//   @media screen and (max-width: 991px) {
-//       flex: 0 1 65%;
-//   }
-//   @media screen and (max-width: 767px) {
-//       flex: 0 1 80%;
-//   }
-
-//   @media screen and (max-width: 575px) {
-//       flex: 0 1 100%;
-//       height: 100%;
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: center;
-//   }
-// }
 :root {
-  --color-white: #ffffff;
+  --color-white: $color-title;
   --pd-section: 120px;
 }
 
@@ -152,53 +92,9 @@ a {
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
-  // padding: 0 15px;
   padding: 0px 25px;
-
   box-sizing: border-box;
 }
-
-// .logo {
-//   color: #ffffff;
-//   font-weight: 700;
-//   font-family: "Josefin Sans";
-// }
-
-// .btn-link {
-//   display: block;
-//   background: rgb(72, 107, 254);
-//   background: linear-gradient(
-//           45deg,
-//           rgba(72, 107, 254, 1) 0%,
-//           rgba(72, 107, 254, 1) 17%,
-//           rgba(83, 115, 253, 1) 17%,
-//           rgba(83, 115, 253, 1) 50%,
-//           rgba(83, 115, 253, 1) 67%,
-//           rgba(72, 107, 254, 1) 67%,
-//           rgba(72, 107, 254, 1) 100%
-//       )
-//       left/200%;
-//   transition: background-position 0.5s ease-in-out;
-//   width: 225px;
-//   height: 60px;
-
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   text-decoration: none;
-
-//   font-size: 16px;
-//   letter-spacing: 1px;
-//   line-height: 1.65em;
-//   color: #ffffff;
-//   font-weight: 400;
-//   font-family: "Aleo";
-
-//   &:hover,
-//   &:focus {
-//       background-position: right;
-//   }
-// }
 
 .spain-block {
   background-color: rgba($card, $opacity);
@@ -229,9 +125,8 @@ a {
   }
   &__link {
     text-align: center;
-   padding-left: 40px;
-      padding-right: 50px;
-    
+    padding-left: 40px;
+    padding-right: 50px;
   }
 
   @media screen and (max-width: 991px) {
@@ -241,13 +136,6 @@ a {
     flex: 0 1 100%;
     justify-content: center;
     align-items: center;
-    // .spain-block {
-    //   background-color: rgba($card, $opacity);
-    //   padding: 50px 30px 50px 70px;
-    //   flex: 0 1 120%;
-    //   max-width: 100%;
-    //   width: 720px;
-    // }
   }
 
   @media screen and (max-width: 575px) {
@@ -257,54 +145,10 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // .container {
-    //   padding: 75px 25px;
-    // }
     .spain-block {
       background-color: rgba($card, $opacity);
       padding: 50px 30px 50px 70px;
       flex: 0 1 70%;
     }
   }
-  //   @media screen and (max-width: 320px) {
-  //     flex: 0 1 100%;
-  //     height: 100%;
-  //     display: flex;
-  //     flex-direction: column;
-  //     justify-content: center;
-  //     align-items: center;
-  //     .spain-block {
-  //       background-color: rgba($card, $opacity);
-  //       padding: 50px 30px 50px 70px;
-  //       flex: 0 1 49%;
-
-  //       &__country {
-  //         font-family: $josefin;
-  //         font-weight: 300;
-  //         font-size: 10px;
-  //         line-height: 28px;
-  //         letter-spacing: 0.1em;
-  //         color: $color-title;
-  //       }
-  //       &__title {
-  //         font-family: $josefin;
-  //         font-style: normal;
-  //         font-weight: 400;
-  //         font-size: 10px;
-  //         line-height: 28px;
-  //         text-transform: uppercase;
-  //         color: $color-title;
-  //         margin: 16px 0 16px 0;
-  //       }
-  //       &__text {
-  //         @include text;
-  //         margin: 0 0 45px 0;
-  //       }
-  //       &__link {
-  //         .btn {
-  //           width: 213px;
-  //         }
-  //       }
-  //     }
-  // }
 }
