@@ -150,7 +150,9 @@ a {
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
+  // padding: 0 15px;
+  padding: 75px 25px;
+
   box-sizing: border-box;
 }
 
@@ -233,9 +235,16 @@ a {
     flex: 0 1 65%;
   }
   @media screen and (max-width: 767px) {
-    flex: 0 1 80%;
+    flex: 0 1 100%;
     justify-content: center;
     align-items: center;
+    // .spain-block {
+    //   background-color: rgba($card, $opacity);
+    //   padding: 50px 30px 50px 70px;
+    //   flex: 0 1 120%;
+    //   max-width: 100%;
+    //   width: 720px;
+    // }
   }
 
   @media screen and (max-width: 575px) {
@@ -245,5 +254,54 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    // .container {
+    //   padding: 75px 25px;
+    // }
+    .spain-block {
+      background-color: rgba($card, $opacity);
+      padding: 50px 30px 50px 70px;
+      flex: 0 1 70%;
+    }
   }
+//   @media screen and (max-width: 320px) {
+//     flex: 0 1 100%;
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     .spain-block {
+//       background-color: rgba($card, $opacity);
+//       padding: 50px 30px 50px 70px;
+//       flex: 0 1 49%;
+    
+//       &__country {
+//         font-family: $josefin;
+//         font-weight: 300;
+//         font-size: 10px;
+//         line-height: 28px;
+//         letter-spacing: 0.1em;
+//         color: $color-title;
+//       }
+//       &__title {
+//         font-family: $josefin;
+//         font-style: normal;
+//         font-weight: 400;
+//         font-size: 10px;
+//         line-height: 28px;
+//         text-transform: uppercase;
+//         color: $color-title;
+//         margin: 16px 0 16px 0;
+//       }
+//       &__text {
+//         @include text;
+//         margin: 0 0 45px 0;
+//       }
+//       &__link {
+//         .btn {
+//           width: 213px;
+//         }
+//       }
+//     }
+// }
 }

@@ -1700,12 +1700,12 @@ textarea {
 }
 @media screen and (max-width: 767px) {
   .footer {
-    padding: 60px 0 40px 0;
+    padding: 70px 0 40px 0;
   }
 }
 @media screen and (max-width: 565px) {
   .footer {
-    padding: 30px 0;
+    padding: 70px 0;
   }
 }
 
@@ -1811,7 +1811,7 @@ a {
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 75px 25px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -1864,8 +1864,8 @@ a {
 @media screen and (max-width: 767px) {
   .spain-block {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 80%;
-            flex: 0 1 80%;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1893,6 +1893,13 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .spain-block .spain-block {
+    background-color: rgba(35, 35, 35, 0.8);
+    padding: 50px 30px 50px 70px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 70%;
+            flex: 0 1 70%;
   }
 }
 /*# sourceMappingURL=style.css.map */
