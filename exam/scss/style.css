@@ -1803,12 +1803,6 @@ a {
   text-decoration: none;
 }
 
-.flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .container {
   max-width: 1140px;
   width: 100%;
