@@ -1,0 +1,125 @@
+@import "./reset";
+
+.header {
+    width: 100%;
+    height: 60px;
+  
+    &__wrapper {
+      width: 90%;
+      height: 50px;
+    }
+  
+    &__title {
+      font-family: "Roboto", sans-serif;
+      font-size: 35px;
+      color: #606060;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
+  .main {
+    width: 100%;
+  
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      width: 90%;
+      height: 90%;
+      margin: 0 auto;
+      justify-content: space-around;
+      background-color: #006400;
+      border: 10px solid #8b4513;
+      border-radius: 20px;
+      padding-top: 40px;
+    }
+  
+    &__flip-card {
+      background-color: transparent;
+      width: 300px;
+      height: 400px;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+  
+    &__flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 1s;
+      transform-style: preserve-3d;
+    }
+  
+    &__flip-card:hover &__flip-card-inner {
+      transform: rotateY(180deg);
+    }
+  
+    &__flip-card-front,
+    &__flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+  
+    &__img {
+      width: 300px;
+      height: 380px;
+      border-radius: 15px;
+    }
+  
+    &__flip-card-back {
+      background-color: #ffffff;
+      width: 300px;
+      height: 380px;
+      border: 3px solid #000000;
+      border-radius: 15px;
+      box-sizing: border-box;
+      transform: rotateY(180deg);
+    }
+  
+    &__icon-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: absolute;
+    }
+  
+    &__icon--letter {
+      width: 35px;
+      height: 35px;
+    }
+  
+    &__icon--suit {
+      width: 30px;
+      height: 30px;
+      margin-left: 3px;
+    }
+  
+    &__icon-wrapper--top {
+      top: 10px;
+      left: 10px;
+    }
+  
+    &__icon--central {
+      width: 80px;
+      height: 80px;
+    }
+  
+    &__icon-wrapper--central {
+      width: 300px;
+      height: 380px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    &__icon-wrapper--down {
+      rotate: (180deg);
+      bottom: 10px;
+      right: 10px;
+    }
+  }
