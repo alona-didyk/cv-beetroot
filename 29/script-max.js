@@ -1,11 +1,11 @@
 "use strict";
 
 // 1 завдання
-// const radius = prompt('Введіть радіус кола');
+const radius = prompt('Введіть радіус кола');
 
-// let area = Math.PI * Number(radius) * Number(radius);
+let area = Math.PI * Number(radius) * Number(radius);
 
-// alert("Площа кола: " + area.toFixed(2));
+alert("Площа кола: " + Number(area.toFixed(2)));
 
 // 2 завдання
 // const distance = prompt('Вкажіть відстань між двома містами в кілометрах');
