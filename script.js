@@ -135,3 +135,37 @@
 //     }
 //     console.log(string);
 // }
+
+// var message = "Welcome!";
+
+// function setMessage() {
+
+// message = "Go away!";
+
+// }
+
+// setMessage();
+
+// alert(message);
+
+// var name = "Trish";
+
+// function setName() {
+
+// var name = "Sarah";
+
+// }
+
+// setName();
+
+// alert(name);
+
+// function myFunction() {
+
+//     return 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri';
+    
+//     }
+    
+//     var days = myFunction();
+
+//     console.log(myFunction());
