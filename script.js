@@ -12,7 +12,7 @@ const car = {
   drivers: ["Ivan", "Mark"],
   showInfo: function () {
     console.log(
-      `Brand: ${this.brand}\nModel: ${this.model}\nYear: ${this.year}`
+      `Brand: ${this.brand}\nModel: ${this.model}\nYear: ${this.year}\nSpeed: ${this.averageSpeed}\nFuel: ${this.fuelTank}\nConsumption: ${this.fuelConsumption}`
     );
   },
   addDriver: function () {
@@ -54,5 +54,48 @@ car.checkDriver(driverName);
 const distance = Number(prompt("Вкажіть відстань яку потрібно подолати у км"));
 car.calculateTrip(distance);
 
-
 // НОРМА
+
+const now = new Date();
+
+const myDateObject = {
+  MS_PER_SECOND: 1000,
+  MS_PER_MINUTE: 60000,
+  MS_PER_HOUR: 3600000,
+
+  DataType: {
+    SECONDS: "SECONDS",
+    MINUTES: "MINUTES",
+    HOURS: "HOURS",
+  },
+
+  buildDate() {
+    let date = now;
+    console.log(date);
+    let changedSeconds = +prompt("Введіть кількість секунд:");
+    let changedMinutes = +prompt("Введіть кількість хвилин:");
+    let changedHours = +prompt("Введіть кількість годин:");
+    date = this.changeDate(date, changedSeconds, this.DataType.SECONDS);
+    date = this.changeDate(date, changedMinutes, this.DataType.MINUTES);
+    date = this.changeDate(date, changedHours, this.DataType.HOURS);
+    console.log(date);
+  },
+
+  changeDate(date, time, dataType) {
+    const msCount = this.getMilliseconds(dataType);
+    return new Date(date.getTime() + time * msCount);
+  },
+
+  getMilliseconds(dataType) {
+    switch (dataType) {
+      case this.DataType.SECONDS:
+        return this.MS_PER_SECOND;
+      case this.DataType.MINUTES:
+        return this.MS_PER_MINUTE;
+      case this.DataType.HOURS:
+        return this.MS_PER_HOUR;
+    }
+  },
+};
+
+myDateObject.buildDate();
