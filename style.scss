@@ -46,3 +46,54 @@
   align-items: center;
   flex-direction: column;
 }
+
+
+
+
+
+.traffic-lights__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.traffic-lights {
+    margin: 0 auto;
+    width: 200px;
+    height: 470px;
+    background-color: #808080;
+
+    &--light {
+        display: flex;
+        flex-direction: column;
+    }
+    &--red {
+        background-color: red;
+        border-radius: 50%;
+        width: 100%;
+        height: 150px;
+    }
+    &--yellow {
+        background-color: yellow;
+        border-radius: 50%;
+        width: 100%;
+        height: 150px;
+    }
+    &--green {
+        background-color: green;
+        border-radius: 50%;
+        width: 100%;
+        height: 150px;
+    }
+    &__button {
+        width: 150px;
+        height: 50px;
+        background-color: #808080;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+}

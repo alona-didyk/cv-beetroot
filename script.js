@@ -79,3 +79,15 @@ closeButton.addEventListener('click', () => {
 
 // 3. Створити HTML-сторінку зі світлофором і кнопкою, яка перемикає світлофор на наступний колір.
 
+const lights = document.querySelectorAll(".traffic-lights--red, .traffic-lights--yellow, .traffic-lights--green");
+const button = document.querySelector(".traffic-lights__button");
+let currentLightIndex = 0;
+
+function switchLight() {
+  lights[currentLightIndex].style.backgroundColor = '#808080';
+  currentLightIndex = (currentLightIndex + 1) % 3;
+  lights[currentLightIndex].style.backgroundColor = ["red", "yellow", "green"][currentLightIndex];
+}
+
+button.addEventListener('click', switchLight);
+
