@@ -35,6 +35,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,36 +55,44 @@
   align-items: center;
   gap: 20px;
 }
-
-.traffic-lights {
+.traffic-lights__wrapper .traffic-lights {
   margin: 0 auto;
-  width: 200px;
+  width: 170px;
   height: 470px;
   background-color: #808080;
+  position: relative;
 }
-.traffic-lights--light {
+.traffic-lights__wrapper .traffic-lights--light {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
 }
-.traffic-lights--red {
-  background-color: red;
+.traffic-lights__wrapper .traffic-lights--light .light {
   border-radius: 50%;
-  width: 100%;
+  width: 150px;
   height: 150px;
+  box-shadow: inset 0 0 10px #222;
 }
-.traffic-lights--yellow {
-  background-color: yellow;
-  border-radius: 50%;
-  width: 100%;
-  height: 150px;
+.traffic-lights__wrapper .traffic-lights--red {
+  background-color: #ff4136;
+  box-shadow: inset 0 0 10px #ff4136, 0 0 20px #ff4136;
+  transition: background-color 0.5s;
 }
-.traffic-lights--green {
-  background-color: green;
-  border-radius: 50%;
-  width: 100%;
-  height: 150px;
+.traffic-lights__wrapper .traffic-lights--yellow {
+  background-color: #ffdc00;
+  box-shadow: inset 0 0 10px #ffdc00, 0 0 20px #ffdc00;
+  transition: background-color 0.5s;
 }
-.traffic-lights__button {
+.traffic-lights__wrapper .traffic-lights--green {
+  background-color: #2ecc40;
+  box-shadow: inset 0 0 10px #2ecc40, 0 0 20px #2ecc40;
+  transition: background-color 0.5s;
+}
+.traffic-lights__wrapper .traffic-lights__button {
   width: 150px;
   height: 50px;
   background-color: #808080;

@@ -69,25 +69,30 @@ const openButton = document.querySelector(".button__open");
 const modalWindow = document.querySelector(".modal-window");
 const closeButton = document.querySelector(".button__close");
 
-openButton.addEventListener('click', () => {
-    modalWindow.style.display = 'block';
-})
+openButton.addEventListener("click", () => {
+  modalWindow.style.display = "block";
+});
 
-closeButton.addEventListener('click', () => {
-    modalWindow.style.display = 'none';
-})
+closeButton.addEventListener("click", () => {
+  modalWindow.style.display = "none";
+});
 
 // 3. Створити HTML-сторінку зі світлофором і кнопкою, яка перемикає світлофор на наступний колір.
 
-const lights = document.querySelectorAll(".traffic-lights--red, .traffic-lights--yellow, .traffic-lights--green");
+const lights = document.querySelectorAll(
+  ".traffic-lights--red, .traffic-lights--yellow, .traffic-lights--green"
+);
 const button = document.querySelector(".traffic-lights__button");
 let currentLightIndex = 0;
 
 function switchLight() {
-  lights[currentLightIndex].style.backgroundColor = '#808080';
+  lights[currentLightIndex].style.backgroundColor = "#808080";
   currentLightIndex = (currentLightIndex + 1) % 3;
-  lights[currentLightIndex].style.backgroundColor = ["red", "yellow", "green"][currentLightIndex];
+  lights[currentLightIndex].style.backgroundColor = [
+    "#FF4136",
+    "#FFDC00",
+    "#2ECC40",
+  ][currentLightIndex];
 }
 
-button.addEventListener('click', switchLight);
-
+button.addEventListener("click", switchLight);
