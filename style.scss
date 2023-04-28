@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //   height: 60vh;
+  gap: 40px;
+}
+
+.text,
+textarea {
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+table {
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid black;
+  padding: 4px;
+}
+th {
+  cursor: pointer;
+}
+th:hover {
+  background: yellow;
+}
+
+#resize {
+  border: 1px solid black;
+  resize: both;
+  overflow: auto;
+}
