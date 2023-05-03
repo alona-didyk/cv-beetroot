@@ -1,0 +1,58 @@
+@import "./reset";
+@import "./variables";
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+body {
+  background-color: $background;
+  padding: 80px 220px;
+}
+
+.main {
+  position: relative;
+  font-family: $font-family;
+  font-size: 16px;
+  color: $white;
+  margin: 0 auto;
+  width: 100%;
+  width: 1000px;
+  height: 860px;
+  background-image: url("../assets/img/photo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  // background: rgba(41, 45, 62, 0.8);
+}
+
+.card {
+  position: absolute;
+  padding: 150px 200px;
+
+  .navbar {
+    display: flex;
+    background-color: $dark-background;
+    &__list {
+      display: flex;
+      gap: 70px;
+      padding: 30px 50px;
+      text-transform: uppercase;
+    }
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      color: $inactive-background;
+      .svg path {
+        stroke: $inactive-background;
+      }
+      &:hover {
+        color: $white;
+        .svg path {
+          stroke: $white;
+        }
+      }
+    }
+  }
+}
