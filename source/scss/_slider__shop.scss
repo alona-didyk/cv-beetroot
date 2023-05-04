@@ -39,7 +39,7 @@
         }
 
         &:hover {
-            border: 1px solid #F16A50;
+            border: 1px solid $primary-color;
             cursor: pointer; 
             & .picture {
                 transform: translateY(12%) scale3d(1, 1.2, 1);
@@ -61,8 +61,8 @@
         }
 
         &.stock {
-            background: #F16A50;
-            color: #F8F1EA;
+            background: $primary-color;
+            color: $secondary-colo;
             @media (max-width: 768px) {
                 width: 50%;
             }
@@ -97,14 +97,14 @@
         width: 230px;
         background: transparent;
         padding: 15px 60px;
-        border: 2px solid #000;
+        border: 2px solid $font-color;
         text-transform: uppercase;
         transition: all 0.3s ease;
 
         &:hover {
             border: 2px solid transparent;
-            background: #F16A50;
-            color: #fff;
+            background: $primary-color;
+            color: $white;
             transform:  scale(1.2);
         }
     }
