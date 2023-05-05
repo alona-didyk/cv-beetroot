@@ -6,9 +6,6 @@ const swiperPart = new Swiper(".partners.swiper", {
   loop: true,
   autoplay: {
     delay: 1500,
-    disableOnInteraction: true,
-    pauseOnMouseEnter: true,
-    waitForTransition: true,
   },
   keyboard: {
     enabled: true,
@@ -21,21 +18,23 @@ const swiperPart = new Swiper(".partners.swiper", {
 
   pagination: {
     el: ".swiper-pagination",
-    enabled: true,
+    enabled: false,
     clickable: true,
-    renderBullet: (index, className) => `<span class="${className}">${menu[index]}</span>`,
+    renderBullet: (index, className) =>
+      `<span class="${className}">${menu[index]}</span>`,
   },
 
   breakpoints: {
     320: {
       slidesPerView: 2,
       slidesPerGroup: 2,
+
       pagination: {
         enabled: true,
       },
     },
     600: {
-      slidesPerView: 5,
+      slidesPerView: 6,
       spaceBetween: 20,
     },
     920: {
@@ -44,4 +43,3 @@ const swiperPart = new Swiper(".partners.swiper", {
     },
   },
 });
-

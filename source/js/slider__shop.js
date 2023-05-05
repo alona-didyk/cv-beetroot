@@ -35,4 +35,3 @@ const swiper = new Swiper(".slider__shop", {
     },
   },
 });
-
