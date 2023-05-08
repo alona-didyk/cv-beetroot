@@ -65,4 +65,67 @@ main {
 }
 .type-button:hover {
   box-shadow: 0 0 2px 2px #435778;
+}
+
+.movie {
+  display: flex;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.movie img {
+  width: 150px;
+  height: 225px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.movie .movie-info {
+  padding: 10px;
+}
+.movie .movie-info h3 {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+.movie .movie-info p {
+  font-size: 18px;
+  margin: 0 0 5px;
+}
+.movie .movie-info .details-btn {
+  padding: 10px 20px;
+  background-color: #181f2b;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+}
+.movie .movie-info .details-btn:hover {
+  box-shadow: 0 0 2px 2px #435778;
+}
+.movie:hover .details-btn {
+  display: block;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.pagination button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.pagination button:hover {
+  background-color: #333;
+  color: #fff;
+}
+.pagination button.active {
+  background-color: #333;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

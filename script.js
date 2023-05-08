@@ -38,9 +38,10 @@ function searchMovies(input, search, page) {
 }
 
 function showMovie(movies) {
+  res.innerHTML = "";
   movies.forEach((movie) => {
     const elem = document.createElement("div");
-    elem.classList.add("movie");
+    elem.classList.add("movie", "movieDetails");
     elem.innerHTML = `<img src="${movie.Poster}" alt="${movie.Title}">
     <div class="movie-info">
     <h3>${movie.Title}</h3>
@@ -94,6 +95,7 @@ function addDetailsListener() {
     });
   });
 }
+
 
 
 // setTimeout(() => {
