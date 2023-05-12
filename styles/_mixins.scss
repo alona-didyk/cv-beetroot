@@ -1,0 +1,64 @@
+@mixin fontsize_14 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@mixin icon-flex {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+@mixin icon {
+  width: 40px;
+  height: 40px;
+  transition: 0.5s;
+}
+
+@mixin title-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 100px 0 90px;
+}
+
+@mixin border {
+  width: 100px;
+  border: 1px solid $border;
+}
+
+@mixin title {
+  font-family: "montserratregular", sans-serif;
+  font-weight: 700;
+  color: $border;
+  font-size: 44px;
+  line-height: 54px;
+}
+
+@mixin button {
+  width: 190px;
+  height: 50px;
+  border: 1px solid $border;
+  background-color: transparent;
+  font-family: "montserratregular", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin button_hover {
+  background: linear-gradient(243.43deg, #7e5aff 16.9%, #55b7ff 83.27%);
+  color: #fff;
+  border: none;
+}
+
+@mixin icon-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}

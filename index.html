@@ -1,12 +1,624 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script src="./script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Monticello</title>
+  </head>
+  <body onload="initMap()">
+    <header class="header">
+      <div class="header__wrapper">
+        <a href="#"><img src="./assets/img/logo.png" alt="logo" /></a>
+        <ul class="header__nav">
+          <li>
+            <div class="header__dot"></div>
+            <a href="#main" class="header__nav--item">ABOUT US</a>
+          </li>
+          <li>
+            <div class="header__dot"></div>
+            <a href="#gallery" class="header__nav--item">PROJECTS</a>
+          </li>
+          <li>
+            <div class="header__dot"></div>
+            <a href="#news" class="header__nav--item">NEWS</a>
+          </li>
+          <li>
+            <div class="header__dot"></div>
+            <a href="#map" class="header__nav--item">CONTACT</a>
+          </li>
+        </ul>
+        <div class="header__text-wrapper">
+          <h1 class="header__title">SIMPLE &amp MODERN</h1>
+          <p class="header__subtitle">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
+        </div>
+        <div class="header__socials">
+          <a href="#" class="header__link">
+            <svg class="header__icon header__icon--mirror">
+              <use xlink:href="./assets/icons/sprite.svg#facebook"></use>
+            </svg>
+          </a>
+          <a href="#" class="header__link">
+            <svg class="header__icon header__icon--mirror">
+              <use xlink:href="./assets/icons/sprite.svg#twitter"></use>
+            </svg>
+          </a>
+          <a href="#" class="header__link">
+            <svg class="header__icon header__icon--mirror">
+              <use xlink:href="./assets/icons/sprite.svg#instagram"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="header__background">
+        <div class="swiper swiper__main">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                class="swiper__img"
+                src="./assets/img/main-background-first.png"
+                alt="main background"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="swiper__img"
+                src="./assets/img/background-2.png"
+                alt="second background"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="swiper__img"
+                src="./assets/img/background-3.png"
+                alt="third background"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="swiper__img"
+                src="./assets/img/main-background-first.png"
+                alt="forth background"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="swiper__img"
+                src="./assets/img/background-2.png"
+                alt="fifth background"
+              />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <a href="#main">
+        <svg class="header__icon header__scroll-down">
+          <use xlink:href="./assets/icons/sprite.svg#arrow"></use>
+        </svg>
+      </a>
+    </header>
+    <main class="main" id="main">
+      <div class="main__title-wrapper">
+        <div class="main__border"></div>
+        <h2 class="main__title">WHAT WE DO</h2>
+      </div>
+
+      <div class="main__wrapper">
+        <div class="main__wrapper-content">
+          <div class="main__img-wrapper">
+            <div class="main__square main__square--blue"></div>
+            <img
+              class="main__img"
+              src="./assets/img/img-left.png"
+              alt="Main Image"
+            />
+          </div>
+
+          <div class="main__text-wrapper">
+            <h3 class="main__text-subtitle">ONE WORLD</h3>
+            <h2 class="main__text-title">TRADE CENTER</h2>
+            <p class="main__text">
+              Increasing prosperity in our lives can be accomplished by having
+              the right frame of mind. The truth is, our thoughts are very
+              powerful.
+            </p>
+            <button type="button" class="main__button">MORE DETAILS</button>
+
+            <a
+              href="https://goo.gl/maps/iqeMzAVgSWth5H1N6"
+              class="main__location"
+            >
+              <svg class="main__icon">
+                <use xlink:href="assets/icons/sprite.svg#location"></use>
+              </svg>
+              New York City, United States - 1776 feet
+            </a>
+          </div>
+        </div>
+
+        <div class="main__wrapper-content">
+          <div class="main__text-wrapper">
+            <h3 class="main__text-subtitle">INTERNATIONAL</h3>
+            <h2 class="main__text-title">COMMERCE CENTRE</h2>
+            <p class="main__text">
+              Successful businesses have many things in common, today we’ll look
+              at the big &#39;R&#39; of recognition and how a digital
+              advertising network may help.
+            </p>
+            <button type="button" class="main__button">MORE DETAILS</button>
+
+            <a
+              href="https://www.google.com/maps/place/Hong+Kong,+%D0%93%D0%BE%D0%BD%D0%BA%D0%BE%D0%BD%D0%B3/@22.3530356,113.7980227,10z/data=!3m1!4b1!4m15!1m8!3m7!1s0x3403e2eda332980f:0xf08ab3badbeac97c!2z0JPQvtC90LrQvtC90LM!3b1!8m2!3d22.3193039!4d114.1693611!16zL20vMDNoNjQ!3m5!1s0x3403fefda2ea2807:0x486db43574f494da!8m2!3d22.3192011!4d114.1696121!16s%2Fg%2F11bc6lk3dp"
+              class="main__location"
+            >
+              <svg class="main__icon">
+                <use xlink:href="assets/icons/sprite.svg#location"></use>
+              </svg>
+              Hong Kong - 1588 feet
+            </a>
+          </div>
+          <div class="main__img-wrapper">
+            <div class="main__square main__square--violet"></div>
+            <img
+              class="main__img"
+              src="./assets/img/img-right.png"
+              alt="Main Image"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+    <section class="section-news" id="news">
+      <div class="section-news__img-wrapper"></div>
+      <div class="section-news__title-wrapper">
+        <div class="section-news__border"></div>
+        <h2 class="section-news__title">LATEST NEWS</h2>
+      </div>
+      <div class="swiper mySwiper__section">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#">
+              <img
+                src="./assets/img/news-first.png"
+                alt="First section"
+                class="section-news__img"
+              />
+              <div class="section-news__article-wrapper">
+                <h3 class="section-news__article-title">
+                  SEE THE UNMATCHED BEAUTY OF THE GREAT.
+                </h3>
+                <p class="section-news__article-text">
+                  Free directories: directories are perfect for customers
+                  that...
+                </p>
+
+                <div class="section-news__article-user">
+                  <img
+                    src="./assets/img/alja.png"
+                    alt="Alja Brun"
+                    class="section-news__article-img"
+                  />
+                  <div class="section-news__article-text-wrapper">
+                    <h3 class="section-news__article-text-name">ALJA BRUN</h3>
+                    <p class="section-news__article-text-date">20 Jan 2020</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <img
+                src="./assets/img/news-second.png"
+                alt="Second section"
+                class="section-news__img"
+              />
+              <div class="section-news__article-wrapper">
+                <h3 class="section-news__article-title">
+                  EFFECTIVE ADVERTISING POINTERS.
+                </h3>
+                <p class="section-news__article-text">
+                  Having a home based business is a wonderful asset to your
+                  life...
+                </p>
+
+                <div class="section-news__article-user">
+                  <img
+                    src="./assets/img/dominic.png"
+                    alt="DOMINIC FREEMAN"
+                    class="section-news__article-img"
+                  />
+                  <div class="section-news__article-text-wrapper">
+                    <h3 class="section-news__article-text-name">
+                      DOMINIC FREEMAN
+                    </h3>
+                    <p class="section-news__article-text-date">13 Dec 2019</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <img
+                src="./assets/img/news-third.png"
+                alt="Third section"
+                class="section-news__img"
+              />
+              <div class="section-news__article-wrapper">
+                <h3 class="section-news__article-title">
+                  HYPNOTIZE YOURSELF INTO THE GHOST.
+                </h3>
+                <p class="section-news__article-text">
+                  There are many things that are important to catalog design...
+                </p>
+
+                <div class="section-news__article-user">
+                  <img
+                    src="./assets/img/alice.png"
+                    alt="ALICE WARD"
+                    class="section-news__article-img"
+                  />
+                  <div class="section-news__article-text-wrapper">
+                    <h3 class="section-news__article-text-name">ALICE WARD</h3>
+                    <p class="section-news__article-text-date">30 Nov 2019</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <img
+                src="./assets/img/news-first.png"
+                alt="First section"
+                class="section-news__img"
+              />
+              <div class="section-news__article-wrapper">
+                <h3 class="section-news__article-title">
+                  SEE THE UNMATCHED BEAUTY OF THE GREAT.
+                </h3>
+                <p class="section-news__article-text">
+                  Free directories: directories are perfect for customers that
+                  are searching for...
+                </p>
+
+                <div class="section-news__article-user">
+                  <img
+                    src="./assets/img/alja.png"
+                    alt="Alja Brun"
+                    class="section-news__article-img"
+                  />
+                  <div class="section-news__article-text-wrapper">
+                    <h3 class="section-news__article-text-name">ALJA BRUN</h3>
+                    <p class="section-news__article-text-date">20 Jan 2020</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <img
+                src="./assets/img/news-second.png"
+                alt="First section"
+                class="section-news__img"
+              />
+              <div class="section-news__article-wrapper">
+                <h3 class="section-news__article-title">
+                  EFFECTIVE ADVERTISING POINTERS.
+                </h3>
+                <p class="section-news__article-text">
+                  Having a home based business is a wonderful asset to your
+                  life...
+                </p>
+
+                <div class="section-news__article-user">
+                  <img
+                    src="./assets/img/dominic.png"
+                    alt="DOMINIC FREEMAN"
+                    class="section-news__article-img"
+                  />
+                  <div class="section-news__article-text-wrapper">
+                    <h3 class="section-news__article-text-name">
+                      DOMINIC FREEMAN
+                    </h3>
+                    <p class="section-news__article-text-date">13 Dec 2019</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <img
+                src="./assets/img/news-third.png"
+                alt="First section"
+                class="section-news__img"
+              />
+              <div class="section-news__article-wrapper">
+                <h3 class="section-news__article-title">
+                  HYPNOTIZE YOURSELF INTO THE GHOST.
+                </h3>
+                <p class="section-news__article-text">
+                  There are many things that are important to catalog design...
+                </p>
+
+                <div class="section-news__article-user">
+                  <img
+                    src="./assets/img/alice.png"
+                    alt="ALICE WARD"
+                    class="section-news__article-img"
+                  />
+                  <div class="section-news__article-text-wrapper">
+                    <h3 class="section-news__article-text-name">ALICE WARD</h3>
+                    <p class="section-news__article-text-date">30 Nov 2019</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <img
+                src="./assets/img/news-second.png"
+                alt="First section"
+                class="section-news__img"
+              />
+              <div class="section-news__article-wrapper">
+                <h3 class="section-news__article-title">
+                  EFFECTIVE ADVERTISING POINTERS.
+                </h3>
+                <p class="section-news__article-text">
+                  Having a home based business is a wonderful asset to your
+                  life...
+                </p>
+
+                <div class="section-news__article-user">
+                  <img
+                    src="./assets/img/dominic.png"
+                    alt="DOMINIC FREEMAN"
+                    class="section-news__article-img"
+                  />
+                  <div class="section-news__article-text-wrapper">
+                    <h3 class="section-news__article-text-name">
+                      DOMINIC FREEMAN
+                    </h3>
+                    <p class="section-news__article-text-date">13 Dec 2019</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="swiper-button-wrapper">
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+    <section class="section gallery" id="gallery">
+      <div class="gallery__wrapper">
+        <div class="gallery__title-wrapper">
+          <div class="gallery__border"></div>
+          <h2 class="gallery__title">GALLERY</h2>
+        </div>
+
+        <div class="gallery__photos-grid">
+          <div id="gallery-photo1" class="gallery__photo large"><img src="./assets/img/gallery-first.png" alt="">
+              <div class="photo__cover"><svg class="photo__zoom" width="70" height="70" viewBox="0 0 70 70"
+                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M28.4375 52.5C31.5974 52.5 34.7264 51.8776 37.6458 50.6684C40.5652 49.4591 43.2178 47.6867 45.4523 45.4523C47.6867 43.2178 49.4591 40.5652 50.6684 37.6458C51.8776 34.7264 52.5 31.5974 52.5 28.4375C52.5 25.2776 51.8776 22.1486 50.6684 19.2292C49.4591 16.3098 47.6867 13.6572 45.4523 11.4227C43.2178 9.18833 40.5652 7.4159 37.6458 6.20665C34.7264 4.9974 31.5974 4.375 28.4375 4.375C22.0557 4.375 15.9353 6.91015 11.4227 11.4227C6.91015 15.9353 4.375 22.0557 4.375 28.4375C4.375 34.8193 6.91015 40.9397 11.4227 45.4523C15.9353 49.9649 22.0557 52.5 28.4375 52.5ZM56.875 28.4375C56.875 35.9796 53.8789 43.2128 48.5458 48.5458C43.2128 53.8789 35.9796 56.875 28.4375 56.875C20.8954 56.875 13.6622 53.8789 8.32915 48.5458C2.99609 43.2128 0 35.9796 0 28.4375C0 20.8954 2.99609 13.6622 8.32915 8.32915C13.6622 2.99609 20.8954 0 28.4375 0C35.9796 0 43.2128 2.99609 48.5458 8.32915C53.8789 13.6622 56.875 20.8954 56.875 28.4375Z"
+                          fill="white" />
+                      <path
+                          d="M45.255 51.3714C45.3863 51.5464 45.5263 51.7126 45.6838 51.8745L62.5275 68.7182C63.3479 69.5392 64.4607 70.0006 65.6213 70.001C66.7818 70.0014 67.895 69.5408 68.7159 68.7204C69.5369 67.9001 69.9983 66.7872 69.9987 65.6267C69.9991 64.4661 69.5385 63.3529 68.7181 62.532L51.8744 45.6882C51.718 45.5299 51.5498 45.3836 51.3713 45.2507C49.655 47.5908 47.5927 49.6561 45.255 51.3757V51.3714Z"
+                          fill="white" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M28.4375 13.125C29.0177 13.125 29.5741 13.3555 29.9843 13.7657C30.3945 14.1759 30.625 14.7323 30.625 15.3125V26.25H41.5625C42.1427 26.25 42.6991 26.4805 43.1093 26.8907C43.5195 27.3009 43.75 27.8573 43.75 28.4375C43.75 29.0177 43.5195 29.5741 43.1093 29.9843C42.6991 30.3945 42.1427 30.625 41.5625 30.625H30.625V41.5625C30.625 42.1427 30.3945 42.6991 29.9843 43.1093C29.5741 43.5195 29.0177 43.75 28.4375 43.75C27.8573 43.75 27.3009 43.5195 26.8907 43.1093C26.4805 42.6991 26.25 42.1427 26.25 41.5625V30.625H15.3125C14.7323 30.625 14.1759 30.3945 13.7657 29.9843C13.3555 29.5741 13.125 29.0177 13.125 28.4375C13.125 27.8573 13.3555 27.3009 13.7657 26.8907C14.1759 26.4805 14.7323 26.25 15.3125 26.25H26.25V15.3125C26.25 14.7323 26.4805 14.1759 26.8907 13.7657C27.3009 13.3555 27.8573 13.125 28.4375 13.125Z"
+                          fill="white" />
+                  </svg></div>
+          </div>
+          <div id="gallery-photo2" class="gallery__photo small"><img src="./assets/img/gallery-second.png"
+                  alt="">
+              <div class="photo__cover"><svg class="photo__zoom" width="70" height="70" viewBox="0 0 70 70"
+                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M28.4375 52.5C31.5974 52.5 34.7264 51.8776 37.6458 50.6684C40.5652 49.4591 43.2178 47.6867 45.4523 45.4523C47.6867 43.2178 49.4591 40.5652 50.6684 37.6458C51.8776 34.7264 52.5 31.5974 52.5 28.4375C52.5 25.2776 51.8776 22.1486 50.6684 19.2292C49.4591 16.3098 47.6867 13.6572 45.4523 11.4227C43.2178 9.18833 40.5652 7.4159 37.6458 6.20665C34.7264 4.9974 31.5974 4.375 28.4375 4.375C22.0557 4.375 15.9353 6.91015 11.4227 11.4227C6.91015 15.9353 4.375 22.0557 4.375 28.4375C4.375 34.8193 6.91015 40.9397 11.4227 45.4523C15.9353 49.9649 22.0557 52.5 28.4375 52.5ZM56.875 28.4375C56.875 35.9796 53.8789 43.2128 48.5458 48.5458C43.2128 53.8789 35.9796 56.875 28.4375 56.875C20.8954 56.875 13.6622 53.8789 8.32915 48.5458C2.99609 43.2128 0 35.9796 0 28.4375C0 20.8954 2.99609 13.6622 8.32915 8.32915C13.6622 2.99609 20.8954 0 28.4375 0C35.9796 0 43.2128 2.99609 48.5458 8.32915C53.8789 13.6622 56.875 20.8954 56.875 28.4375Z"
+                          fill="white" />
+                      <path
+                          d="M45.255 51.3714C45.3863 51.5464 45.5263 51.7126 45.6838 51.8745L62.5275 68.7182C63.3479 69.5392 64.4607 70.0006 65.6213 70.001C66.7818 70.0014 67.895 69.5408 68.7159 68.7204C69.5369 67.9001 69.9983 66.7872 69.9987 65.6267C69.9991 64.4661 69.5385 63.3529 68.7181 62.532L51.8744 45.6882C51.718 45.5299 51.5498 45.3836 51.3713 45.2507C49.655 47.5908 47.5927 49.6561 45.255 51.3757V51.3714Z"
+                          fill="white" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M28.4375 13.125C29.0177 13.125 29.5741 13.3555 29.9843 13.7657C30.3945 14.1759 30.625 14.7323 30.625 15.3125V26.25H41.5625C42.1427 26.25 42.6991 26.4805 43.1093 26.8907C43.5195 27.3009 43.75 27.8573 43.75 28.4375C43.75 29.0177 43.5195 29.5741 43.1093 29.9843C42.6991 30.3945 42.1427 30.625 41.5625 30.625H30.625V41.5625C30.625 42.1427 30.3945 42.6991 29.9843 43.1093C29.5741 43.5195 29.0177 43.75 28.4375 43.75C27.8573 43.75 27.3009 43.5195 26.8907 43.1093C26.4805 42.6991 26.25 42.1427 26.25 41.5625V30.625H15.3125C14.7323 30.625 14.1759 30.3945 13.7657 29.9843C13.3555 29.5741 13.125 29.0177 13.125 28.4375C13.125 27.8573 13.3555 27.3009 13.7657 26.8907C14.1759 26.4805 14.7323 26.25 15.3125 26.25H26.25V15.3125C26.25 14.7323 26.4805 14.1759 26.8907 13.7657C27.3009 13.3555 27.8573 13.125 28.4375 13.125Z"
+                          fill="white" />
+                  </svg></div>
+
+          </div>
+          <div id="gallery-photo3" class="gallery__photo small"><img src="./assets/img/gallery-third.png"
+                  alt="">
+              <div class="photo__cover"><svg class="photo__zoom" width="70" height="70" viewBox="0 0 70 70"
+                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M28.4375 52.5C31.5974 52.5 34.7264 51.8776 37.6458 50.6684C40.5652 49.4591 43.2178 47.6867 45.4523 45.4523C47.6867 43.2178 49.4591 40.5652 50.6684 37.6458C51.8776 34.7264 52.5 31.5974 52.5 28.4375C52.5 25.2776 51.8776 22.1486 50.6684 19.2292C49.4591 16.3098 47.6867 13.6572 45.4523 11.4227C43.2178 9.18833 40.5652 7.4159 37.6458 6.20665C34.7264 4.9974 31.5974 4.375 28.4375 4.375C22.0557 4.375 15.9353 6.91015 11.4227 11.4227C6.91015 15.9353 4.375 22.0557 4.375 28.4375C4.375 34.8193 6.91015 40.9397 11.4227 45.4523C15.9353 49.9649 22.0557 52.5 28.4375 52.5ZM56.875 28.4375C56.875 35.9796 53.8789 43.2128 48.5458 48.5458C43.2128 53.8789 35.9796 56.875 28.4375 56.875C20.8954 56.875 13.6622 53.8789 8.32915 48.5458C2.99609 43.2128 0 35.9796 0 28.4375C0 20.8954 2.99609 13.6622 8.32915 8.32915C13.6622 2.99609 20.8954 0 28.4375 0C35.9796 0 43.2128 2.99609 48.5458 8.32915C53.8789 13.6622 56.875 20.8954 56.875 28.4375Z"
+                          fill="white" />
+                      <path
+                          d="M45.255 51.3714C45.3863 51.5464 45.5263 51.7126 45.6838 51.8745L62.5275 68.7182C63.3479 69.5392 64.4607 70.0006 65.6213 70.001C66.7818 70.0014 67.895 69.5408 68.7159 68.7204C69.5369 67.9001 69.9983 66.7872 69.9987 65.6267C69.9991 64.4661 69.5385 63.3529 68.7181 62.532L51.8744 45.6882C51.718 45.5299 51.5498 45.3836 51.3713 45.2507C49.655 47.5908 47.5927 49.6561 45.255 51.3757V51.3714Z"
+                          fill="white" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M28.4375 13.125C29.0177 13.125 29.5741 13.3555 29.9843 13.7657C30.3945 14.1759 30.625 14.7323 30.625 15.3125V26.25H41.5625C42.1427 26.25 42.6991 26.4805 43.1093 26.8907C43.5195 27.3009 43.75 27.8573 43.75 28.4375C43.75 29.0177 43.5195 29.5741 43.1093 29.9843C42.6991 30.3945 42.1427 30.625 41.5625 30.625H30.625V41.5625C30.625 42.1427 30.3945 42.6991 29.9843 43.1093C29.5741 43.5195 29.0177 43.75 28.4375 43.75C27.8573 43.75 27.3009 43.5195 26.8907 43.1093C26.4805 42.6991 26.25 42.1427 26.25 41.5625V30.625H15.3125C14.7323 30.625 14.1759 30.3945 13.7657 29.9843C13.3555 29.5741 13.125 29.0177 13.125 28.4375C13.125 27.8573 13.3555 27.3009 13.7657 26.8907C14.1759 26.4805 14.7323 26.25 15.3125 26.25H26.25V15.3125C26.25 14.7323 26.4805 14.1759 26.8907 13.7657C27.3009 13.3555 27.8573 13.125 28.4375 13.125Z"
+                          fill="white" />
+                  </svg></div>
+
+          </div>
+          <div id="gallery-photo4" class="gallery__photo small"><img src="./assets/img/gallery-forth.png" alt="">
+              <div class="photo__cover"><svg class="photo__zoom" width="70" height="70" viewBox="0 0 70 70"
+                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M28.4375 52.5C31.5974 52.5 34.7264 51.8776 37.6458 50.6684C40.5652 49.4591 43.2178 47.6867 45.4523 45.4523C47.6867 43.2178 49.4591 40.5652 50.6684 37.6458C51.8776 34.7264 52.5 31.5974 52.5 28.4375C52.5 25.2776 51.8776 22.1486 50.6684 19.2292C49.4591 16.3098 47.6867 13.6572 45.4523 11.4227C43.2178 9.18833 40.5652 7.4159 37.6458 6.20665C34.7264 4.9974 31.5974 4.375 28.4375 4.375C22.0557 4.375 15.9353 6.91015 11.4227 11.4227C6.91015 15.9353 4.375 22.0557 4.375 28.4375C4.375 34.8193 6.91015 40.9397 11.4227 45.4523C15.9353 49.9649 22.0557 52.5 28.4375 52.5ZM56.875 28.4375C56.875 35.9796 53.8789 43.2128 48.5458 48.5458C43.2128 53.8789 35.9796 56.875 28.4375 56.875C20.8954 56.875 13.6622 53.8789 8.32915 48.5458C2.99609 43.2128 0 35.9796 0 28.4375C0 20.8954 2.99609 13.6622 8.32915 8.32915C13.6622 2.99609 20.8954 0 28.4375 0C35.9796 0 43.2128 2.99609 48.5458 8.32915C53.8789 13.6622 56.875 20.8954 56.875 28.4375Z"
+                          fill="white" />
+                      <path
+                          d="M45.255 51.3714C45.3863 51.5464 45.5263 51.7126 45.6838 51.8745L62.5275 68.7182C63.3479 69.5392 64.4607 70.0006 65.6213 70.001C66.7818 70.0014 67.895 69.5408 68.7159 68.7204C69.5369 67.9001 69.9983 66.7872 69.9987 65.6267C69.9991 64.4661 69.5385 63.3529 68.7181 62.532L51.8744 45.6882C51.718 45.5299 51.5498 45.3836 51.3713 45.2507C49.655 47.5908 47.5927 49.6561 45.255 51.3757V51.3714Z"
+                          fill="white" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M28.4375 13.125C29.0177 13.125 29.5741 13.3555 29.9843 13.7657C30.3945 14.1759 30.625 14.7323 30.625 15.3125V26.25H41.5625C42.1427 26.25 42.6991 26.4805 43.1093 26.8907C43.5195 27.3009 43.75 27.8573 43.75 28.4375C43.75 29.0177 43.5195 29.5741 43.1093 29.9843C42.6991 30.3945 42.1427 30.625 41.5625 30.625H30.625V41.5625C30.625 42.1427 30.3945 42.6991 29.9843 43.1093C29.5741 43.5195 29.0177 43.75 28.4375 43.75C27.8573 43.75 27.3009 43.5195 26.8907 43.1093C26.4805 42.6991 26.25 42.1427 26.25 41.5625V30.625H15.3125C14.7323 30.625 14.1759 30.3945 13.7657 29.9843C13.3555 29.5741 13.125 29.0177 13.125 28.4375C13.125 27.8573 13.3555 27.3009 13.7657 26.8907C14.1759 26.4805 14.7323 26.25 15.3125 26.25H26.25V15.3125C26.25 14.7323 26.4805 14.1759 26.8907 13.7657C27.3009 13.3555 27.8573 13.125 28.4375 13.125Z"
+                          fill="white" />
+                  </svg></div>
+
+          </div>
+          <div id="gallery-photo5" class="gallery__photo small"><img src="./assets/img/gallery-fifth.png"
+                  alt="">
+              <div class="photo__cover"><svg class="photo__zoom" width="70" height="70" viewBox="0 0 70 70"
+                      fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M28.4375 52.5C31.5974 52.5 34.7264 51.8776 37.6458 50.6684C40.5652 49.4591 43.2178 47.6867 45.4523 45.4523C47.6867 43.2178 49.4591 40.5652 50.6684 37.6458C51.8776 34.7264 52.5 31.5974 52.5 28.4375C52.5 25.2776 51.8776 22.1486 50.6684 19.2292C49.4591 16.3098 47.6867 13.6572 45.4523 11.4227C43.2178 9.18833 40.5652 7.4159 37.6458 6.20665C34.7264 4.9974 31.5974 4.375 28.4375 4.375C22.0557 4.375 15.9353 6.91015 11.4227 11.4227C6.91015 15.9353 4.375 22.0557 4.375 28.4375C4.375 34.8193 6.91015 40.9397 11.4227 45.4523C15.9353 49.9649 22.0557 52.5 28.4375 52.5ZM56.875 28.4375C56.875 35.9796 53.8789 43.2128 48.5458 48.5458C43.2128 53.8789 35.9796 56.875 28.4375 56.875C20.8954 56.875 13.6622 53.8789 8.32915 48.5458C2.99609 43.2128 0 35.9796 0 28.4375C0 20.8954 2.99609 13.6622 8.32915 8.32915C13.6622 2.99609 20.8954 0 28.4375 0C35.9796 0 43.2128 2.99609 48.5458 8.32915C53.8789 13.6622 56.875 20.8954 56.875 28.4375Z"
+                          fill="white" />
+                      <path
+                          d="M45.255 51.3714C45.3863 51.5464 45.5263 51.7126 45.6838 51.8745L62.5275 68.7182C63.3479 69.5392 64.4607 70.0006 65.6213 70.001C66.7818 70.0014 67.895 69.5408 68.7159 68.7204C69.5369 67.9001 69.9983 66.7872 69.9987 65.6267C69.9991 64.4661 69.5385 63.3529 68.7181 62.532L51.8744 45.6882C51.718 45.5299 51.5498 45.3836 51.3713 45.2507C49.655 47.5908 47.5927 49.6561 45.255 51.3757V51.3714Z"
+                          fill="white" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M28.4375 13.125C29.0177 13.125 29.5741 13.3555 29.9843 13.7657C30.3945 14.1759 30.625 14.7323 30.625 15.3125V26.25H41.5625C42.1427 26.25 42.6991 26.4805 43.1093 26.8907C43.5195 27.3009 43.75 27.8573 43.75 28.4375C43.75 29.0177 43.5195 29.5741 43.1093 29.9843C42.6991 30.3945 42.1427 30.625 41.5625 30.625H30.625V41.5625C30.625 42.1427 30.3945 42.6991 29.9843 43.1093C29.5741 43.5195 29.0177 43.75 28.4375 43.75C27.8573 43.75 27.3009 43.5195 26.8907 43.1093C26.4805 42.6991 26.25 42.1427 26.25 41.5625V30.625H15.3125C14.7323 30.625 14.1759 30.3945 13.7657 29.9843C13.3555 29.5741 13.125 29.0177 13.125 28.4375C13.125 27.8573 13.3555 27.3009 13.7657 26.8907C14.1759 26.4805 14.7323 26.25 15.3125 26.25H26.25V15.3125C26.25 14.7323 26.4805 14.1759 26.8907 13.7657C27.3009 13.3555 27.8573 13.125 28.4375 13.125Z"
+                          fill="white" />
+                  </svg></div>
+
+          </div>
+      </div>
+
+      <div class="gallery__modal">
+          <div id="modal_background" class="modal__background">
+              <span class="modal_closebtn" id="modal_close"><svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 50 50" width="50px" height="50px">
+                      <path
+                          d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z" />
+                  </svg></span>
+              <img id="modal_content" class="modal_content" alt="">
+          </div>
+      </div>
+      </div>
+
+      <button type="button" class="gallery__button">SEE MORE</button>
+    </section>
+
+    <section class="map">
+      <img class="map__pin" src="./assets/icons/Pin.svg" alt="pin">
+      <div id="map"></div>
+    </section>
+    <footer class="footer">
+      <img
+        class="footer__img"
+        src="./assets/img/background-3.png"
+        alt="footer img"
+      />
+
+      <div class="footer__wrapper">
+        <div class="footer__logo-wrapper">
+          <img src="./assets/img/logo.png" alt="logo" />
+          <p class="footer__text">Copyrights © 2020 Montichello</p>
+        </div>
+
+        <div class="footer__social">
+          <a href="#" class="footer__link">
+            <svg class="footer__icon">
+              <use xlink:href="./assets/icons/sprite.svg#facebook"></use>
+            </svg>
+          </a>
+          <a href="#" class="footer__link">
+            <svg class="footer__icon">
+              <use xlink:href="./assets/icons/sprite.svg#twitter"></use>
+            </svg>
+          </a>
+          <a href="#" class="footer__link">
+            <svg class="footer__icon">
+              <use xlink:href="./assets/icons/sprite.svg#instagram"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <form id="form" class="form">
+        <div class="form__img-wrapper">
+          <img
+            class="form__img"
+            src="./assets/img/form-background.png"
+            alt="form background"
+          />
+          <div class="form__wrapper">
+            <div class="form__title-wrapper">
+              <div class="form__border"></div>
+              <h2 class="form__title">GET IN TOUCH</h2>
+            </div>
+
+            <div class="form__info">
+              <div class="form__contacts">
+                <a href="#">
+                  <svg class="form__icon">
+                    <use
+                      xlink:href="./assets/icons/sprite.svg#location-dot-solid"
+                    ></use>
+                  </svg>
+                  91 Nolan Extensions Suite 670
+                </a>
+                <a href="tel:+001 356-868-2454">
+                  <svg class="form__icon">
+                    <use
+                      xlink:href="./assets/icons/sprite.svg#phone-solid"
+                    ></use>
+                  </svg>
+                  +001 356-868-2454
+                </a>
+                <a href="montichello@service.com">
+                  <svg class="form__icon">
+                    <use
+                      xlink:href="./assets/icons/sprite.svg#inbox-solid"
+                    ></use>
+                  </svg>
+                  montichello@service.com
+                </a>
+                <p>
+                  <svg class="form__icon">
+                    <use
+                      xlink:href="./assets/icons/sprite.svg#clock-regular"
+                    ></use>
+                  </svg>
+                  From 07:05AM to 19:30PM
+                </p>
+              </div>
+              <div class="form__user-info">
+                <input
+                  type="text"
+                  class="form__input form__name"
+                  placeholder="Fullname"
+                />
+                <input
+                  type="email"
+                  class="form__input"
+                  placeholder="Email"
+                  required
+                  id="input"
+                />
+                <span id="error"></span>
+                <button type="submit" class="form__button">SUBMIT</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </footer>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBE2k0NyfYkP0Kt6DZOxewpUGePYBJZE-0&callback=initMap"
+    ></script>
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./script/script.js"></script>
+  </body>
 </html>
