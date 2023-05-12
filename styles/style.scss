@@ -20,7 +20,7 @@ html {
     width: 100%;
     height: 100vh;
 
-    background: linear-gradient(243.43deg, #7e5aff 16.9%, #55b7ff 83.27%);
+    background: linear-gradient(243.43deg, $purple 16.9%, $blue 83.27%);
     z-index: -1;
     position: absolute;
   }
@@ -50,12 +50,12 @@ html {
     }
     &-pagination-bullet {
       background-color: transparent;
-      border: 1px solid #fff;
+      border: 1px solid $white;
       opacity: 1;
       margin: 40px !important;
 
       &-active {
-        background-color: #fff;
+        background-color: $white;
       }
     }
   }
@@ -150,7 +150,7 @@ html {
     stroke: $white;
     fill: none;
     &:hover {
-      stroke: #7e5aff;
+      stroke: $purple;
     }
   }
 }
@@ -219,7 +219,7 @@ html {
     font-weight: 400;
     font-size: 22px;
     line-height: 27px;
-    color: #2c4058;
+    color: $border;
   }
 
   &__text-title {
@@ -227,7 +227,7 @@ html {
     font-weight: 700;
     font-size: 44px;
     line-height: 54px;
-    color: #2c4058;
+    color: $border;
     margin-bottom: 20px;
   }
 
@@ -236,7 +236,7 @@ html {
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
-    color: #2c4058;
+    color: $border;
   }
 
   &__button {
@@ -255,7 +255,7 @@ html {
     line-height: 20px;
     font-style: italic;
     text-decoration: none;
-    color: #000;
+    color: $black;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -278,13 +278,13 @@ html {
     overflow: hidden;
 
     &--blue {
-      background-color: #55b7ff;
+      background-color: $blue;
       top: -10%;
       left: -20%;
     }
 
     &--violet {
-      background-color: #7e5aff;
+      background-color: $purple;
       top: -10%;
       right: -19%;
       width: 100%;
@@ -297,7 +297,7 @@ html {
   height: 978px;
   // max-height: 978px;
   position: relative;
-  background: linear-gradient(237.1deg, #24ccfa 11.16%, #3c7fd4 89.18%);
+  background: linear-gradient(237.1deg, $blue-light 11.16%, $blue-dark 89.18%);
 
   &__img-wrapper {
     position: absolute;
@@ -312,12 +312,12 @@ html {
   &__border {
     @include border;
     margin-top: 90px;
-    border: 1px solid #fff;
+    border: 1px solid $white;
   }
 
   &__title {
     @include title;
-    color: #fff;
+    color: $white;
   }
 
   .swiper {
@@ -333,7 +333,7 @@ html {
     &-slide {
       height: 514px;
       font-size: 18px;
-      background: #fff;
+      background: $white;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -352,12 +352,12 @@ html {
 
     &-pagination-bullet {
       background-color: transparent;
-      border: 1px solid #fff;
+      border: 1px solid $white;
       opacity: 1;
       margin: 40px !important;
 
       &-active {
-        background-color: #fff;
+        background-color: $white;
       }
     }
     &-button-next {
@@ -368,8 +368,8 @@ html {
     }
     &-button-next,
     &-button-prev {
-      color: #000;
-      border: 1px solid #fff;
+      color: $black;
+      border: 1px solid $white;
       border-radius: 50%;
       width: 40px;
       height: 40px;
@@ -385,12 +385,12 @@ html {
       top: 55%;
     }
     &-button-prev:after {
-      color: #fff;
+      color: $white;
       content: "<";
       font-size: 14px;
     }
     &-button-next::after {
-      color: #fff;
+      color: $white;
       content: ">";
       font-size: 14px;
     }
@@ -405,7 +405,7 @@ html {
 
   &__article-title {
     margin: 20px 0 15px;
-    color: #2c4058;
+    color: $border;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 22px;
@@ -417,7 +417,7 @@ html {
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
-    color: #2c4058;
+    color: $border;
     margin-bottom: 15px;
   }
 
@@ -443,7 +443,7 @@ html {
   &__article-text-name {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
-    color: #2c4058;
+    color: $border;
     font-size: 18px;
     line-height: 24px;
   }
@@ -451,7 +451,7 @@ html {
   &__article-text-date {
     font-family: "Montserrat", sans-serif;
     @include fontsize-14;
-    color: #55b7ff;
+    color: $blue;
   }
   .swiper-horizontal > .swiper-pagination-bullets,
   .swiper-pagination-bullets.swiper-pagination-horizontal,
@@ -556,7 +556,7 @@ html {
 .photo__cover {
   width: 100%;
   height: 100%;
-  background-color: #0000004f;
+  background-color: $black0004f;
   position: absolute;
   top: 0px;
   display: flex;
@@ -596,7 +596,7 @@ html {
   position: absolute;
   top: 15px;
   right: 35px;
-  color: #f1f1f1;
+  color: $white-2;
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
@@ -604,7 +604,7 @@ html {
 
 .modal_closebtn:hover,
 .modal_closebtn:focus {
-  color: #bbb;
+  color: $grey;
   text-decoration: none;
   cursor: pointer;
 }
@@ -622,11 +622,6 @@ html {
     transform: scale(1);
   }
 }
-
-// #map {
-//   height: 700px;
-//   width: 100%;
-// }
 
 .map {
   width: 100%;
@@ -670,7 +665,7 @@ html {
   width: 100%;
   height: 70vh;
   max-height: 549px;
-  background: linear-gradient(251.06deg, #7e5aff -2.19%, #55b7ff 103.21%);
+  background: linear-gradient(251.06deg, $purple -2.19%, $blue 103.21%);
   position: relative;
 
   &__img {
