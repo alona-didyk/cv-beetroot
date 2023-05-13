@@ -809,11 +809,21 @@ li:hover .header__dot {
 }
 @media screen and (min-width: 2882px) {
   .swiper-button-next {
-    margin-right: 630px;
+    margin-right: 650px;
     transform: translateX(-50%);
   }
   .swiper-button-prev {
-    margin-left: 670px;
+    margin-left: 690px;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (min-width: 4000px) {
+  .swiper-button-next {
+    margin-right: 950px;
+    transform: translateX(-50%);
+  }
+  .swiper-button-prev {
+    margin-left: 990px;
     transform: translateX(-50%);
   }
 }
@@ -975,7 +985,8 @@ li:hover .header__dot {
   position: relative;
 }
 .map__pin {
-  position: absolute;
+  position: relative;
+  margin: 0 auto;
   top: 120px;
   z-index: 1;
   left: 666px;

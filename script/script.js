@@ -238,22 +238,33 @@ function initMap() {
           },
         ],
       },
-    ],
+    ]
   });
-
-  const Marker = "../../cv-beetroot/assets/icons/Pin.svg";
 
   let marker = new google.maps.Marker({
     position: { lat: 40.689244, lng: -73.906453 },
-    icon: Marker,
+    icon: {
+      position: { lat: 40.689244, lng: -73.906453 },
+      url: "./assets/icons/Pin.svg",
+      scaledSize: new google.maps.Size(70, 70),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(25, 25),
+      zIndex: 1
+    },
     map: map,
+    opacity: 1.0
   });
 
-  marker.setIcon({
-    url: Marker,
-    scaledSize: new google.maps.Size(50, 50),
-    origin: new google.maps.Point(0, 0),
-    anchor: new google.maps.Point(25, 25),
-    className: "pulse",
-  });
+  let fadingOut = false;
+  setInterval(() => {
+    if (marker.opacity <= 0.1) {
+      fadingOut = false;
+    } else if (marker.opacity >= 0.9) {
+      fadingOut = true;
+    }
+
+    marker.opacity = fadingOut ? marker.opacity - 0.1 : marker.opacity + 0.1;
+    marker.setOpacity(marker.opacity);
+  }, 100);
+  
 }
