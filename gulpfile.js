@@ -13,7 +13,7 @@ gulp.task("styles", function () {
     .pipe(sourceMaps.init())
     .pipe(sass().on("error", sass.logError))
     .pipe(autoprefixer())
-    .pipe(cleanCss({ compatibility: "ie8" }))
+    .pipe(cleanCss({ compatibility: "ie8", level: { 1: { specialComments: 0 }, 2: { restructureRules: false } } }))
     .pipe(sourceMaps.write('./'))
     .pipe(gulp.dest("./"))
     .pipe(browserSync.stream());
@@ -28,4 +28,7 @@ gulp.task("watch", function () {
 });
 
 gulp.task('default', gulp.series(['styles', 'watch']));
+
+
+
 
