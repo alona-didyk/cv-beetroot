@@ -8,11 +8,14 @@ const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
 const postcssPresetEnv = require('postcss-preset-env');
 
-const watchedFiles = "styles/**/*.scss";
+const watchedFiles = {
+  styles: "styles/**/*.scss",
+  scripts: "scripts/**/*.js",
+};
 
 gulp.task("styles", function () {
   return gulp
-    .src(watchedFiles)
+    .src(watchedFiles.styles)
     .pipe(sourceMaps.init())
     .pipe(sass().on("error", sass.logError))
     .pipe(autoprefixer())
@@ -25,12 +28,19 @@ gulp.task("styles", function () {
     .pipe(browserSync.stream());
 });
 
+gulp.task("scripts", function () {
+  return gulp
+    .src(watchedFiles.scripts)
+    .pipe(browserSync.stream());
+});
+
 gulp.task("watch", function () {
   browserSync.init({
     server: "./"
   });
-  gulp.watch(watchedFiles, gulp.series(["styles"]));
+  gulp.watch(watchedFiles.styles, gulp.series(["styles"]));
+  gulp.watch(watchedFiles.scripts, gulp.series(["scripts"]));
   gulp.watch("./*.html").on('change', browserSync.reload);
 });
 
-gulp.task('default', gulp.series(['styles', 'watch']));
+gulp.task('default', gulp.series(['styles', 'scripts', 'watch']));
