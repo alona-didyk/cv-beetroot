@@ -7,6 +7,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
 const postcssPresetEnv = require('postcss-preset-env');
+const postcssGapProperties = require('postcss-gap-properties');
 
 const watchedFiles = "styles/**/*.scss";
 
@@ -18,6 +19,7 @@ gulp.task("styles", function () {
     .pipe(autoprefixer())
     .pipe(postcss([
       postcssPresetEnv(),
+      postcssGapProperties(),
       cssnano()
     ]))
     .pipe(sourceMaps.write('./'))
@@ -34,6 +36,8 @@ gulp.task("watch", function () {
 });
 
 gulp.task('default', gulp.series(['styles', 'watch']));
+
+
 
 
 
