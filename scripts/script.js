@@ -92,69 +92,74 @@ console.log(
 );
 
 
-class WorldClock {
-    constructor(timezone) {
-      this.timezone = timezone;
-    }
-  
-    getCurrentDate() {
-      const now = new Date();
-      const options = { timeZone: this.timezone, dateStyle: 'full' };
-      return now.toLocaleDateString(undefined, options);
-    }
-  
-    getCurrentDateTime() {
-      const now = new Date();
-      const options = { timeZone: this.timezone, timeStyle: 'long' };
-      return now.toLocaleString(undefined, options);
-    }
+class Clock {
+  constructor(timezone) {
+    this.timezone = timezone;
   }
-  
-  const clockDashboard = document.getElementById('clockDashboard');
-  const timezoneInput = document.getElementById('timezoneInput');
-  const addClockBtn = document.getElementById('addClockBtn');
-  
-  addClockBtn.addEventListener('click', () => {
-    const timezone = timezoneInput.value.trim();
-    if (timezone !== '') {
-      const clock = new WorldClock(timezone);
-      addClockToDashboard(clock);
-    }
+
+  getCurrentDate() {
+    const now = new Date();
+    const options = { timeZone: this.timezone, dateStyle: 'full' };
+    return now.toLocaleDateString(undefined, options);
+  }
+
+  getCurrentDateTime() {
+    const now = new Date();
+    const options = { timeZone: this.timezone, timeStyle: 'long' };
+    return now.toLocaleString(undefined, options);
+  }
+}
+
+const clockDashboard = document.getElementById('clockDashboard');
+const timezoneInput = document.getElementById('timezoneInput');
+const addClockBtn = document.getElementById('addClockBtn');
+
+addClockBtn.addEventListener('click', () => {
+  const timezone = timezoneInput.value.trim();
+  if (timezone !== '') {
+    const clock = new Clock(timezone);
+    addClockToDashboard(clock);
+  }
+});
+
+function addClockToDashboard(clock) {
+  const clockDiv = document.createElement('div');
+  clockDiv.classList.add('clock');
+
+  const timezoneText = document.createElement('p');
+  timezoneText.textContent = `Часовий пояс: ${clock.timezone}`;
+  clockDiv.appendChild(timezoneText);
+
+  const buttonsWrapper = document.createElement('div');
+  buttonsWrapper.classList.add('clock__buttons');
+
+  const timeBtn = createButton('Показати час', 'clock__button-blue', () => {
+    const currentTime = clock.getCurrentDateTime();
+    alert(`Поточний час (${clock.timezone}): ${currentTime}`);
   });
-  
-  function addClockToDashboard(clock) {
-    const clockDiv = document.createElement('div');
-    clockDiv.classList.add('clock');
-  
-    const timezoneText = document.createElement('p');
-    timezoneText.textContent = `Часовий пояс: ${clock.timezone}`;
-    clockDiv.appendChild(timezoneText);
-  
-    const timeBtn = document.createElement('button');
-    timeBtn.textContent = 'Показати час';
-    timeBtn.addEventListener('click', () => {
-      const currentTime = clock.getCurrentDateTime();
-      alert(`Поточний час (${clock.timezone}): ${currentTime}`);
-    });
-    clockDiv.appendChild(timeBtn);
-  
-    const dateBtn = document.createElement('button');
-    dateBtn.textContent = 'Показати дату';
-    dateBtn.addEventListener('click', () => {
-      const currentDate = clock.getCurrentDate();
-      alert(`Поточна дата (${clock.timezone}): ${currentDate}`);
-    });
-    clockDiv.appendChild(dateBtn);
-  
-    const deleteBtn = document.createElement('button');
-    deleteBtn.textContent = 'Видалити годинник';
-    deleteBtn.addEventListener('click', () => {
-      clockDiv.parentNode.removeChild(clockDiv);
-    });
-    clockDiv.appendChild(deleteBtn);
-  
-    clockDashboard.appendChild(clockDiv);
-  }
-  
-  
-  
+  buttonsWrapper.appendChild(timeBtn);
+
+  const dateBtn = createButton('Показати дату', 'clock__button-red', () => {
+    const currentDate = clock.getCurrentDate();
+    alert(`Поточна дата (${clock.timezone}): ${currentDate}`);
+  });
+  buttonsWrapper.appendChild(dateBtn);
+
+  const deleteBtn = createButton('Видалити годинник', 'clock__button-green', () => {
+    clockDiv.remove();
+  });
+  buttonsWrapper.appendChild(deleteBtn);
+
+  clockDiv.appendChild(buttonsWrapper);
+  clockDashboard.appendChild(clockDiv);
+}
+
+function createButton(text, className, onClick) {
+  const button = document.createElement('button');
+  button.textContent = text;
+  button.classList.add(className);
+  button.addEventListener('click', onClick);
+  return button;
+}
+
+
