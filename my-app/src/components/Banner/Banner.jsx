@@ -1,3 +1,4 @@
 import './Banner.scss';
+import Logo from "./Assets/image.png";
 
-export const Banner = (props) => <div className="banner"></div>
+export const Banner = () =>    <img className='banner' src={ Logo } alt="logo" />

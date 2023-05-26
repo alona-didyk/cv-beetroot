@@ -2,28 +2,16 @@ import "./App.scss";
 import "./components/Header/Header.scss";
 import { Banner } from "./components/Banner/Banner";
 import { Blog } from "./components/Blog/Blog";
-// import { Header } from './components/Header/Header';
+import { Header } from "./components/Header/Header";
+import { News } from "./components/News/News";
 
 function App() {
   return (
     <>
-      <header className="header">
-        <div className="header__wrapper">
-          <div className="header__wrapper-logo"></div>
-          <h1 className="header__wrapper-name">Blog name</h1>
-          <div className="header__span">
-            <span className="header__span-item"></span>
-            <span className="header__span-item"></span>
-            <span className="header__span-item"></span>
-            <span className="header__span-item"></span>
-            <span className="header__span-item"></span>
-          </div>
-        </div>
-      </header>
+      <Header></Header>
       <Banner></Banner>
-      <main className="main">
-        <Blog></Blog>
-      </main>
+      <Blog></Blog>
+      <News></News>
     </>
   );
 }

@@ -1,6 +1,25 @@
 .blog {
   display: flex;
+  flex-direction: column;
+  width: 940px;
+  height: 437px;
+  background: #d9d9d9;
+  margin-top: 24px;
+  float: left;
   &__name {
-    align-items: center;
+    margin: 0 auto;
+    margin-top: 17px;
+  }
+  &__parts {
+    margin-top: 17px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    &-item {
+      background: #f9d7d7;
+      width: 759px;
+      height: 70px;
+      margin: 0 auto;
+    }
   }
 }
