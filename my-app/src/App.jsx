@@ -1,5 +1,4 @@
 import "./App.scss";
-import "./components/Header/Header.scss";
 import { Banner } from "./components/Banner/Banner";
 import { Blog } from "./components/Blog/Blog";
 import { Header } from "./components/Header/Header";
