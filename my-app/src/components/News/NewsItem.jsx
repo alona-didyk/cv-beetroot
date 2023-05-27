@@ -1,26 +1,17 @@
-import './News.scss';
+import { Card } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
 
-export const NewsItem = () => {
-    return (
-        <div className="news__parts">
-        <span className="news__parts--item">
-              orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-  
-            </span>
-            <span className="news__parts--item">
-              orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-  
-            </span>
-            <span className="news__parts--item">
-              orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-  
-            </span>
-            </div>
-    )
-}
+export const NewsItem = ({ urlToImage, content, title }) => {
+  return (
+    <Container>
+      <Card>
+        <Card.Img variant="top" src={urlToImage} alt="Top" />
+        <Card.Body>
+          <Card.Title>{title}</Card.Title>
+          <Card.Text>{content}</Card.Text>
+        </Card.Body>
+      </Card>
+    </Container>
+  );
+};
+

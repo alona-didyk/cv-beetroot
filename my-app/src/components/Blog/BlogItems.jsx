@@ -1,32 +1,29 @@
-import './Blog.scss';
+import "./Blog.scss";
+import { Card } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
 
-export const BlogItem = () => {
-return (
-    <div className="blog__parts">
-    <span className="blog__parts-item">
-      orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-      commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-      penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-    </span>
-    <span className="blog__parts-item">
-      orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-      commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-      penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-    </span>
-    <span className="blog__parts-item">
-      orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-      commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-      penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-    </span>
-    <span className="blog__parts-item">
-      orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-      commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-      penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-    </span>
-  </div>
-)
-}
+
+export const BlogItem = ({ title, body, userId }) => {
+  return (
+    <Container>
+    <Card className="mb-4 bg-danger" role="button" >
+      <Card.Body>
+        <Card.Title>{title}</Card.Title>
+        <Card.Text>{body}</Card.Text>
+      </Card.Body>
+    </Card>
+    </Container>
+
+    // <div className="blog__parts">
+    //   <div className="blog__parts-item">
+
+    //     <h2>{userId}</h2>
+    //     <h3>{title}</h3>
+    //     {body}
+    //   </div>
+    //   <div className="blog__parts-item"></div>
+    //   <div className="blog__parts-item"></div>
+    //   <div className="blog__parts-item"></div>
+    // </div>
+  );
+};

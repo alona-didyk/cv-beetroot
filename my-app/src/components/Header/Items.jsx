@@ -3,29 +3,29 @@ import "./Header.scss";
 export const Items = () => {
   return (
     <>
-      <ul class="header__nav">
+      <ul className="header__nav">
         <li>
-          <a href="#header" class="header__nav--item">
+          <a href="#header" className="header__nav--item">
             Logo
           </a>
         </li>
         <li>
-          <a href="#image" class="header__nav--item">
+          <a href="#image" className="header__nav--item">
             Image
           </a>
         </li>
         <li>
-          <a href="#blog" class="header__nav--item">
+          <a href="#blog" className="header__nav--item">
             Blog
           </a>
         </li>
         <li>
-          <a href="#news" class="header__nav--item">
+          <a href="#news" className="header__nav--item">
             News
           </a>
         </li>
         <li>
-          <a href="#contact" class="header__nav--item">
+          <a href="#contact" className="header__nav--item">
             Contact
           </a>
         </li>
