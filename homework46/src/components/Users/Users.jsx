@@ -16,6 +16,8 @@ export const Users = () => {
     SecondUser,
     ThirdUser,
     ForthUser,
+    FirsImg,
+    SecondImg,
   ];
   const NICKNAMES = [
     "Cedric Kirin",
@@ -24,6 +26,8 @@ export const Users = () => {
     "Loma Quigley",
     "Donell Nienow",
     "Ross Lockman",
+    "Cedric Kirin",
+    "Alessandra Simonis",
   ];
 
   function NewUser(props) {
