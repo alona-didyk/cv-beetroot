@@ -1,57 +1,67 @@
 import React, { useState } from "react";
 import "./Form2.scss";
+import { TextInput } from "./TextInput";
+import { SelectInput } from "./SelectInput";
+import { RadioButtonGroup } from "./RadioButtonGroup";
 
 export const Form2 = () => {
-  const [name, setName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [company, setCompany] = useState("");
-  const [email, setEmail] = useState("");
-  const [phoneAreaCode, setPhoneAreaCode] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [subject, setSubject] = useState("");
-  const [isExistingCustomer, setIsExistingCustomer] = useState(false);
-  const [, setSubmitted] = useState(false);
+  const initialFormState = {
+    firstName: "",
+    lastName: "",
+    company: "",
+    email: "",
+    phoneAreaCode: "",
+    phoneNumber: "",
+    subject: "",
+    isExistingCustomer: false,
+  };
 
-  const [nameError, setNameError] = useState("");
-  const [emailError, setEmailError] = useState("");
-  const [phoneError, setPhoneError] = useState("");
+  const [form, setForm] = useState(initialFormState);
+  const [errors, setErrors] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    let isValid = true;
-
-    if (name.length < 4 || lastName.length < 4) {
-      isValid = false;
-      setNameError("Юзернейм повинен містити мінімум 4 символи");
-    } else {
-      setNameError("");
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email.match(emailRegex)) {
-      isValid = false;
-      setEmailError("Неправильна адреса електронної пошти");
-    } else {
-      setEmailError("");
-    }
-
-    
-    if (phoneAreaCode.length < 3 || phoneNumber.length< 6) {
-      isValid = false;
-      setPhoneError("Перевір формат телефонного коду");
-    } else {
-      setPhoneError("");
-    }
+    const isValid =
+      form.firstName.length >= 4 &&
+      form.lastName.length >= 4 &&
+      form.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/) &&
+      form.phoneAreaCode.length >= 3 &&
+      form.phoneNumber.length >= 6;
 
     if (isValid) {
-      setSubmitted(true);
       alert("Ваш запит було надіслано.");
+      setForm(initialFormState);
+    } else {
+      setErrors({
+        firstName:
+          form.firstName.length < 4 &&
+          "Юзернейм повинен містити мінімум 4 символи",
+        lastName:
+          form.lastName.length < 4 &&
+          "Прізвище повинно містити мінімум 4 символи",
+        email:
+          !form.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/) &&
+          "Неправильна адреса електронної пошти",
+        phone:
+          (form.phoneAreaCode.length < 3 || form.phoneNumber.length < 6) &&
+          "Перевір формат телефонного коду",
+      });
     }
   };
 
-  const handleFieldFocus = (errorSetter) => {
-    errorSetter("");
+  const handleFieldChange = (e) => {
+    const fieldName = e.target.name;
+    const fieldValue = e.target.value;
+    setForm((prevForm) => ({
+      ...prevForm,
+      [fieldName]: fieldValue,
+    }));
   };
 
   return (
@@ -60,37 +70,35 @@ export const Form2 = () => {
         <h1 className="form__title">EVENT REGISTRATION FORM</h1>
       </div>
       <div className="form__wrapper">
-        <label className="form__label">
-          Name
-          <div className="form__input-wrapper">
-            <input
-              className="form__input-name"
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              onFocus={() => handleFieldFocus(setNameError)}
-            />
-            <p className="form__caption">First Name</p>
-          </div>
-          <div className="form__input-wrapper">
-            <input
-              className="form__input-name"
-              type="text"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-              onFocus={() => handleFieldFocus(setNameError)}
-            />
-            <p className="form__caption">Last Name</p>
-          </div>
-        </label>
-          {nameError && <p className="form__error">{nameError}</p>}
+        <div className="form__inline">
+          <label className="form__label">Name</label>
+          <TextInput
+            className="inline"
+            // label="First Name"
+            name="firstName"
+            value={form.firstName}
+            onChange={handleFieldChange}
+            error={errors.firstName}
+            caption="First Name"
+          />
+          <TextInput
+            className="inline"
+            // label="Last Name"
+            name="lastName"
+            value={form.lastName}
+            onChange={handleFieldChange}
+            error={errors.lastName}
+            caption="Last Name"
+          />
+        </div>
 
         <label className="form__label">
           Company
           <input
             className="form__input"
-            value={company}
-            onChange={(e) => setCompany(e.target.value)}
+            name="company"
+            value={form.company}
+            onChange={handleFieldChange}
           />
         </label>
 
@@ -99,12 +107,12 @@ export const Form2 = () => {
           <input
             className="form__input"
             type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            onFocus={() => handleFieldFocus(setEmailError)}
+            name="email"
+            value={form.email}
+            onChange={handleFieldChange}
           />
+          {errors.email && <p className="form__error">{errors.email}</p>}
         </label>
-          {emailError && <p className="form__error">{emailError}</p>}
 
         <label className="form__label">
           Phone
@@ -112,69 +120,48 @@ export const Form2 = () => {
             <input
               className="form__input form__input--small"
               type="tel"
-              value={phoneAreaCode}
-              onChange={(e) => setPhoneAreaCode(e.target.value)}
-              onFocus={() => handleFieldFocus(setPhoneError)}
+              name="phoneAreaCode"
+              value={form.phoneAreaCode}
+              onChange={handleFieldChange}
             />
             <p className="form__caption">Area Code</p>
           </div>
           <div className="form__input-wrapper">
-            <input className="form__input form__input--small" 
-            type="tel"
-            value={phoneNumber}
-            onChange={(e) => setPhoneNumber(e.target.value)}
-            onFocus={() => handleFieldFocus(setPhoneError)}
+            <input
+              className="form__input form__input--small"
+              type="tel"
+              name="phoneNumber"
+              value={form.phoneNumber}
+              onChange={handleFieldChange}
             />
             <p className="form__caption">Phone Number</p>
           </div>
+          {errors.phone && <p className="form__error">{errors.phone}</p>}
         </label>
-          {phoneError && <p className="form__error">{phoneError}</p>}
 
-        <div className="form__select-wrapper">
-          <label for="subject" className="form__label">
-            Subject
-          </label>
+        <SelectInput
+          label="Subject"
+          name="subject"
+          value={form.subject}
+          onChange={handleFieldChange}
+          options={[
+            { value: "1", label: "Subject 1" },
+            { value: "2", label: "Subject 2" },
+            { value: "3", label: "Subject 3" },
+          ]}
+        />
 
-          <select
-            id="subject"
-            name="subject"
-            className="form__input form__select"
-            value={subject}
-            onChange={(e) => setSubject(e.target.value)}
-          >
-            <option disabled selected hidden>
-              Choose option
-            </option>
-            <option value="1">Subject 1</option>
-            <option value="2">Subject 2</option>
-            <option value="3">Subject 3</option>
-          </select>
-        </div>
+        <RadioButtonGroup
+          label="Are you an existing customer?"
+          name="isExistingCustomer"
+          value={form.isExistingCustomer}
+          onChange={handleFieldChange}
+          options={[
+            { value: true, label: "Yes" },
+            { value: false, label: "No" },
+          ]}
+        />
 
-        <div className="form__radiobutton-wrapper">
-          <h4 className="form__label">Are you an existing customer?</h4>
-          <div className="form__radiobutton-group">
-            <label className="form__radiobutton-label">
-              <input className="form__radiobutton" 
-              type="radio" 
-              name="radio" 
-              checked={isExistingCustomer}
-              onChange={() => setIsExistingCustomer(true)}
-              />
-              <span className="form__checkmark"></span>
-              Yes
-            </label>
-            <label className="form__radiobutton-label">
-              <input className="form__radiobutton" 
-              type="radio" 
-              name="radio" 
-              checked={!isExistingCustomer}
-              onChange={() => setIsExistingCustomer(false)} />
-              <span className="form__checkmark"></span>
-              No
-            </label>
-          </div>
-        </div>
         <button className="form__button" type="submit">
           Register
         </button>
@@ -182,6 +169,3 @@ export const Form2 = () => {
     </form>
   );
 };
-
-
-
