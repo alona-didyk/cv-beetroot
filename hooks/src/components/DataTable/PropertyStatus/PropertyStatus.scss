@@ -1,0 +1,21 @@
+.property-status {
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+&__text {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: rgb(88, 82, 128);
+    margin: 0px;
+}
+
+&__icon {
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    margin-left: 1rem;
+    position: absolute;
+    right: 7rem;
+}
+}

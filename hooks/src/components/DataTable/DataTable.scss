@@ -1,0 +1,56 @@
+.data-table {
+  &__header {
+    font-weight: 500;
+    color: rgb(88, 82, 128);
+    font-size: 1.3rem;
+    display: flex;
+  }
+
+  &__label {
+    margin-right: 1rem;
+  }
+
+  table {
+    width: 60%;
+    margin-left: 200px;
+    margin: 0 auto;
+
+  }
+
+  &__head {
+    background-color: rgb(248, 248, 248);
+    background-color: rgb(248, 248, 248);
+    margin: 2rem 0px;
+    border-radius: 5px;
+    gap: 20px;
+
+    th {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: rgb(88, 82, 128);
+
+
+      &:first-child {
+        padding-left: -17rem;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      &:last-child {
+        padding-right: 1rem;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+  }
+
+  &__row {
+    padding: 1rem 0px;
+    border-bottom: 1px solid rgba(190, 190, 190, 0.22);
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    transition: all 300ms ease-in-out 0s;
+  }
+}
