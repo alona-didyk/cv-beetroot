@@ -16,18 +16,30 @@
   }
 
   &__wrapper {
-    padding: 20px 50px;
+    height: 50px;
+    background-color: #202020;
     // width: 95%;
     max-width: 95%;
     display: flex;
   }
 
   &__nav {
-    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    background-color: #202020;
+    color: #fff;
+    font-family: Roboto,Trebuchet MS,Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    user-select: none;
     &--ul {
       display: flex;
       flex-direction: row;
       gap: 30px;
+    }
+
+    &__li {
+      height: 40px;
+      text-align: center;
     }
   }
 }

@@ -21,18 +21,18 @@ export const Header = ({ hideEntryPage }) => {
           <nav className="header__nav">
 
             <ul className="header__nav--ul">
-              {!hideEntryPage && (
+              {(
                 <li className="header__nav--li">
                   <Link onClick={(event) => navigateHandler(event, "/")}>
-                    EntryPage
+                    HomePage
                   </Link>
                 </li>
               )}
-              <li className="header__nav--li">
+              {/* <li className="header__nav--li">
                 <Link onClick={(event) => navigateHandler(event, "/homepage")}>
                   HomePage
                 </Link>
-              </li>
+              </li> */}
 
               <li className="header__nav--li">
                 <Link onClick={(event) => navigateHandler(event, "/movie")}>

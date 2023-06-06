@@ -16,7 +16,7 @@ function App() {
   return (
     <div>
       <Router>
-        <Header hideEntryPage></Header>
+        {/* <Header hideEntryPage></Header> */}
         <Main>
           {/* <nav>
             <ul>
