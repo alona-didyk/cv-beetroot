@@ -1,7 +1,9 @@
-import { Outlet, Link, useNavigate } from "react-router-dom";
+import { Outlet, Link, useNavigate, Navigate } from "react-router-dom";
 
 import logo from "../../assets/images/logo.png";
 import "./Header.scss";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 
 export const Header = ({ hideEntryPage }) => {
   const navigate = useNavigate();
@@ -10,6 +12,11 @@ export const Header = ({ hideEntryPage }) => {
     event.preventDefault();
     navigate(to);
   };
+
+  const {currentUser} = useContext(AuthContext);
+  const AuthRoute = ({children}) => {
+    return currentUser ? children : <Navigate to="/login"/>
+  }
   return (
     <>
       <header className="header">
@@ -60,9 +67,12 @@ export const Header = ({ hideEntryPage }) => {
                 </Link>
               </li>
               <li className="header__nav--li">
+ 
                 <Link onClick={(event) => navigateHandler(event, "/user")}>
-                  User
+                  {currentUser?.displayName}
                 </Link>
+       
+         
               </li>
             </ul>
           </nav>

@@ -11,12 +11,18 @@ import { Login } from "./pages/Login";
 import { Movie } from "./pages/Movie";
 import { Regist } from "./pages/Regist";
 import { User } from "./pages/User";
+import { AuthContextProvider } from "./context/AuthContext";
+import { useContext } from "react";
+import { AuthContext } from "./context/AuthContext";
 
 function App() {
+
+
   return (
     <div>
+      <AuthContextProvider>
       <Router>
-        {/* <Header hideEntryPage></Header> */}
+        <Header hideEntryPage></Header>
         <Main>
           {/* <nav>
             <ul>
@@ -61,6 +67,7 @@ function App() {
 
         <Footer></Footer>
       </Router>
+      </AuthContextProvider>
     </div>
   );
 }
