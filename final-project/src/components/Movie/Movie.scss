@@ -1,0 +1,125 @@
+main {
+    margin: 0 auto;
+    width: 500px;
+    margin-top: 30px;
+  }
+  
+  .type-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .type-input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #1c1e1e;
+    &:focus {
+      border-color: rgba(82, 168, 236, 0.8);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,
+        0 0 8px rgba(82, 168, 236, 0.6);
+      outline: 0 none;
+    }
+  }
+  
+  .type-search {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #1c1e1e;
+    &:focus {
+      border-color: rgba(82, 168, 236, 0.8);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,
+        0 0 8px rgba(82, 168, 236, 0.6);
+      outline: 0 none;
+    }
+  }
+  
+  .type-button {
+    padding: 10px 20px;
+    background-color: #181f2b;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    &:hover {
+      box-shadow: 0 0 2px 2px #435778;
+    }
+  }
+  
+  .movie {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  
+    img {
+      width: 150px;
+    height: 225px;
+    object-fit: cover;
+    }
+  
+    .movie-info {
+      padding: 10px;
+      h3 {
+        font-size: 24px;
+        margin: 0 0 10px;
+      }
+  
+      p {
+        font-size: 18px;
+        margin: 0 0 5px;
+      }
+  
+      .details-btn {
+        padding: 10px 20px;
+        background-color: #181f2b;
+        border-radius: 5px;
+        cursor: pointer;
+        border: none;
+        color: #fff;
+        &:hover {
+          box-shadow: 0 0 2px 2px #435778;
+        }
+      }
+    }
+  
+    &:hover {
+      .details-btn {
+        display: block;
+      }
+    }
+  }
+  
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  
+    button {
+      padding: 5px 10px;
+      margin: 0 5px;
+      border-radius: 5px;
+      border: none;
+      background-color: #fff;
+      color: #333;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+  
+      &:hover {
+        background-color: #333;
+        color: #fff;
+      }
+  
+      &.active {
+        background-color: #333;
+        color: #fff;
+      }
+    }
+  }

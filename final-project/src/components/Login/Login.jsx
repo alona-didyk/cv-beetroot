@@ -5,16 +5,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import facebook from "../../assets/icons/facebook.svg";
 import google from "../../assets/icons/google.svg";
-import { auth } from "../../firebase";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { AuthContext } from "../../context/AuthContext";
+import { auth, provider } from "../../firebase";
+
+import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { AuthContext } from "./../../context/AuthContext";
 
 export const Login = () => {
   const [inputs, setInputs] = useState({
     email: "",
     password: "",
   });
-
   const [toggleEye, setToggleEye] = useState(false);
   const [inputType, setInputType] = useState("password");
   const navigate = useNavigate();
@@ -25,7 +25,6 @@ export const Login = () => {
     setToggleEye(!toggleEye);
     setInputType(inputType === "password" ? "text" : "password");
   };
-
   const handleChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
@@ -36,10 +35,11 @@ export const Login = () => {
     try {
       signInWithEmailAndPassword(auth, inputs.email, inputs.password).then(
         (userCredential) => {
+          // Signed in
           const user = userCredential.user;
           dispatch({ type: "LOGIN_SUCCESS", payload: user });
           // console.log(user);
-          navigate("/user");
+          navigate("/");
         }
       );
     } catch (error) {
@@ -47,7 +47,22 @@ export const Login = () => {
     }
   };
 
-  console.log(inputs);
+  const signInWithGoogle = () => {
+    dispatch({ type: "LOGIN_START" });
+
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        console.log(result);
+        // The signed-in user info.
+        const user = result.user;
+        dispatch({ type: "LOGIN_SUCCESS", payload: user });
+        navigate("/");
+      })
+      .catch((error) => {
+        dispatch({ type: "LOGIN_FAILURE" });
+      });
+  };
+  // console.log(inputs);
 
   return (
     <div className="login">
@@ -99,7 +114,11 @@ export const Login = () => {
           </Link>
         </div>
         <div className="regist__media-options">
-          <Link to="#" className="regist__form--facebook regist__form--google">
+          <Link
+            to="#"
+            className="regist__form--facebook regist__form--google"
+            onClick={signInWithGoogle}
+          >
             <img src={google} alt="icon" className="googleImg" />
             <span>Login with Google</span>
           </Link>

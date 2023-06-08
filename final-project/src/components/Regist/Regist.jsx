@@ -1,23 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Regist.scss";
 import { FormInput } from "./FormInput/FormInput";
 
 import facebook from "../../assets/icons/facebook.svg";
 import google from "../../assets/icons/google.svg";
-import { auth } from "../../firebase";
-import { updateProfile, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth, provider } from "../../firebase";
+import {
+  updateProfile,
+  createUserWithEmailAndPassword,
+  signInWithPopup,
+} from "firebase/auth";
+import { AuthContext } from "../../context/AuthContext";
+
 
 export const Regist = () => {
-  const [inputValid, setInputValid] = useState({
+  const { dispatch } = useContext(AuthContext);
+  const [inputValues, setInputValues] = useState({
     username: "",
     email: "",
     password: "",
     confirmPassword: "",
   });
-
-  const navigate = useNavigate()
-
+  const navigate = useNavigate();
   const inputs = [
     {
       id: 1,
@@ -25,7 +30,7 @@ export const Regist = () => {
       type: "text",
       placeholder: "Username",
       errorMessage:
-        "Username should be 3-16 characters and shouldn`t include any special character",
+        "Username should be 3-16 characters and shouldn't include any special character",
       pattern: "^[A-Za-z0-9]{3,16}$",
       required: true,
     },
@@ -53,34 +58,50 @@ export const Regist = () => {
       type: "text",
       placeholder: "Confirm Password",
       errorMessage: "Passwords don't match",
-      pattern: inputValid.password,
+      pattern: inputValues.password,
       required: true,
     },
   ];
 
   const handleChange = (e) => {
-    setInputValid({ ...inputValid, [e.target.name]: e.target.value });
+    setInputValues({ ...inputValues, [e.target.name]: e.target.value });
   };
 
-  //   console.log(inputValid);
-  const handleRegist =  async (e) => {
+  const handleRegist= async (e) => {
     e.preventDefault();
 
     try {
-     await createUserWithEmailAndPassword(
+      await createUserWithEmailAndPassword(
         auth,
-        inputValid.email,
-        inputValid.password
+        inputValues.email,
+        inputValues.password
       ).then((userCredential) => {
         // Signed in
         const user = userCredential.user;
         updateProfile(user, {
-          displayName: inputValid.username,
+          displayName: inputValues.username,
         });
         navigate("/login");
       });
     } catch (error) {}
   };
+
+  const signInWithGoogle = () => {
+    dispatch({ type: "LOGIN_START" });
+
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        console.log(result);
+        // The signed-in user info.
+        const user = result.user;
+        dispatch({ type: "LOGIN_SUCCESS", payload: user });
+        navigate("/");
+      })
+      .catch((error) => {
+        dispatch({ type: "LOGIN_FAILURE" });
+      });
+  };
+  // console.log(inputValues);
 
   return (
     <div className="regist">
@@ -90,7 +111,7 @@ export const Regist = () => {
           <FormInput
             key={input.id}
             {...input}
-            value={inputValid[input.name]}
+            value={inputValues[input.name]}
             onChange={handleChange}
             className="regist__input"
           />
@@ -114,7 +135,7 @@ export const Regist = () => {
           </Link>
         </div>
         <div className="regist__media-options">
-          <Link to="#" className="regist__form--facebook regist__form--google ">
+          <Link to="#" className="regist__form--facebook regist__form--google " onClick={signInWithGoogle}>
             <img src={google} alt="icon" className="googleImg" />
             <span>Login with Google</span>
           </Link>
