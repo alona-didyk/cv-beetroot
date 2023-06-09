@@ -1,125 +1,412 @@
-main {
+// main {
+//     margin: 0 auto;
+//     width: 500px;
+//     margin-top: 30px;
+//   }
+
+//   .type-form {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     gap: 20px;
+//     align-items: center;
+//     margin-bottom: 20px;
+//   }
+
+//   .type-input {
+//     width: 300px;
+//     padding: 10px;
+//     border-radius: 5px;
+//     border: 1px solid #1c1e1e;
+//     &:focus {
+//       border-color: rgba(82, 168, 236, 0.8);
+//       box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,
+//         0 0 8px rgba(82, 168, 236, 0.6);
+//       outline: 0 none;
+//     }
+//   }
+
+//   .type-search {
+//     width: 300px;
+//     padding: 10px;
+//     border-radius: 5px;
+//     border: 1px solid #1c1e1e;
+//     &:focus {
+//       border-color: rgba(82, 168, 236, 0.8);
+//       box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,
+//         0 0 8px rgba(82, 168, 236, 0.6);
+//       outline: 0 none;
+//     }
+//   }
+
+//   .type-button {
+//     padding: 10px 20px;
+//     background-color: #181f2b;
+//     border-radius: 5px;
+//     cursor: pointer;
+//     border: none;
+//     color: #fff;
+//     &:hover {
+//       box-shadow: 0 0 2px 2px #435778;
+//     }
+//   }
+
+//   .movie {
+//     display: flex;
+//     margin-bottom: 20px;
+//     border: 1px solid #ccc;
+//     border-radius: 5px;
+
+//     img {
+//       width: 150px;
+//     height: 225px;
+//     object-fit: cover;
+//     }
+
+//     .movie-info {
+//       padding: 10px;
+//       h3 {
+//         font-size: 24px;
+//         margin: 0 0 10px;
+//       }
+
+//       p {
+//         font-size: 18px;
+//         margin: 0 0 5px;
+//       }
+
+//       .details-btn {
+//         padding: 10px 20px;
+//         background-color: #181f2b;
+//         border-radius: 5px;
+//         cursor: pointer;
+//         border: none;
+//         color: #fff;
+//         &:hover {
+//           box-shadow: 0 0 2px 2px #435778;
+//         }
+//       }
+//     }
+
+//     &:hover {
+//       .details-btn {
+//         display: block;
+//       }
+//     }
+//   }
+
+//   .pagination {
+//     display: flex;
+//     justify-content: center;
+//     margin-top: 20px;
+
+//     button {
+//       padding: 5px 10px;
+//       margin: 0 5px;
+//       border-radius: 5px;
+//       border: none;
+//       background-color: #fff;
+//       color: #333;
+//       font-size: 16px;
+//       cursor: pointer;
+//       transition: all 0.2s ease-in-out;
+
+//       &:hover {
+//         background-color: #333;
+//         color: #fff;
+//       }
+
+//       &.active {
+//         background-color: #333;
+//         color: #fff;
+//       }
+//     }
+//   }
+
+.main {
+  width: 100%;
+  height: 100%;
+  background: #000000;
+
+  &__wrapper {
+    width: 100%;
+    max-width: 1440px;
     margin: 0 auto;
-    width: 500px;
-    margin-top: 30px;
   }
-  
-  .type-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    align-items: center;
-    margin-bottom: 20px;
+
+  &__head {
+    position: relative;
   }
-  
-  .type-input {
-    width: 300px;
+
+  &__text-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    width: 630px;
+    max-width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #1c1e1e;
-    &:focus {
-      border-color: rgba(82, 168, 236, 0.8);
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,
-        0 0 8px rgba(82, 168, 236, 0.6);
-      outline: 0 none;
-    }
   }
-  
-  .type-search {
-    width: 300px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #1c1e1e;
-    &:focus {
-      border-color: rgba(82, 168, 236, 0.8);
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,
-        0 0 8px rgba(82, 168, 236, 0.6);
-      outline: 0 none;
-    }
+
+  &__title {
+    font-family: "Coiny";
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 110px;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    text-shadow: 15px 5px 5px rgba(0, 0, 0, 0.12);
+    margin-bottom: 10px;
   }
-  
-  .type-button {
-    padding: 10px 20px;
-    background-color: #181f2b;
-    border-radius: 5px;
-    cursor: pointer;
-    border: none;
-    color: #fff;
-    &:hover {
-      box-shadow: 0 0 2px 2px #435778;
-    }
+
+  &__subtitle {
+    font-family: "Baloo 2";
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px;
+    color: #ffffff;
+    opacity: 0.9;
   }
-  
-  .movie {
-    display: flex;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  
-    img {
-      width: 150px;
-    height: 225px;
-    object-fit: cover;
+
+  &__img {
+    width: 100%;
+    height: 650px;
+    border-radius: 60px;
+    opacity: 0.7;
+  }
+
+  .search {
+    width: 100%;
+    max-width: 1440px;
+    height: 300px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+    &__wrapper {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
     }
-  
-    .movie-info {
-      padding: 10px;
-      h3 {
-        font-size: 24px;
-        margin: 0 0 10px;
-      }
-  
-      p {
-        font-size: 18px;
-        margin: 0 0 5px;
-      }
-  
-      .details-btn {
-        padding: 10px 20px;
-        background-color: #181f2b;
-        border-radius: 5px;
-        cursor: pointer;
-        border: none;
-        color: #fff;
-        &:hover {
-          box-shadow: 0 0 2px 2px #435778;
-        }
-      }
+
+    &__text-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
-  
-    &:hover {
-      .details-btn {
+
+    &__title {
+      font-family: "Baloo 2";
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 63px;
+      text-transform: capitalize;
+      color: #b756ff;
+      margin-bottom: 2px;
+    }
+
+    &__subtitle {
+      font-family: "Baloo 2";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 36px;
+      color: #ffffff;
+      opacity: 0.6;
+    }
+
+    &__form-wrapper {
+      width: 100%;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &__input {
+      padding: 10px 100px;
+      margin: 10px 0px;
+      border: 1px solid #d00ffc;
+      outline: none;
+      font-size: 16px;
+      font-weight: 400;
+      font-family: "Baloo 2";
+
+      &:focus {
+        box-shadow: 0px 1px 10px 0.5px #d00ffc;
+        background-color: #fff;
+      }
+
+      &:invalid[focused="true"] {
+        border: 1px solid red;
+      }
+
+      &:invalid[focused="true"] ~ .errorMessage {
         display: block;
       }
     }
   }
+
+  .movies {
+    background: #fff;
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 70px;
+    padding-bottom: 50px;
   
+    .loader {
+      display: inline-block;
+      position: relative;
+      margin: 0 auto;
+      width: 80px;
+      height: 80px;
+    }
   
-  .pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    .loader div {
+      position: absolute;
+      top: 33px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: #c517f0;
+      animation-timing-function: cubic-bezier(0, 1, 1, 0);
+    }
   
-    button {
-      padding: 5px 10px;
-      margin: 0 5px;
-      border-radius: 5px;
-      border: none;
-      background-color: #fff;
-      color: #333;
-      font-size: 16px;
-      cursor: pointer;
-      transition: all 0.2s ease-in-out;
+    .loader div:nth-child(1) {
+      left: 8px;
+      animation: flip1 0.6s infinite;
+    }
   
-      &:hover {
-        background-color: #333;
-        color: #fff;
+    .loader div:nth-child(2) {
+      left: 8px;
+      animation: flip2 0.6s infinite;
+    }
+  
+    .loader div:nth-child(3) {
+      left: 32px;
+      animation: flip2 0.6s infinite;
+    }
+  
+    .loader div:nth-child(4) {
+      left: 56px;
+      animation: flip3 0.6s infinite;
+    }
+  
+    @keyframes flip1 {
+      0% {
+        transform: scale(0);
       }
   
-      &.active {
-        background-color: #333;
-        color: #fff;
+      100% {
+        transform: scale(1);
       }
     }
+  
+    @keyframes flip3 {
+      0% {
+        transform: scale(1);
+      }
+  
+      100% {
+        transform: scale(0);
+      }
+    }
+  
+    @keyframes flip2 {
+      0% {
+        transform: translate(0, 0);
+      }
+  
+      100% {
+        transform: translate(24px, 0);
+      }
+    }
+  
+    &__wrapper {
+      width: 80%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    &__border {
+      border: 1.5px solid rgba(21, 21, 21, 0.25);
+      border-radius: 60px 0px;
+      display: flex;
+      flex-direction: row;
+      padding: 10px;
+      margin-bottom: 20px;
+      height: 390px;
+    }
+  
+    &__text-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 200%;
+    }
+  
+    &__title {
+      font-family: "Coiny";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 53px;
+      padding-top: 5px;
+      margin-bottom: -35px;
+      letter-spacing: 0.02em;
+      text-transform: capitalize;
+      color: #151515;
+    }
+  
+    &__title2 {
+      font-family: "Baloo 2";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 50px;
+      letter-spacing: 0.05em;
+      color: #151515;
+      margin-bottom: -10px;
+    }
+
+
+  &__subtitle {
+    font-family: "Baloo 2";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 36px;
+    color: #151515;
+    opacity: 0.75;
   }
+  
+    &__img-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+  
+    &__img {
+      width: 200px;
+      height: 300px;
+    }
+  }
+  
+  
+  
+}

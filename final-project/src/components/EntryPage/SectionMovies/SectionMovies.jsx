@@ -2,15 +2,15 @@
 // import axios from "axios";
 // import md5 from "md5";
 // import { Carousel } from "react-responsive-carousel";
-import { Link } from "react-router-dom";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Poster1 from "../../../assets/images/poster1.jpeg";
-import Poster2 from "../../../assets/images/poster2.jpeg";
-import Poster3 from "../../../assets/images/poster3.jpeg";
+// import { Link } from "react-router-dom";
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
+// import Poster1 from "../../../assets/images/poster1.jpeg";
+// import Poster2 from "../../../assets/images/poster2.jpeg";
+// import Poster3 from "../../../assets/images/poster3.jpeg";
 
-const POSTER = [Poster1, Poster2, Poster3];
+// const POSTER = [Poster1, Poster2, Poster3];
 
-export const SectionSeries = () => {
+// export const SectionSeries = () => {
   //   const [series, setSeries] = useState([]);
 
   //   useEffect(() => {
@@ -33,37 +33,37 @@ export const SectionSeries = () => {
   //     fetchSeries();
   //   }, []);
 
-  return (
-<div className="description__movies">
-  <div className="description__content">
-    <div className="description__title-wrapper">
-      <div className="description__square"></div>
-      <h3 className="description__title">Movies and TV shows</h3>
-    </div>
-    <div className="description__inline">
-    <div className="description__bt">
-      <p className="description__subtitle">
-        Explore an extensive collection of movies and TV shows featuring your favorite Marvel superheroes and villains.
-      </p>
-      <div className="description__button">
-      <button className="button">
-        <Link className="button" to="/movies">Explore More</Link>
-      </button>
-    </div>
-      </div>
-      <div className="description__poster-wrapper">
-        {POSTER.map((poster, index) => (
-          <img
-            key={index}
-            className={`description__poster ${index === 1 ? "middle-poster" : ""}`}
-            src={poster}
-            alt={`Poster ${index + 1}`}
-          />
-        ))}
-      </div>
-    </div>
-  </div>
-</div>
+//   return (
+// <div className="description__movies">
+//   <div className="description__content">
+//     <div className="description__title-wrapper">
+//       <div className="description__square"></div>
+//       <h3 className="description__title">Movies and TV shows</h3>
+//     </div>
+//     <div className="description__inline">
+//     <div className="description__bt">
+//       <p className="description__subtitle">
+//         Explore an extensive collection of movies and TV shows featuring your favorite Marvel superheroes and villains.
+//       </p>
+//       <div className="description__button">
+//       <button className="button">
+//         <Link className="button" to="/movies">Explore More</Link>
+//       </button>
+//     </div>
+//       </div>
+//       <div className="description__poster-wrapper">
+//         {POSTER.map((poster, index) => (
+//           <img
+//             key={index}
+//             className={`description__poster ${index === 1 ? "middle-poster" : ""}`}
+//             src={poster}
+//             alt={`Poster ${index + 1}`}
+//           />
+//         ))}
+//       </div>
+//     </div>
+//   </div>
+// </div>
 
     // <div className="description">
     //   <div className="description__wrapper">
@@ -107,5 +107,5 @@ export const SectionSeries = () => {
     //     </div>
     //   </div>
     // </div>
-  );
-};
+//   );
+// };
