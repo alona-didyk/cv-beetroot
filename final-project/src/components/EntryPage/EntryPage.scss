@@ -37,6 +37,7 @@
   border-radius: 20%;
   transition: 0.3s ease-in;
   text-align: center;
+  cursor: pointer;
   &:hover {
     background-color: #3a7dff;
   }
@@ -104,7 +105,7 @@
 .hero {
   width: 100%;
   height: 700px;
-  max-height: 100%;
+  max-height: 600px;
 
   &__wrapper {
     width: 90%;
@@ -480,7 +481,10 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        gap: 60px;
+      }
+
+      &__title {
+        font-size: 30px;
       }
       &__subtitle {
         font-size: 12px;
@@ -736,7 +740,7 @@
   background: #fff;
   width: 100%;
   max-width: 1440px;
-  height: 1810px;
+  max-height: 1810px;
   margin: 0 auto;
 
   &__wrapper {
@@ -768,7 +772,7 @@
     flex-direction: column;
     padding: 10px;
     margin-bottom: 20px;
-    height: 239px;
+    height: 243px;
   }
 
   &__title2 {

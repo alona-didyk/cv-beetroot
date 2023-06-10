@@ -6,6 +6,7 @@ import Swiper3 from "../../assets/images/swiper3.jpeg";
 import toroid from "../../assets/icons/toroid.svg";
 import toroid2 from "../../assets/icons/toroid2.svg";
 import "./Movie.scss";
+import { Discuss } from "./MovieItems/Discuss";
 
 export const Movie = () => {
   const publicKey = "c3f632bec30eb93b2dd9e59bf1f57195";
@@ -17,7 +18,6 @@ export const Movie = () => {
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
-  const [searchYear, setSearchYear] = useState("");
 
   useEffect(() => {
     fetchMovies();
@@ -171,9 +171,12 @@ export const Movie = () => {
                         </p>
                         {/* <p className="movies__subtitle">Rating: {movie.rating}</p> */}
                         <p className="movies__subtitle">{movie.description}</p>
-                        <Link to={`/details/${movie.id}`} className="button">
-                          View More
-                        </Link>
+                        <div className="buttons">
+                          <Link to={`/details/${movie.id}`} className="button">
+                            View More
+                          </Link>
+                          <button className="button">Add to Favorite</button>
+                        </div>
                       </div>
                     </div>
                   ))
@@ -182,6 +185,7 @@ export const Movie = () => {
             )}
           </div>
         </div>
+        <Discuss />
       </div>
     </main>
   );
