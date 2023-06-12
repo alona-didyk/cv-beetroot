@@ -30,3 +30,22 @@
         background-color: #3a7dff;
       }
 }
+
+@mixin media-sm() {
+    @media (min-width: 26.25em) {
+      @content;
+    }
+  }
+  
+  
+  @mixin media-md() {
+    @media (min-width: 47em) {
+      @content;
+    }
+  }
+  
+  @mixin support($value) {
+    @supports (#{$value}) {
+      @content;
+    }
+  }

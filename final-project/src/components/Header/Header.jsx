@@ -6,7 +6,7 @@ import { AuthContext } from "../../context/AuthContext";
 
 export const Header = ({ hideEntryPage }) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const headerRef = useRef(null);
   const burgerButtonRef = useRef(null);
@@ -15,10 +15,10 @@ export const Header = ({ hideEntryPage }) => {
     setMenuOpen(!menuOpen);
   };
 
-  const navigateHandler = (event, to) => {
-    event.preventDefault();
-    navigate(to);
-  };
+  // const navigateHandler = (event, to) => {
+  //   event.preventDefault();
+  //   navigate(to);
+  // };
 
   const { currentUser } = useContext(AuthContext);
 
@@ -43,7 +43,7 @@ export const Header = ({ hideEntryPage }) => {
             <ul className="header__nav">
               <li>
                 <Link
-                to="/"
+                  to="/"
                   className="header__nav--item"
                   onClick={() => setMenuOpen(false)}
                 >
@@ -52,7 +52,7 @@ export const Header = ({ hideEntryPage }) => {
               </li>
               <li>
                 <Link
-                to="/movie"
+                  to="/movie"
                   className="header__nav--item"
                   onClick={() => setMenuOpen(false)}
                 >
@@ -61,7 +61,7 @@ export const Header = ({ hideEntryPage }) => {
               </li>
               <li>
                 <Link
-                to="/comic"
+                  to="/comic"
                   className="header__nav--item"
                   onClick={() => setMenuOpen(false)}
                 >
@@ -70,44 +70,43 @@ export const Header = ({ hideEntryPage }) => {
               </li>
               <li>
                 <Link
-                to="/chat"
+                  to="/chat"
                   className="header__nav--item"
                   onClick={() => setMenuOpen(false)}
                 >
                   Community
                 </Link>
               </li>
-          
             </ul>
             <div className="header__buttons">
-                <li>
-                  <Link
+              <li>
+                <Link
                   to="/login"
-                    className="button header__nav--item"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    Login
-                  </Link>
-                </li>
-                <li>
-                  <Link
+                  className="button"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Login
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/regist"
-                    className="button "
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    Regist
-                  </Link>
-                </li>
-                <li>
-                  <Link
+                  className="button "
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Regist
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/user"
-                    className="account"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    {<p> Account:{currentUser?.displayName}</p>}
-                  </Link>
-                </li>
-              </div>
+                  className="account"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {<p> Account:{currentUser?.displayName}</p>}
+                </Link>
+              </li>
+            </div>
           </div>
         </div>
       </header>
