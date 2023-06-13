@@ -16,15 +16,13 @@ import { User } from "./pages/User";
 import { AuthContextProvider } from "./context/AuthContext";
 
 function App() {
-
-
   return (
     <div>
       <AuthContextProvider>
-      <Router>
-        <Header hideEntryPage></Header>
-        <Main>
-          {/* <nav>
+        <Router>
+          <Header hideEntryPage></Header>
+          <Main>
+            {/* <nav>
             <ul>
               <li>
                 <Link to="/">EntryPage</Link>
@@ -52,23 +50,23 @@ function App() {
               </li>
             </ul>
           </nav> */}
-        </Main>
+          </Main>
 
-        <Routes>
-          <Route path="/" element={<EntryPage />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/regist" element={<Regist />} />
-          <Route path="/homepage" element={<HomePage />} />
-          <Route path="/movie" element={<Movie />} />
-          <Route path="/details/:id" element={<MoviesDetails />} />
-          <Route path="/comic" element={<Comic />} />
-          <Route path="/comicsdetails/:id" element={<ComicsDetails />} />
-          <Route path="/chat" element={<Chat />} />
-          <Route path="/user" element={<User />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<EntryPage />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/regist" element={<Regist />} />
+            <Route path="/homepage" element={<HomePage />} />
+            <Route path="/movie" element={<Movie />} />
+            <Route path="/details/:id" element={<MoviesDetails />} />
+            <Route path="/comic" element={<Comic />} />
+            <Route path="/comicsdetails/:id" element={<ComicsDetails />} />
+            <Route path="/chat" element={<Chat />} />
+            <Route path="/user" element={<User />} />
+          </Routes>
 
-        <Footer></Footer>
-      </Router>
+          <Footer></Footer>
+        </Router>
       </AuthContextProvider>
     </div>
   );
