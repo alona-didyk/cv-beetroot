@@ -10,6 +10,7 @@ import { HomePage } from "./pages/Homepage";
 import { Login } from "./pages/Login";
 import { Movie } from "./pages/Movie";
 import { MoviesDetails } from "./components/Movie/Details/Details";
+import { ComicsDetails } from "./components/Comic/Details/ComicsDetails";
 import { Regist } from "./pages/Regist";
 import { User } from "./pages/User";
 import { AuthContextProvider } from "./context/AuthContext";
@@ -61,6 +62,7 @@ function App() {
           <Route path="/movie" element={<Movie />} />
           <Route path="/details/:id" element={<MoviesDetails />} />
           <Route path="/comic" element={<Comic />} />
+          <Route path="/comicsdetails/:id" element={<ComicsDetails />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/user" element={<User />} />
         </Routes>
