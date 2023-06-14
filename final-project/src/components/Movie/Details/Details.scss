@@ -79,6 +79,32 @@
     }
   }
 
+  &__creators {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+ 
+    &-title {
+      font-family: 'Baloo 2';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+text-transform: capitalize;
+color: #B756FF;
+
+    }
+  }
+  &__creator {
+    font-family: 'Baloo 2';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+color: #FFFFFF;
+opacity: 0.6;
+
+  }
+
   @media screen and (max-width: 767px) and (min-width: 576px) {
     &__wrapper {
       width: 90%;

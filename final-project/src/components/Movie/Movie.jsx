@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import md5 from "md5";
@@ -7,6 +7,7 @@ import toroid from "../../assets/icons/toroid.svg";
 import toroid2 from "../../assets/icons/toroid2.svg";
 import "./Movie.scss";
 import { Discuss } from "./MovieItems/Discuss";
+import { AuthContext } from "../../context/AuthContext";
 
 export const Movie = () => {
   const publicKey = "c3f632bec30eb93b2dd9e59bf1f57195";
@@ -14,43 +15,65 @@ export const Movie = () => {
   const timestamp = Date.now().toString();
   const hash = md5(timestamp + privateKey + publicKey);
 
+  const { currentUser } = useContext(AuthContext);
+
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
+ 
 
   useEffect(() => {
+    const fetchMovies = () => {
+      axios
+        .get(
+          `https://gateway.marvel.com/v1/public/series?title=Avengers&apikey=${publicKey}&ts=${timestamp}&hash=${hash}`
+        )
+        .then((response) => {
+          const data = response.data;
+          if (
+            data &&
+            data.data &&
+            data.data.results &&
+            data.data.results.length > 0
+          ) {
+            setMovies(data.data.results);
+            setError(null);
+          } else {
+            setMovies([]);
+            setError("No Marvel movies found.");
+          }
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.error("Error", error);
+          setMovies([]);
+          setError("An error occurred while fetching Marvel movies.");
+          setLoading(false);
+        });
+    };
+
     fetchMovies();
+    // eslint-disable-next-line
   }, []);
 
-  const fetchMovies = () => {
-    axios
-      .get(
-        `https://gateway.marvel.com/v1/public/series?title=Avengers&apikey=${publicKey}&ts=${timestamp}&hash=${hash}`
-      )
-      .then((response) => {
-        const data = response.data;
-        if (
-          data &&
-          data.data &&
-          data.data.results &&
-          data.data.results.length > 0
-        ) {
-          setMovies(data.data.results);
-          setError(null);
-        } else {
-          setMovies([]);
-          setError("No Marvel movies found.");
-        }
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error", error);
-        setMovies([]);
-        setError("An error occurred while fetching Marvel movies.");
-        setLoading(false);
-      });
+
+  const addToFavorites = (movie) => {
+    if (currentUser) {
+      const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+      const isAlreadyAdded = storedFavorites.some(item => item.id === movie.id);
+      if (isAlreadyAdded) {
+        alert("Movie is already in favorites.");
+        return;
+      }
+      const updatedFavorites = [...storedFavorites, movie];
+      localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+      alert("Movie added to favorites.");
+    } else {
+      alert("Please log in to add a movie to favorites.");
+    }
   };
+  
 
   const handleSearch = (event) => {
     event.preventDefault();
@@ -175,7 +198,12 @@ export const Movie = () => {
                           <Link to={`/details/${movie.id}`} className="button">
                             View More
                           </Link>
-                          <button className="button">Add to Favorite</button>
+                          <button
+                            className="button"
+                            onClick={() => addToFavorites(movie)}
+                          >
+                            Add to Favorite
+                          </button>
                         </div>
                       </div>
                     </div>

@@ -440,6 +440,31 @@
       padding: 10px 20px;
     }
 
+    &__pagination {
+      margin: 0 auto;
+      display: flex;
+      gap: 10px;
+
+      &--button {
+        border: 1px solid #d00ffc;
+  border-radius: 20%;
+        background-color: transparent;
+        color: #333;
+        font-size: 16px;
+        margin: 0 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        &:hover {
+          background-color: #eee;
+        }
+        &.active {
+          background-color: #000000;
+  color: #fff;
+        }
+      }
+    }
+
     @media screen and (max-width: 1024px) and (min-width: 768px) {
       .movies {
         width: 100%;
@@ -570,10 +595,10 @@
         }
 
         &__title {
-          font-size: 15px;
-          line-height: 53px;
+          font-size: 13px;
+          line-height: 35px;
           padding-top: 5px;
-          margin-bottom: -25px;
+          margin-bottom: -5px;
         }
 
         &__title2 {

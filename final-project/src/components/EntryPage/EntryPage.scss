@@ -139,7 +139,8 @@
     font-size: 28px;
     line-height: 36px;
     color: #ffffff;
-    opacity: 0.6;
+    opacity: 0.9;
+    text-shadow: 15px 5px 5px rgba(0, 0, 0, 0.12);
   }
 
   &__img-wrapper {
@@ -151,6 +152,7 @@
       width: 800px;
       height: 490px;
       border-radius: 0px 60px;
+      opacity: 0.9;
     }
   }
 

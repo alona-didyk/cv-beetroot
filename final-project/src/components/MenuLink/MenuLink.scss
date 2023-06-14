@@ -5,6 +5,7 @@
     align-items: center;
     font-weight: 500;
     cursor: pointer;
+    transition: all 0.3s ease-in;
     
     .menuLinkText {
       margin-left: 10px;
@@ -15,7 +16,7 @@
     }
   
     &:hover {
-      background-color: rgb(240, 238, 238);
+      opacity: 0.8;
     }
   }
   

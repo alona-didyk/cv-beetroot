@@ -47,8 +47,7 @@ export const ComicsDetails = () => {
       <div className="details__wrapper">
         <div className="details__info">
           <h2 className="details__title">{comic.title}</h2>
-          <p className="details__subtitle">Start Year: {comic.startYear}</p>
-          <p className="details__description">{comic.description}</p>
+          <p className="details__subtitle">Issue Number: {comic.issueNumber}</p>
           <button className="details__button" onClick={redirectToMarvelWebsite}>
             Visit Official Marvel Website
           </button>
@@ -65,3 +64,7 @@ export const ComicsDetails = () => {
     </div>
   );
 };
+
+
+
+
