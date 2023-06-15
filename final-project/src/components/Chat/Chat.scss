@@ -1,0 +1,151 @@
+.discuss {
+  width: 100%;
+  height: 100%;
+  background: #000000;
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 100px;
+  }
+
+  &__title {
+    font-family: "Coiny";
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 110px;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    // text-shadow: 15px 5px 5px rgba(212, 9, 248, 0.12);
+  }
+
+  &__subtitle {
+    font-family: "Baloo 2";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px;
+    color: #ffffff;
+    opacity: 0.6;
+  }
+
+  .form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__wrapper {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &--title {
+      font-family: "Baloo 2";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 63px;
+      text-transform: capitalize;
+      color: #b756ff;
+    }
+  }
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  &__input {
+    width: 300px;
+    padding: 25px 60px;
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    background: transparent;
+    color: #ffffff;
+
+    &::placeholder {
+      font-family: "Baloo 2";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+      opacity: 0.4;
+    }
+  }
+
+  &__post--wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+  &__post {
+    background: #ffffff;
+    display: flex;
+    margin-bottom: 20px;
+
+    &--info {
+      padding: 20px;
+    }
+  }
+
+  .posts {
+    background: #fff;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    &__wrapper {
+      width: 80%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    &__title {
+      font-family: "Coiny";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 53px;
+      padding-top: 100px;
+      letter-spacing: 0.02em;
+      text-transform: capitalize;
+      color: #151515;
+    }
+
+    &__border {
+      border: 1.5px solid rgba(21, 21, 21, 0.25);
+      border-radius: 60px 0px;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+  }
+}
