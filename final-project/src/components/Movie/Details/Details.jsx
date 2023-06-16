@@ -63,12 +63,6 @@ export const MoviesDetails = () => {
         </div>
       </div>
       <Comments />
-      {/* <h3>Characters:</h3>
-        <ul>
-          {series.characters.items.map((character) => (
-            <li key={character.name}>{character.name}</li>
-          ))}
-        </ul> */}
     </div>
   );
 };

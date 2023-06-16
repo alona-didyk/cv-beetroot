@@ -7,16 +7,18 @@ export const Comments = () => {
   const [comments, updateComments] = useState([
     {
       id: 1,
-      content: "I absolutely loved this movie! The storyline was captivating, and the performances were brilliant. Highly recommend it!",
+      content:
+        "I absolutely loved this movie! The storyline was captivating, and the performances were brilliant. Highly recommend it!",
       createdAt: "23 November 2021",
       score: 12,
       username: "amyrobson",
       currentUser: false,
-      replies: []
+      replies: [],
     },
     {
       id: 2,
-      content: "I agree! The cinematography was stunning, and the soundtrack added so much depth to the film. It's definitely a must-watch!",
+      content:
+        "I agree! The cinematography was stunning, and the soundtrack added so much depth to the film. It's definitely a must-watch!",
       createdAt: "5 December 2021",
       score: 5,
       username: "maxblagun",
@@ -24,23 +26,25 @@ export const Comments = () => {
       replies: [
         {
           id: 3,
-          content: "@maxblaugn, This movie was a huge disappointment. The plot was confusing, and the acting felt forced. I wouldn't recommend it.",
+          content:
+            "@maxblaugn, This movie was a huge disappointment. The plot was confusing, and the acting felt forced. I wouldn't recommend it.",
           createdAt: "18 December 2021",
           score: 4,
           username: "ramsesmiron",
           currentUser: false,
-          replies: []
+          replies: [],
         },
         {
           id: 4,
-          content: "@ramsesmiron, I have to disagree. I thought the movie was a unique and thought-provoking experience. It's not for everyone, but I found it quite intriguing.",
+          content:
+            "@ramsesmiron, I have to disagree. I thought the movie was a unique and thought-provoking experience. It's not for everyone, but I found it quite intriguing.",
           createdAt: "30 December 2021",
           score: 2,
           username: "juliusomo",
           currentUser: true,
-          replies: []
-        }
-      ]
+          replies: [],
+        },
+      ],
     },
   ]);
   const [deleteModalState, setDeleteModalState] = useState(false);
@@ -141,22 +145,19 @@ export const Comments = () => {
 
   return (
     <main className="Comments">
-    <h2 className="Comments__title">Comments</h2>
-    {comments.map((comment) => (
-      <Comment
-        key={comment.id}
-        commentData={comment}
-        updateScore={updateScore}
-        updateReplies={updateReplies}
-        editComment={editComment}
-        commentDelete={commentDelete}
-        setDeleteModalState={setDeleteModalState}
-      />
-    ))}
-    <AddComment buttonValue={"send"} addComments={addComments} />
-  </main>
+      <h2 className="Comments__title">Comments</h2>
+      {comments.map((comment) => (
+        <Comment
+          key={comment.id}
+          commentData={comment}
+          updateScore={updateScore}
+          updateReplies={updateReplies}
+          editComment={editComment}
+          commentDelete={commentDelete}
+          setDeleteModalState={setDeleteModalState}
+        />
+      ))}
+      <AddComment buttonValue={"send"} addComments={addComments} />
+    </main>
   );
 };
-
-
-

@@ -1,132 +1,9 @@
-// main {
-//     margin: 0 auto;
-//     width: 500px;
-//     margin-top: 30px;
-//   }
-
-//   .type-form {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     gap: 20px;
-//     align-items: center;
-//     margin-bottom: 20px;
-//   }
-
-//   .type-input {
-//     width: 300px;
-//     padding: 10px;
-//     border-radius: 5px;
-//     border: 1px solid #1c1e1e;
-//     &:focus {
-//       border-color: rgba(82, 168, 236, 0.8);
-//       box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,
-//         0 0 8px rgba(82, 168, 236, 0.6);
-//       outline: 0 none;
-//     }
-//   }
-
-//   .type-search {
-//     width: 300px;
-//     padding: 10px;
-//     border-radius: 5px;
-//     border: 1px solid #1c1e1e;
-//     &:focus {
-//       border-color: rgba(82, 168, 236, 0.8);
-//       box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,
-//         0 0 8px rgba(82, 168, 236, 0.6);
-//       outline: 0 none;
-//     }
-//   }
-
-//   .type-button {
-//     padding: 10px 20px;
-//     background-color: #181f2b;
-//     border-radius: 5px;
-//     cursor: pointer;
-//     border: none;
-//     color: #fff;
-//     &:hover {
-//       box-shadow: 0 0 2px 2px #435778;
-//     }
-//   }
-
-//   .movie {
-//     display: flex;
-//     margin-bottom: 20px;
-//     border: 1px solid #ccc;
-//     border-radius: 5px;
-
-//     img {
-//       width: 150px;
-//     height: 225px;
-//     object-fit: cover;
-//     }
-
-//     .movie-info {
-//       padding: 10px;
-//       h3 {
-//         font-size: 24px;
-//         margin: 0 0 10px;
-//       }
-
-//       p {
-//         font-size: 18px;
-//         margin: 0 0 5px;
-//       }
-
-//       .details-btn {
-//         padding: 10px 20px;
-//         background-color: #181f2b;
-//         border-radius: 5px;
-//         cursor: pointer;
-//         border: none;
-//         color: #fff;
-//         &:hover {
-//           box-shadow: 0 0 2px 2px #435778;
-//         }
-//       }
-//     }
-
-//     &:hover {
-//       .details-btn {
-//         display: block;
-//       }
-//     }
-//   }
-
-//   .pagination {
-//     display: flex;
-//     justify-content: center;
-//     margin-top: 20px;
-
-//     button {
-//       padding: 5px 10px;
-//       margin: 0 5px;
-//       border-radius: 5px;
-//       border: none;
-//       background-color: #fff;
-//       color: #333;
-//       font-size: 16px;
-//       cursor: pointer;
-//       transition: all 0.2s ease-in-out;
-
-//       &:hover {
-//         background-color: #333;
-//         color: #fff;
-//       }
-
-//       &.active {
-//         background-color: #333;
-//         color: #fff;
-//       }
-//     }
-//   }
+@import "../../styles/variables";
 
 .main {
   width: 100%;
   height: 100%;
-  background: #000000;
+  background: $black;
 
   &__wrapper {
     width: 100%;
@@ -157,7 +34,7 @@
     font-size: 100px;
     line-height: 110px;
     letter-spacing: 0.02em;
-    color: #ffffff;
+    color: $white;
     text-shadow: 15px 5px 5px rgba(0, 0, 0, 0.12);
     margin-bottom: 10px;
   }
@@ -167,7 +44,7 @@
     font-weight: 400;
     font-size: 28px;
     line-height: 36px;
-    color: #ffffff;
+    color: $white;
     opacity: 0.9;
   }
 
@@ -206,7 +83,7 @@
       font-size: 40px;
       line-height: 63px;
       text-transform: capitalize;
-      color: #b756ff;
+      color: $purple;
       margin-bottom: 2px;
     }
 
@@ -216,7 +93,7 @@
       font-weight: 400;
       font-size: 24px;
       line-height: 36px;
-      color: #ffffff;
+      color: $white;
       opacity: 0.6;
     }
 
@@ -235,19 +112,19 @@
     &__input {
       padding: 10px 100px;
       margin: 10px 0px;
-      border: 1px solid #d00ffc;
+      border: 1px solid $button;
       outline: none;
       font-size: 16px;
       font-weight: 400;
       font-family: "Baloo 2";
 
       &:focus {
-        box-shadow: 0px 1px 10px 0.5px #d00ffc;
-        background-color: #fff;
+        box-shadow: 0px 1px 10px 0.5px $button;
+        background-color: $white;
       }
 
       &:invalid[focused="true"] {
-        border: 1px solid red;
+        border: 1px solid $red;
       }
 
       &:invalid[focused="true"] ~ .errorMessage {
@@ -271,7 +148,7 @@
         &__input {
           padding: 10px 50px;
           margin: 10px 0px;
-          border: 1px solid #d00ffc;
+          border: 1px solid $button;
           outline: none;
           font-size: 16px;
         }
@@ -280,7 +157,7 @@
   }
 
   .movies {
-    background: #fff;
+    background: $white;
     width: 100%;
     max-width: 1440px;
     height: 100%;
@@ -302,7 +179,7 @@
       width: 13px;
       height: 13px;
       border-radius: 50%;
-      background: #c517f0;
+      background: $loader;
       animation-timing-function: cubic-bezier(0, 1, 1, 0);
     }
 
@@ -392,7 +269,7 @@
       margin-bottom: -35px;
       letter-spacing: 0.02em;
       text-transform: capitalize;
-      color: #151515;
+      color: $black-light;
     }
 
     &__title2 {
@@ -402,7 +279,7 @@
       font-size: 25px;
       line-height: 50px;
       letter-spacing: 0.05em;
-      color: #151515;
+      color: $black-light;
       margin-bottom: -10px;
     }
 
@@ -412,7 +289,7 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 36px;
-      color: #151515;
+      color: $black-light;
       opacity: 0.75;
       overflow: scroll;
     }
@@ -446,8 +323,8 @@
       gap: 10px;
 
       &--button {
-        border: 1px solid #d00ffc;
-  border-radius: 20%;
+        border: 1px solid $button;
+        border-radius: 20%;
         background-color: transparent;
         color: #333;
         font-size: 16px;
@@ -459,8 +336,8 @@
           background-color: #eee;
         }
         &.active {
-          background-color: #000000;
-  color: #fff;
+          background-color: $black;
+          color: $white;
         }
       }
     }
@@ -641,6 +518,7 @@
       width: 90%;
       margin: 0 auto;
       display: flex;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
       gap: 30px;
@@ -658,7 +536,7 @@
       font-size: 40px;
       line-height: 63px;
       text-transform: capitalize;
-      color: #b756ff;
+      color: $purple;
       margin-bottom: 2px;
     }
     &__title2 {
@@ -668,7 +546,7 @@
       font-size: 54px;
       line-height: 59px;
       letter-spacing: 0.02em;
-      color: #ffffff;
+      color: $white;
     }
     &__subtitle {
       font-family: "Baloo 2";
@@ -676,7 +554,7 @@
       font-weight: 400;
       font-size: 24px;
       line-height: 36px;
-      color: #ffffff;
+      color: $white;
       opacity: 0.6;
     }
 
@@ -706,7 +584,7 @@
       font-weight: 600;
       font-size: 32px;
       line-height: 50px;
-      color: #ffffff;
+      color: $white;
     }
 
     &__more {
@@ -716,7 +594,7 @@
       font-size: 20px;
       line-height: 22px;
       letter-spacing: 0.05em;
-      color: #ffffff;
+      color: $white;
     }
 
     @media screen and (max-width: 1024px) and (min-width: 768px) {
@@ -744,7 +622,7 @@
           font-weight: 400;
           font-size: 24px;
           line-height: 36px;
-          color: #ffffff;
+          color: $white;
           opacity: 0.6;
         }
 
@@ -773,7 +651,7 @@
           font-weight: 600;
           font-size: 32px;
           line-height: 50px;
-          color: #ffffff;
+          color: $white;
         }
 
         &__more {
@@ -783,7 +661,7 @@
           font-size: 20px;
           line-height: 22px;
           letter-spacing: 0.05em;
-          color: #ffffff;
+          color: $white;
         }
       }
     }

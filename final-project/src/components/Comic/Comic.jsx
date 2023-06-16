@@ -63,8 +63,11 @@ export const Comic = () => {
 
   const addToFavorites = (comic) => {
     if (currentUser) {
-      const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
-      const isAlreadyAdded = storedFavorites.some(item => item.id === comic.id);
+      const storedFavorites =
+        JSON.parse(localStorage.getItem("favorites")) || [];
+      const isAlreadyAdded = storedFavorites.some(
+        (item) => item.id === comic.id
+      );
       if (isAlreadyAdded) {
         alert("Movie is already in favorites.");
         return;
@@ -219,7 +222,6 @@ export const Comic = () => {
                           >
                             Add to Favorite
                           </button>
-
                         </div>
                       </div>
                     </div>
@@ -247,5 +249,3 @@ export const Comic = () => {
     </main>
   );
 };
-
-

@@ -13,7 +13,6 @@ import {
 } from "firebase/auth";
 import { AuthContext } from "../../context/AuthContext";
 
-
 export const Regist = () => {
   const { dispatch } = useContext(AuthContext);
   const [inputValues, setInputValues] = useState({
@@ -67,7 +66,7 @@ export const Regist = () => {
     setInputValues({ ...inputValues, [e.target.name]: e.target.value });
   };
 
-  const handleRegist= async (e) => {
+  const handleRegist = async (e) => {
     e.preventDefault();
 
     try {
@@ -135,7 +134,11 @@ export const Regist = () => {
           </Link>
         </div>
         <div className="regist__media-options">
-          <Link to="#" className="regist__form--facebook regist__form--google " onClick={signInWithGoogle}>
+          <Link
+            to="#"
+            className="regist__form--facebook regist__form--google "
+            onClick={signInWithGoogle}
+          >
             <img src={google} alt="icon" className="googleImg" />
             <span>Login with Google</span>
           </Link>

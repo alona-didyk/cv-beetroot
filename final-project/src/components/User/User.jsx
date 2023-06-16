@@ -39,7 +39,9 @@ export const User = () => {
             <span className="user__name">
               Username: {currentUser.displayName}
             </span>
-            <span className="user__name">Email Address: {currentUser.email}</span>
+            <span className="user__name">
+              Email Address: {currentUser.email}
+            </span>
           </div>
           <hr />
 
@@ -48,8 +50,11 @@ export const User = () => {
             <ul className="user__nav">
               {favorites.map((favorite, index) => (
                 <li className="user__list" key={index}>
-                  {favorite.title} 
-                  <button className="button" onClick={() => removeFromFavorites(favorite)}>
+                  {favorite.title}
+                  <button
+                    className="button"
+                    onClick={() => removeFromFavorites(favorite)}
+                  >
                     Remove
                   </button>
                 </li>
@@ -61,4 +66,3 @@ export const User = () => {
     </div>
   );
 };
-

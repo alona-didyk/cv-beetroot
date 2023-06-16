@@ -11,12 +11,13 @@ export const Banner = () => {
         <div className="hero__text-wrapper">
           <h1 className="hero__title">Marvelverse Community</h1>
           <p className="hero__subtitle">
-            Entering into Marvelverse Community. Dive
-            into the extraordinary world of Marvel superheroes and immerse
-            yourself in thrilling adventures..
+            Entering into Marvelverse Community. Dive into the extraordinary
+            world of Marvel superheroes and immerse yourself in thrilling
+            adventures..
           </p>
-          <Link className="button" to="/regist">Join Us Now</Link>
-       
+          <Link className="button" to="/regist">
+            Join Us Now
+          </Link>
         </div>
         <div className="hero__img-wrapper">
           <div className="toroid">
@@ -28,22 +29,6 @@ export const Banner = () => {
           </div>
         </div>
       </div>
-      {/* <div className="hero-banner__wrapper">
-        <img className="hero-banner__img" src={hero} alt="hero-banner" />
-        <div className="hero-banner__desc">
-          <h1 className="hero-banner__title">Marvelverse Community</h1>
-          <p className="hero-banner__subtitle">
-            Welcome to our Marvel-themed platform, <br /> where you can dive
-            into the extraordinary world of Marvel superheroes and immerse
-            yourself in thrilling adventures. Whether you're a die-hard fan or
-            just discovering the Marvel Universe, our platform offers a unique
-            and immersive experience that will captivate and entertain you. Join
-            us as we celebrate the iconic characters, epic stories, and rich
-            history of Marvel through movies, TV shows, comic books, and
-            interactive features. Get ready to unleash your inner superhero!
-          </p>
-        </div>
-      </div> */}
     </section>
   );
 };

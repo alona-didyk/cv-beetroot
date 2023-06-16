@@ -79,8 +79,6 @@ export const Chat = () => {
             </div>
           </div>
         </section>
-
-        {/* Add Post Form */}
         <div className="form">
           <div className="form__wrapper">
             <form onSubmit={handleAddPost}>
@@ -128,7 +126,11 @@ export const Chat = () => {
                 <li className="discuss__post" key={post.id}>
                   <div className="discuss__post--info">
                     <div className="posts__inline">
-                      <img className="posts__inline--img" src={user} alt="user" />
+                      <img
+                        className="posts__inline--img"
+                        src={user}
+                        alt="user"
+                      />
                       <span className="posts__inline--user">Juliusomo</span>
                       <span className="posts__inline--you">you</span>
                     </div>
@@ -140,16 +142,17 @@ export const Chat = () => {
               ))}
             </ul>
 
-            {/* Display API Posts */}
-
             <ul>
               {apiPosts.slice(0, visiblePosts).map((post) => (
                 <li className="discuss__post" key={post.id}>
                   <div className="discuss__post--info">
-                  <div className="posts__inline">
-                    <img className="posts__inline--img" src={user} alt="user" />
-                    <span className="posts__inline--user">UserName</span>
-                  
+                    <div className="posts__inline">
+                      <img
+                        className="posts__inline--img"
+                        src={user}
+                        alt="user"
+                      />
+                      <span className="posts__inline--user">UserName</span>
                     </div>
                     <h3 className="posts__title-small">{post.title}</h3>
                     <p className="posts__subtitle">{post.body}</p>

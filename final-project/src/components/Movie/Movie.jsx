@@ -21,7 +21,6 @@ export const Movie = () => {
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
- 
 
   useEffect(() => {
     const fetchMovies = () => {
@@ -57,11 +56,13 @@ export const Movie = () => {
     // eslint-disable-next-line
   }, []);
 
-
   const addToFavorites = (movie) => {
     if (currentUser) {
-      const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
-      const isAlreadyAdded = storedFavorites.some(item => item.id === movie.id);
+      const storedFavorites =
+        JSON.parse(localStorage.getItem("favorites")) || [];
+      const isAlreadyAdded = storedFavorites.some(
+        (item) => item.id === movie.id
+      );
       if (isAlreadyAdded) {
         alert("Movie is already in favorites.");
         return;
@@ -73,7 +74,6 @@ export const Movie = () => {
       alert("Please log in to add a movie to favorites.");
     }
   };
-  
 
   const handleSearch = (event) => {
     event.preventDefault();
@@ -192,7 +192,6 @@ export const Movie = () => {
                         <p className="movies__title2">
                           Start Year: {movie.startYear}
                         </p>
-                        {/* <p className="movies__subtitle">Rating: {movie.rating}</p> */}
                         <p className="movies__subtitle">{movie.description}</p>
                         <div className="buttons">
                           <Link to={`/details/${movie.id}`} className="button">

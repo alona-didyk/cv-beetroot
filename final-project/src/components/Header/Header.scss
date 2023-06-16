@@ -1,11 +1,13 @@
+@import "../../styles/variables";
+
 .account {
-  color: #fff;
+  color: $white;
   font-weight: bold;
   text-decoration: none;
   transition: all 0.3s ease-in;
   &:hover {
     opacity: 1;
-    color: #d00ffc;
+    color: $button;
     text-decoration: none;
   }
 }
@@ -13,12 +15,8 @@
 .header {
   width: 100%;
   height: 6vh;
-  background: #000000;
+  background: $black;
   padding-bottom: 30px;
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // z-index: 10;
 
   &__wrapper {
     width: 85%;
@@ -54,7 +52,7 @@
       position: absolute;
       width: 30px;
       height: 3px;
-      background-color: #fff;
+      background-color: $white;
       left: 5px;
       transition: transform 0.4s, opacity 0.4s;
       &:nth-child(1) {
@@ -67,7 +65,6 @@
   }
 
   &__logo {
-    // width: 10vw;
     height: 5vh;
   }
 
@@ -79,7 +76,7 @@
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    color: #fff;
+    color: $white;
     font-family: "Baloo 2";
     font-style: normal;
     font-weight: 400;
@@ -91,7 +88,7 @@
       transition: 0.5s;
       position: relative;
       text-decoration: none;
-      color: #fff;
+      color: $white;
       cursor: pointer;
 
       &::after {
@@ -101,13 +98,13 @@
         left: 0;
         width: 0;
         height: 2px;
-        background-color: #fff;
+        background-color: $white;
         transition: width 0.5s;
       }
 
       &:hover {
         opacity: 1;
-        color: #d00ffc;
+        color: $button;
         text-decoration: none;
       }
       &:hover::after {
@@ -124,19 +121,14 @@
   }
 
   @media screen and (max-width: 1430px) and (min-width: 1025px) {
-
     &__container {
-
       width: 95%;
-
     }
     &__nav {
       width: 25vw;
     }
 
-
     &__logo {
-      // width: 8vw;
       height: 5vh;
     }
     &__buttons {
@@ -169,7 +161,6 @@
     &.open &__container {
       height: 80vh;
       width: 100%;
-      // background: black;
       background: rgba(0, 0, 0, 0.8);
       z-index: 999;
       display: flex;
@@ -217,28 +208,6 @@
     }
   }
 
-  // @media screen and (max-width: 1024px) {
-
-  //   &__container {
-
-  //     width: 95%;
-
-  //   }
-  //   &__nav {
-  //     width: 25vw;
-  //   }
-
-
-  //   &__logo {
-  //     width: 8vw;
-  //     height: 5vh;
-  //   }
-  //   &__buttons {
-  //     flex-direction: row;
-  //     gap: 5px;
-  //   }
-  // }
-
   @media screen and (max-width: 768px) {
     &__subwrapper {
       width: 100%;
@@ -263,7 +232,6 @@
     &.open &__container {
       height: 80vh;
       width: 100%;
-      // background: black;
       background: rgba(0, 0, 0, 0.8);
       z-index: 999;
       display: flex;
@@ -320,10 +288,6 @@
       align-items: center;
       opacity: 1;
     }
-
-    // &__logo {
-    //   width: 25vw;
-    // }
   }
 
   @media screen and (max-width: 480px) {
@@ -338,7 +302,6 @@
     &.open &__container {
       width: 100%;
       height: 80%;
-      // z-index: 999;
     }
     &__container {
       position: absolute;
@@ -374,10 +337,6 @@
         }
       }
     }
-
-    // &__logo {
-    //   width: 25vw;
-    // }
   }
   @media screen and (max-width: 575px) and (min-width: 320px) {
     &__buttons {
@@ -391,7 +350,6 @@
     &.open &__container {
       width: 100%;
       height: 80%;
-      // z-index: 999;
     }
     &__container {
       position: absolute;
@@ -427,9 +385,5 @@
         }
       }
     }
-
-    // &__logo {
-    //   width: 25vw;
-    // }
   }
 }

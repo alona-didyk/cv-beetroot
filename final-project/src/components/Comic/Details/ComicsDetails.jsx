@@ -64,7 +64,3 @@ export const ComicsDetails = () => {
     </div>
   );
 };
-
-
-
-

@@ -61,8 +61,12 @@ export const Footer = () => {
                 ))}
               </ul>
               <div className="footer__buttons">
-              <Link className="button" to="/login">Sign In</Link>
-              <Link className="button" to="/regist">Sign up</Link>
+                <Link className="button" to="/login">
+                  Sign In
+                </Link>
+                <Link className="button" to="/regist">
+                  Sign up
+                </Link>
               </div>
             </div>
           </div>

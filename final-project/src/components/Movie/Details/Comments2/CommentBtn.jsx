@@ -2,7 +2,13 @@ import { ReactComponent as IconReply } from "../../../../assets/icons/icon-reply
 import { ReactComponent as IconDelete } from "../../../../assets/icons/icon-delete.svg";
 import { ReactComponent as IconEdit } from "../../../../assets/icons/icon-edit.svg";
 
-const CommentBtn = ({commentData, setReplying, setDeleting, setDeleteModalState, setEditing}) => {
+const CommentBtn = ({
+  commentData,
+  setReplying,
+  setDeleting,
+  setDeleteModalState,
+  setEditing,
+}) => {
   // adding reply
 
   // console.log(setReplying, setDeleting, se)

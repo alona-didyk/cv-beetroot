@@ -1,4 +1,4 @@
-import { Outlet, Link, useNavigate } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import "./Header.scss";
 import { useContext, useState, useRef } from "react";
@@ -6,7 +6,6 @@ import { AuthContext } from "../../context/AuthContext";
 
 export const Header = ({ hideEntryPage }) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  // const navigate = useNavigate();
 
   const headerRef = useRef(null);
   const burgerButtonRef = useRef(null);
@@ -14,11 +13,6 @@ export const Header = ({ hideEntryPage }) => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-
-  // const navigateHandler = (event, to) => {
-  //   event.preventDefault();
-  //   navigate(to);
-  // };
 
   const { currentUser } = useContext(AuthContext);
 
@@ -47,7 +41,7 @@ export const Header = ({ hideEntryPage }) => {
                   className="header__nav--item"
                   onClick={() => setMenuOpen(false)}
                 >
-                  HomePage
+                  Homepage
                 </Link>
               </li>
               <li>
