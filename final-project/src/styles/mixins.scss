@@ -1,8 +1,6 @@
 @mixin title {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2rem;
-    padding-bottom: 20px;
-    text-align: center;
+  font-family: "Coiny";
+  font-weight: 400;
 }
 
 @mixin subtitle {
@@ -11,6 +9,21 @@
     line-height: 36px;
     color: #ffffff;
     opacity: 0.6;
+}
+
+@mixin subtitle2 {
+  font-family: "Baloo 2";
+  font-weight: 400;
+}
+
+@mixin baloo6 {
+  font-family: "Baloo 2";
+  font-weight: 600;
+}
+
+@mixin baloo5 {
+  font-family: "Baloo 2";
+    font-weight: 500;
 }
 
 @mixin button {

@@ -1,4 +1,5 @@
 @import "../../styles/variables";
+@import "../../styles/mixins.scss";
 
 .footer {
   width: 100%;
@@ -30,8 +31,7 @@
   }
 
   &__title {
-    font-family: "Baloo 2";
-    font-weight: 600;
+    @include baloo6;
     font-size: 40px;
     line-height: 63px;
     text-transform: capitalize;
@@ -39,9 +39,7 @@
   }
 
   &__subtitle {
-    font-family: "Coiny";
-    font-style: normal;
-    font-weight: 400;
+    @include title;
     font-size: 54px;
     line-height: 59px;
     text-align: center;
@@ -58,9 +56,7 @@
 
     p,
     a {
-      font-family: "Baloo 2";
-      font-style: normal;
-      font-weight: 600;
+     @include baloo6;
       font-size: 32px;
       line-height: 50px;
       text-decoration: none;
@@ -98,16 +94,11 @@
     margin: 0 auto;
 
     p {
-      font-family: "Baloo 2";
-      font-style: normal;
-      font-weight: 500;
+      @include baloo5;
       font-size: 20px;
       line-height: 31px;
-
       letter-spacing: 0.05em;
-
       color: $white;
-
       opacity: 0.75;
     }
   }

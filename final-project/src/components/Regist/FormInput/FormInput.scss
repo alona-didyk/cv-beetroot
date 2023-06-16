@@ -12,8 +12,7 @@
         border: 1px solid $button;
         outline: none;
         font-size: 16px;
-        font-weight: 400;
-        font-family: "Baloo 2";
+        @include subtitle2;
 
         &:focus {
             box-shadow: 0px 1px 10px 0.5px $button;

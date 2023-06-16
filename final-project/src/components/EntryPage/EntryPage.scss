@@ -48,8 +48,7 @@
   }
 
   &__title {
-    font-family: "Coiny";
-    font-weight: 400;
+    @include title;
     font-size: 100px;
     line-height: 110px;
     letter-spacing: 0.02em;
@@ -58,8 +57,7 @@
     margin-bottom: 10px;
   }
   &__subtitle {
-    font-family: "Baloo 2";
-    font-weight: 400;
+    @include subtitle2;
     font-size: 28px;
     line-height: 36px;
     color: $white;
@@ -335,8 +333,7 @@
   }
 
   &__title {
-    font-family: "Baloo 2";
-    font-weight: 600;
+    @include baloo6;
     font-size: 40px;
     line-height: 63px;
     text-transform: capitalize;
@@ -353,9 +350,8 @@
   }
 
   &__subtitle {
-    font-family: "Coiny";
-    text-transform: uppercase;
-    font-weight: 400;
+    @include title;
+    text-transform: uppercase; 
     font-size: 50px;
     line-height: 59px;
     letter-spacing: 0.02em;
@@ -363,9 +359,7 @@
   }
 
   &__subtitle-p {
-    font-family: "Baloo 2";
-    font-style: normal;
-    font-weight: 400;
+    @include subtitle2;
     font-size: 24px;
     line-height: 36px;
     color: $white;
@@ -471,9 +465,7 @@
   }
 
   &__title {
-    font-family: "Coiny";
-    font-style: normal;
-    font-weight: 400;
+    @include title;
     font-size: 48px;
     line-height: 53px;
     text-align: center;
@@ -482,9 +474,7 @@
   }
 
   &__subtitle {
-    font-family: "Baloo 2";
-    font-style: normal;
-    font-weight: 400;
+    @include subtitle2;
     font-size: 24px;
     line-height: 36px;
     text-align: center;
@@ -708,9 +698,7 @@
   }
 
   &__title {
-    font-family: "Coiny";
-    font-style: normal;
-    font-weight: 400;
+    @include title;
     font-size: 48px;
     line-height: 53px;
     padding-top: 100px;
@@ -731,9 +719,7 @@
   }
 
   &__title2 {
-    font-family: "Baloo 2";
-    font-style: normal;
-    font-weight: 600;
+    @include baloo6;
     font-size: 32px;
     line-height: 50px;
     letter-spacing: 0.05em;
@@ -741,9 +727,7 @@
   }
 
   &__subtitle {
-    font-family: "Baloo 2";
-    font-style: normal;
-    font-weight: 400;
+    @include subtitle2;
     font-size: 24px;
     line-height: 36px;
     color: $black-light;

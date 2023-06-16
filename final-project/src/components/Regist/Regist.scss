@@ -17,8 +17,7 @@
     border-radius: 5px;
 
     &--title {
-      font-family: "Coiny";
-      font-weight: 400;
+      @include title;
       font-size: 60px;
       line-height: 110px;
       letter-spacing: 0.02em;
