@@ -3,10 +3,10 @@ import "./Chat.scss";
 import firstimg from "../../assets/images/discuss-img.jpeg";
 import toroid from "../../assets/icons/toroid.svg";
 import toroid2 from "../../assets/icons/toroid2.svg";
+import user from "../../assets/images/user.jpg";
 
 export const Chat = () => {
   const [apiPosts, setApiPosts] = useState([]);
-  const [comments, setComments] = useState([]);
   const [newPost, setNewPost] = useState({ title: "", body: "" });
   const [visiblePosts, setVisiblePosts] = useState(5);
   const [localPosts, setLocalPosts] = useState([]);
@@ -84,9 +84,9 @@ export const Chat = () => {
         <div className="form">
           <div className="form__wrapper">
             <form onSubmit={handleAddPost}>
-              <h2 className="about__title">Add Post</h2>
+              <h2 className="form__title">Add Post</h2>
 
-              <p className="about__subtitle">
+              <p className="form__subtitle">
                 Enter the title and body of your post
               </p>
 
@@ -121,47 +121,61 @@ export const Chat = () => {
         </div>
 
         <div className="posts">
-            <div className="posts__wrapper">
+          <div className="posts__wrapper">
             <h2 className="posts__title">Latest Posts</h2>
             <ul>
-            {localPosts.map((post) => (
-              <li className="discuss__post" key={post.id}>
-                <div className="discuss__post--info">
-                  <h3>{post.title}</h3>
-                  <p>{post.body}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
+              {localPosts.map((post) => (
+                <li className="discuss__post" key={post.id}>
+                  <div className="discuss__post--info">
+                    <div className="posts__inline">
+                      <img className="posts__inline--img" src={user} alt="user" />
+                      <span className="posts__inline--user">Juliusomo</span>
+                      <span className="posts__inline--you">you</span>
+                    </div>
 
-          {/* Display API Posts */}
+                    <h3 className="posts__title-small">{post.title}</h3>
+                    <p className="posts__subtitle">{post.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
 
-          <ul>
-            {apiPosts.slice(0, visiblePosts).map((post) => (
-              <li className="discuss__post" key={post.id}>
-                <div className="discuss__post--info">
-                  <h3>{post.title}</h3>
-                  <p>{post.body}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
-          {visiblePosts < apiPosts.length ? (
-            <div>
-              <button className="button" onClick={handleShowMorePosts}>Show More</button>
-              {visiblePosts > 5 && (
-                <button className="button" onClick={handleShowLessPosts}>Show Less</button>
-              )}
-            </div>
-          ) : (
-            visiblePosts > 5 && (
-              <button className="button" onClick={handleShowLessPosts}>Show Less</button>
-            )
-          )}
-            </div>
-    
+            {/* Display API Posts */}
 
-  
+            <ul>
+              {apiPosts.slice(0, visiblePosts).map((post) => (
+                <li className="discuss__post" key={post.id}>
+                  <div className="discuss__post--info">
+                  <div className="posts__inline">
+                    <img className="posts__inline--img" src={user} alt="user" />
+                    <span className="posts__inline--user">UserName</span>
+                  
+                    </div>
+                    <h3 className="posts__title-small">{post.title}</h3>
+                    <p className="posts__subtitle">{post.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            {visiblePosts < apiPosts.length ? (
+              <div className="discuss__button">
+                <button className="button" onClick={handleShowMorePosts}>
+                  Show More
+                </button>
+                {visiblePosts > 5 && (
+                  <button className="button" onClick={handleShowLessPosts}>
+                    Show Less
+                  </button>
+                )}
+              </div>
+            ) : (
+              visiblePosts > 5 && (
+                <button className="button" onClick={handleShowLessPosts}>
+                  Show Less
+                </button>
+              )
+            )}
+          </div>
         </div>
       </div>
     </div>
