@@ -76,8 +76,14 @@ export const Header = ({ hideEntryPage }) => {
               <li>
                 <Link
                   to="/login"
-                  className="button"
-                  onClick={() => setMenuOpen(false)}
+                  className={`button ${currentUser ? "disabled" : ""}`}
+                  onClick={() => {
+                    if (currentUser) {
+                      alert("You already have an account!");
+                    } else {
+                      setMenuOpen(false);
+                    }
+                  }}
                 >
                   Login
                 </Link>
@@ -85,8 +91,14 @@ export const Header = ({ hideEntryPage }) => {
               <li>
                 <Link
                   to="/regist"
-                  className="button "
-                  onClick={() => setMenuOpen(false)}
+                  className={`button ${currentUser ? "disabled" : ""}`}
+                  onClick={() => {
+                    if (currentUser) {
+                      alert("You already have an account!");
+                    } else {
+                      setMenuOpen(false);
+                    }
+                  }}
                 >
                   Regist
                 </Link>
