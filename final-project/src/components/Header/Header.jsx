@@ -1,5 +1,5 @@
 import { Outlet, Link } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo.webp";
 import "./Header.scss";
 import { useContext, useState, useRef } from "react";
 import { AuthContext } from "../../context/AuthContext";
@@ -22,6 +22,7 @@ export const Header = ({ hideEntryPage }) => {
         <div className="header__wrapper">
           <div className="header__subwrapper">
             <button
+            aria-label="burger"
               ref={burgerButtonRef}
               className="header__burger-button"
               id="burger-button"

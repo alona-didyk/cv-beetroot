@@ -2,6 +2,7 @@
   "name": "final-project",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://alona-didyk.github.io/cv-beetroot",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -24,6 +25,7 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "react-native-parallax-scroll-view": "^0.21.3",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.11.2",
@@ -37,7 +39,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -58,6 +62,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.10"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.10",
+    "gh-pages": "^5.0.0"
   }
 }
