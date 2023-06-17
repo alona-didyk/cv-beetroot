@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "./Chat.scss";
-import firstimg from "../../assets/images/discuss-img.jpeg";
-import toroid from "../../assets/icons/toroid.svg";
-import toroid2 from "../../assets/icons/toroid2.svg";
-import user from "../../assets/images/user.jpg";
+import { Hero } from "./HeroChat";
+import { PostForm } from "./PostVotes";
+import { PostList } from "./PostList";
+import PostComments from "./PostComments";
 
 export const Chat = () => {
   const [apiPosts, setApiPosts] = useState([]);
   const [newPost, setNewPost] = useState({ title: "", body: "" });
   const [visiblePosts, setVisiblePosts] = useState(5);
   const [localPosts, setLocalPosts] = useState([]);
+  const [comments, setComments] = useState({});
+  const [visibleComments, setVisibleComments] = useState(5);
 
   useEffect(() => {
     fetchApiPosts();
@@ -23,6 +25,21 @@ export const Chat = () => {
       setApiPosts(data.posts);
     } catch (error) {
       console.error("Error fetching API posts:", error);
+    }
+  };
+
+  const fetchComments = async (postId) => {
+    try {
+      const response = await fetch(
+        `https://dummyjson.com/comments?postId=${postId}`
+      );
+      const data = await response.json();
+      setComments((prevComments) => ({
+        ...prevComments,
+        [postId]: data.comments,
+      }));
+    } catch (error) {
+      console.error("Error fetching comments:", error);
     }
   };
 
@@ -43,12 +60,13 @@ export const Chat = () => {
 
   const handleAddPost = (e) => {
     e.preventDefault();
-    const createdPost = { ...newPost, id: Date.now() };
+    const createdPost = { ...newPost, id: Date.now(), comments: [] };
     const updatedPosts = [createdPost, ...localPosts];
     setLocalPosts(updatedPosts);
     saveLocalPosts(updatedPosts);
     setNewPost({ title: "", body: "" });
   };
+
   const handleShowMorePosts = () => {
     setVisiblePosts((prevVisiblePosts) => prevVisiblePosts + 5);
   };
@@ -57,129 +75,52 @@ export const Chat = () => {
     setVisiblePosts((prevVisiblePosts) => Math.max(prevVisiblePosts - 5, 5));
   };
 
+  const handleCloseComments = (postId) => {
+    setComments((prevComments) => ({
+      ...prevComments,
+      [postId]: undefined,
+    }));
+    setVisibleComments(5);
+  };
+
+  const handleShowMoreComments = (postId) => {
+    setVisibleComments((prevVisibleComments) => prevVisibleComments + 5);
+  };
+
   return (
     <div className="discuss">
       <div className="discuss__wrapper">
-        <section className="hero">
-          <div className="hero__wrapper">
-            <div className="hero__text-wrapper">
-              <h1 className="hero__title">Marvelverse Community Blog</h1>
-              <p className="hero__subtitle">
-                Join the conversation and share your thoughts!
-              </p>
-            </div>
-            <div className="hero__img-wrapper">
-              <div className="toroid">
-                <img className="toroid1" src={toroid} alt="toroid" />
-                <img className="toroid2" src={toroid2} alt="toroid" />
-              </div>
-              <div className="hero__img">
-                <img src={firstimg} alt="img" />
-              </div>
-            </div>
-          </div>
-        </section>
-        <div className="form">
-          <div className="form__wrapper">
-            <form onSubmit={handleAddPost}>
-              <h2 className="form__title">Add Post</h2>
+        <Hero />
+        <PostForm
+          newPost={newPost}
+          handleInputChange={handleInputChange}
+          handleAddPost={handleAddPost}
+        />
 
-              <p className="form__subtitle">
-                Enter the title and body of your post
-              </p>
+        <PostList
+          localPosts={localPosts}
+          apiPosts={apiPosts}
+          visiblePosts={visiblePosts}
+          visibleComments={visibleComments}
+          comments={comments}
+          fetchComments={fetchComments}
+          handleShowMorePosts={handleShowMorePosts}
+          handleShowLessPosts={handleShowLessPosts}
+          handleCloseComments={handleCloseComments}
+          handleShowMoreComments={handleShowMoreComments}
+        />
 
-              <div className="discuss__inputs">
-                <div>
-                  <input
-                    className="discuss__input"
-                    placeholder="Add title"
-                    type="text"
-                    name="title"
-                    id="title"
-                    value={newPost.title}
-                    onChange={handleInputChange}
-                  />
-                </div>
-                <div>
-                  <textarea
-                    className="discuss__input"
-                    placeholder="Share your thoughts"
-                    name="body"
-                    id="body"
-                    value={newPost.body}
-                    onChange={handleInputChange}
-                  />
-                </div>
-                <button className="button" type="submit">
-                  Submit
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-
-        <div className="posts">
-          <div className="posts__wrapper">
-            <h2 className="posts__title">Latest Posts</h2>
-            <ul>
-              {localPosts.map((post) => (
-                <li className="discuss__post" key={post.id}>
-                  <div className="discuss__post--info">
-                    <div className="posts__inline">
-                      <img
-                        className="posts__inline--img"
-                        src={user}
-                        alt="user"
-                      />
-                      <span className="posts__inline--user">Juliusomo</span>
-                      <span className="posts__inline--you">you</span>
-                    </div>
-
-                    <h3 className="posts__title-small">{post.title}</h3>
-                    <p className="posts__subtitle">{post.body}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-
-            <ul>
-              {apiPosts.slice(0, visiblePosts).map((post) => (
-                <li className="discuss__post" key={post.id}>
-                  <div className="discuss__post--info">
-                    <div className="posts__inline">
-                      <img
-                        className="posts__inline--img"
-                        src={user}
-                        alt="user"
-                      />
-                      <span className="posts__inline--user">UserName</span>
-                    </div>
-                    <h3 className="posts__title-small">{post.title}</h3>
-                    <p className="posts__subtitle">{post.body}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-            {visiblePosts < apiPosts.length ? (
-              <div className="discuss__button">
-                <button className="button" onClick={handleShowMorePosts}>
-                  Show More
-                </button>
-                {visiblePosts > 5 && (
-                  <button className="button" onClick={handleShowLessPosts}>
-                    Show Less
-                  </button>
-                )}
-              </div>
-            ) : (
-              visiblePosts > 5 && (
-                <button className="button" onClick={handleShowLessPosts}>
-                  Show Less
-                </button>
-              )
-            )}
-          </div>
-        </div>
+        {Object.keys(comments).map((postId) => (
+          <PostComments
+            key={postId}
+            postId={postId}
+            comments={comments}
+            visibleComments={visibleComments}
+            handleShowMoreComments={handleShowMoreComments}
+            handleCloseComments={handleCloseComments}
+            setVisibleComments={setVisibleComments}
+          />
+        ))}
       </div>
     </div>
   );

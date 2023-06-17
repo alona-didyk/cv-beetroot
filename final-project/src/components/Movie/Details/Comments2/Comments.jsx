@@ -4,63 +4,52 @@ import { Comment } from "./Comment";
 import { AddComment } from "./AddComment";
 
 export const Comments = () => {
-  const [comments, updateComments] = useState([
-    {
-      id: 1,
-      content:
-        "I absolutely loved this movie! The storyline was captivating, and the performances were brilliant. Highly recommend it!",
-      createdAt: "23 November 2021",
-      score: 12,
-      username: "amyrobson",
-      currentUser: false,
-      replies: [],
-    },
-    {
-      id: 2,
-      content:
-        "I agree! The cinematography was stunning, and the soundtrack added so much depth to the film. It's definitely a must-watch!",
-      createdAt: "5 December 2021",
-      score: 5,
-      username: "maxblagun",
-      currentUser: false,
-      replies: [
-        {
-          id: 3,
-          content:
-            "@maxblaugn, This movie was a huge disappointment. The plot was confusing, and the acting felt forced. I wouldn't recommend it.",
-          createdAt: "18 December 2021",
-          score: 4,
-          username: "ramsesmiron",
-          currentUser: false,
-          replies: [],
-        },
-        {
-          id: 4,
-          content:
-            "@ramsesmiron, I have to disagree. I thought the movie was a unique and thought-provoking experience. It's not for everyone, but I found it quite intriguing.",
-          createdAt: "30 December 2021",
-          score: 2,
-          username: "juliusomo",
-          currentUser: true,
-          replies: [],
-        },
-      ],
-    },
-  ]);
+  const [comments, updateComments] = useState([]);
   const [deleteModalState, setDeleteModalState] = useState(false);
-
   useEffect(() => {
-    if (localStorage.getItem("comments")) {
-      updateComments(JSON.parse(localStorage.getItem("comments")));
-    }
+    const fetchData = async () => {
+      const res = await fetch(process.env.PUBLIC_URL + "/data/data.json", {
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      });
+      const data = await res.json();
+      updateComments(data.comments);
+    };
+  
+    fetchData();
   }, []);
 
   useEffect(() => {
+    const storedComments = localStorage.getItem("comments");
+    if (storedComments) {
+      updateComments(JSON.parse(storedComments));
+    }
+  }, []);
+
+
+  useEffect(() => {
     localStorage.setItem("comments", JSON.stringify(comments));
-    deleteModalState
-      ? document.body.classList.add("overflow--hidden")
-      : document.body.classList.remove("overflow--hidden");
+    if (deleteModalState) {
+      document.body.classList.add("overflow--hidden");
+    } else {
+      document.body.classList.remove("overflow--hidden");
+    }
   }, [comments, deleteModalState]);
+
+  // useEffect(() => {
+  //   if (localStorage.getItem("comments")) {
+  //     updateComments(JSON.parse(localStorage.getItem("comments")));
+  //   }
+  // }, []);
+
+  // useEffect(() => {
+  //   localStorage.setItem("comments", JSON.stringify(comments));
+  //   deleteModalState
+  //     ? document.body.classList.add("overflow--hidden")
+  //     : document.body.classList.remove("overflow--hidden");
+  // }, [comments, deleteModalState]);
 
   // update score
   let updateScore = (score, id, type) => {
@@ -88,6 +77,7 @@ export const Comments = () => {
   let addComments = (newComment) => {
     let updatedComments = [...comments, newComment];
     updateComments(updatedComments);
+    localStorage.setItem("comments", JSON.stringify(updatedComments));
   };
 
   // add replies

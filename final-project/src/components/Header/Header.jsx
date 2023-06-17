@@ -106,10 +106,16 @@ export const Header = ({ hideEntryPage }) => {
               <li>
                 <Link
                   to="/user"
-                  className="account"
-                  onClick={() => setMenuOpen(false)}
+                  className={`account ${!currentUser ? "disabled" : ""}`}
+                  onClick={() => {
+                    if (!currentUser) {
+                      alert("Please log in or register to access the user page.");
+                    } else {
+                      setMenuOpen(false);
+                    }
+                  }}
                 >
-                  {<p> Account:{currentUser?.displayName}</p>}
+                  {<p> Account: {currentUser?.displayName}</p>}
                 </Link>
               </li>
             </div>
@@ -121,3 +127,4 @@ export const Header = ({ hideEntryPage }) => {
     </>
   );
 };
+

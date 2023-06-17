@@ -121,6 +121,16 @@
     &--info {
       padding: 30px;
     }
+
+    &--comment {
+     list-style: none;
+    }
+    &--buttons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   .posts {
