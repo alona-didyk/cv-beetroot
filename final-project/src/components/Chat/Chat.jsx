@@ -60,6 +60,12 @@ export const Chat = () => {
 
   const handleAddPost = (e) => {
     e.preventDefault();
+
+    if (newPost.title.trim() === "" || newPost.body.trim() === "") {
+      alert("Please enter both the title and body of your post.");
+      return;
+    }
+  
     const createdPost = { ...newPost, id: Date.now(), comments: [] };
     const updatedPosts = [createdPost, ...localPosts];
     setLocalPosts(updatedPosts);
