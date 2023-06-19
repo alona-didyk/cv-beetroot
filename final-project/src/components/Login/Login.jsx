@@ -32,19 +32,18 @@ export const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
-    try {
-      signInWithEmailAndPassword(auth, inputs.email, inputs.password).then(
-        (userCredential) => {
-          // Signed in
-          const user = userCredential.user;
-          dispatch({ type: "LOGIN_SUCCESS", payload: user });
-          // console.log(user);
-          navigate("/");
-        }
-      );
-    } catch (error) {
-      dispatch({ type: "LOGIN_FAILURE" });
-    }
+  
+    signInWithEmailAndPassword(auth, inputs.email, inputs.password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        dispatch({ type: "LOGIN_SUCCESS", payload: user });
+        navigate("/");
+      })
+      .catch((error) => {
+        dispatch({ type: "LOGIN_FAILURE" });
+        alert("Invalid email or password. Please try again.");
+      });
   };
 
   const signInWithGoogle = () => {
