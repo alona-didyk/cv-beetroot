@@ -53,7 +53,6 @@ export const Movie = () => {
     };
 
     fetchMovies();
-    // eslint-disable-next-line
   }, []);
 
   const addToFavorites = (movie) => {

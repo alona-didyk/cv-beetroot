@@ -1,7 +1,3 @@
-import "swiper/scss";
-import "swiper/scss/navigation";
-import "swiper/scss/pagination";
-
 import "./EntryPage.scss";
 import { Banner } from "./Banner/Banner";
 import { About } from "./About/About";
